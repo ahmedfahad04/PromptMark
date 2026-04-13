@@ -1,0 +1,1183 @@
+{
+  "total_samples": 115,
+  "weights": {
+    "bleu": 0.0,
+    "weighted_bleu": 0.0,
+    "ast_syntax": 0.5,
+    "dataflow": 0.5
+  },
+  "statistics": {
+    "codebleu": {
+      "mean": 0.7181327776804336,
+      "min": 0.11375,
+      "max": 1.0
+    },
+    "bleu": {
+      "mean": 0.4958144321771412,
+      "min": 0.002915418158559639,
+      "max": 1.0
+    },
+    "syntax": {
+      "mean": 0.6390923204937444,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "dataflow": {
+      "mean": 0.7971732348671232,
+      "min": 0.12121212121212122,
+      "max": 1.0
+    }
+  },
+  "results": [
+    {
+      "task_id": 124,
+      "filename": "124.py",
+      "em": 0.0,
+      "bleu": 0.1561969968460128,
+      "wbleu": 0.16867759749799194,
+      "syntax": 0.47058823529411764,
+      "dataflow": 0.38461538461538464,
+      "codebleu": 0.42760180995475117
+    },
+    {
+      "task_id": 126,
+      "filename": "126.py",
+      "em": 0.0,
+      "bleu": 0.05705093314691302,
+      "wbleu": 0.07411039308903236,
+      "syntax": 0.0,
+      "dataflow": 0.4117647058823529,
+      "codebleu": 0.20588235294117646
+    },
+    {
+      "task_id": 130,
+      "filename": "130.py",
+      "em": 0.0,
+      "bleu": 0.04885744139976472,
+      "wbleu": 0.0612957497932821,
+      "syntax": 0.1724137931034483,
+      "dataflow": 0.21052631578947367,
+      "codebleu": 0.19147005444646098
+    },
+    {
+      "task_id": 133,
+      "filename": "133.py",
+      "em": 0.0,
+      "bleu": 0.06985342056580097,
+      "wbleu": 0.07730551756939454,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 14,
+      "filename": "14.py",
+      "em": 0.0,
+      "bleu": 0.016603106174265705,
+      "wbleu": 0.02924007455652195,
+      "syntax": 0.1,
+      "dataflow": 1.0,
+      "codebleu": 0.55
+    },
+    {
+      "task_id": 141,
+      "filename": "141.py",
+      "em": 0.0,
+      "bleu": 0.0069654510261311945,
+      "wbleu": 0.011595804105034167,
+      "syntax": 0.2,
+      "dataflow": 0.12121212121212122,
+      "codebleu": 0.1606060606060606
+    },
+    {
+      "task_id": 161,
+      "filename": "161.py",
+      "em": 0.0,
+      "bleu": 0.02786947127860291,
+      "wbleu": 0.03432945239845196,
+      "syntax": 0.08333333333333333,
+      "dataflow": 0.4444444444444444,
+      "codebleu": 0.2638888888888889
+    },
+    {
+      "task_id": 168,
+      "filename": "168.py",
+      "em": 0.0,
+      "bleu": 0.19124813148884032,
+      "wbleu": 0.310441435588881,
+      "syntax": 0.5,
+      "dataflow": 0.7272727272727273,
+      "codebleu": 0.6136363636363636
+    },
+    {
+      "task_id": 20,
+      "filename": "20.py",
+      "em": 0.0,
+      "bleu": 0.008574427603061716,
+      "wbleu": 0.016896132156671566,
+      "syntax": 0.21621621621621623,
+      "dataflow": 0.29411764705882354,
+      "codebleu": 0.2551669316375199
+    },
+    {
+      "task_id": 227,
+      "filename": "227.py",
+      "em": 0.0,
+      "bleu": 0.01110426296541702,
+      "wbleu": 0.013017912285764953,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 235,
+      "filename": "235.py",
+      "em": 0.0,
+      "bleu": 0.010346235489397634,
+      "wbleu": 0.018769357361352615,
+      "syntax": 0.2,
+      "dataflow": 0.2222222222222222,
+      "codebleu": 0.2111111111111111
+    },
+    {
+      "task_id": 242,
+      "filename": "242.py",
+      "em": 0.0,
+      "bleu": 0.017487432819564223,
+      "wbleu": 0.020687206010259414,
+      "syntax": 0.0,
+      "dataflow": 0.5555555555555556,
+      "codebleu": 0.2777777777777778
+    },
+    {
+      "task_id": 247,
+      "filename": "247.py",
+      "em": 0.0,
+      "bleu": 0.012992699896755949,
+      "wbleu": 0.022372409087444936,
+      "syntax": 0.21428571428571427,
+      "dataflow": 0.13043478260869565,
+      "codebleu": 0.17236024844720496
+    },
+    {
+      "task_id": 270,
+      "filename": "270.py",
+      "em": 0.0,
+      "bleu": 0.020904996083879822,
+      "wbleu": 0.03276736880640153,
+      "syntax": 0.20833333333333334,
+      "dataflow": 0.6470588235294118,
+      "codebleu": 0.4276960784313726
+    },
+    {
+      "task_id": 290,
+      "filename": "290.py",
+      "em": 0.0,
+      "bleu": 0.004625479698079485,
+      "wbleu": 0.01727371406259899,
+      "syntax": 0.0,
+      "dataflow": 0.42857142857142855,
+      "codebleu": 0.21428571428571427
+    },
+    {
+      "task_id": 307,
+      "filename": "307.py",
+      "em": 0.0,
+      "bleu": 0.021281397709599685,
+      "wbleu": 0.025098621243978974,
+      "syntax": 0.11764705882352941,
+      "dataflow": 0.45454545454545453,
+      "codebleu": 0.28609625668449196
+    },
+    {
+      "task_id": 309,
+      "filename": "309.py",
+      "em": 0.0,
+      "bleu": 0.007511251053510192,
+      "wbleu": 0.03012006678699483,
+      "syntax": 0.36363636363636365,
+      "dataflow": 0.8333333333333334,
+      "codebleu": 0.5984848484848485
+    },
+    {
+      "task_id": 311,
+      "filename": "311.py",
+      "em": 0.0,
+      "bleu": 0.04217149969103787,
+      "wbleu": 0.04518217671043824,
+      "syntax": 0.2571428571428571,
+      "dataflow": 0.25,
+      "codebleu": 0.25357142857142856
+    },
+    {
+      "task_id": 412,
+      "filename": "412.py",
+      "em": 0.0,
+      "bleu": 0.02084941894345334,
+      "wbleu": 0.02414977936793222,
+      "syntax": 0.4666666666666667,
+      "dataflow": 1.0,
+      "codebleu": 0.7333333333333334
+    },
+    {
+      "task_id": 415,
+      "filename": "415.py",
+      "em": 0.0,
+      "bleu": 0.7333542237270825,
+      "wbleu": 0.7455810056553708,
+      "syntax": 0.8260869565217391,
+      "dataflow": 1.0,
+      "codebleu": 0.9130434782608696
+    },
+    {
+      "task_id": 420,
+      "filename": "420.py",
+      "em": 0.0,
+      "bleu": 0.5246229845869267,
+      "wbleu": 0.5423782837718303,
+      "syntax": 0.3181818181818182,
+      "dataflow": 0.5625,
+      "codebleu": 0.44034090909090906
+    },
+    {
+      "task_id": 427,
+      "filename": "427.py",
+      "em": 0.0,
+      "bleu": 0.7598356856515925,
+      "wbleu": 1.0,
+      "syntax": 0.7692307692307693,
+      "dataflow": 1.0,
+      "codebleu": 0.8846153846153846
+    },
+    {
+      "task_id": 428,
+      "filename": "428.py",
+      "em": 0.0,
+      "bleu": 0.015530057113590824,
+      "wbleu": 0.03546712752812686,
+      "syntax": 0.4186046511627907,
+      "dataflow": 0.42857142857142855,
+      "codebleu": 0.42358803986710963
+    },
+    {
+      "task_id": 434,
+      "filename": "434.py",
+      "em": 0.0,
+      "bleu": 0.23693055763743093,
+      "wbleu": 0.26569365969147957,
+      "syntax": 0.5,
+      "dataflow": 1.0,
+      "codebleu": 0.75
+    },
+    {
+      "task_id": 435,
+      "filename": "435.py",
+      "em": 0.0,
+      "bleu": 0.015703799285850036,
+      "wbleu": 0.09036020036098448,
+      "syntax": 0.2857142857142857,
+      "dataflow": 1.0,
+      "codebleu": 0.6428571428571428
+    },
+    {
+      "task_id": 436,
+      "filename": "436.py",
+      "em": 0.0,
+      "bleu": 0.018515655955607467,
+      "wbleu": 0.021500003802814183,
+      "syntax": 0.11764705882352941,
+      "dataflow": 0.4444444444444444,
+      "codebleu": 0.28104575163398693
+    },
+    {
+      "task_id": 437,
+      "filename": "437.py",
+      "em": 0.0,
+      "bleu": 0.0034815095771907477,
+      "wbleu": 0.011460878429386796,
+      "syntax": 0.04,
+      "dataflow": 0.1875,
+      "codebleu": 0.11375
+    },
+    {
+      "task_id": 443,
+      "filename": "443.py",
+      "em": 0.0,
+      "bleu": 0.008531104334876973,
+      "wbleu": 0.017013884945977147,
+      "syntax": 0.13333333333333333,
+      "dataflow": 0.7272727272727273,
+      "codebleu": 0.4303030303030303
+    },
+    {
+      "task_id": 445,
+      "filename": "445.py",
+      "em": 0.0,
+      "bleu": 0.2225252108443019,
+      "wbleu": 0.24147015760932922,
+      "syntax": 0.6666666666666666,
+      "dataflow": 0.5,
+      "codebleu": 0.5833333333333333
+    },
+    {
+      "task_id": 446,
+      "filename": "446.py",
+      "em": 0.0,
+      "bleu": 0.06054241748197744,
+      "wbleu": 0.0664462779761476,
+      "syntax": 0.29411764705882354,
+      "dataflow": 0.45454545454545453,
+      "codebleu": 0.37433155080213903
+    },
+    {
+      "task_id": 448,
+      "filename": "448.py",
+      "em": 0.0,
+      "bleu": 0.002915418158559639,
+      "wbleu": 0.00929876956391069,
+      "syntax": 0.23404255319148937,
+      "dataflow": 0.13793103448275862,
+      "codebleu": 0.185986793837124
+    },
+    {
+      "task_id": 453,
+      "filename": "453.py",
+      "em": 0.0,
+      "bleu": 0.2406390344689371,
+      "wbleu": 0.25936948141639554,
+      "syntax": 0.5942028985507246,
+      "dataflow": 0.4782608695652174,
+      "codebleu": 0.536231884057971
+    },
+    {
+      "task_id": 455,
+      "filename": "455.py",
+      "em": 0.0,
+      "bleu": 0.20059767794569708,
+      "wbleu": 0.22676969933796182,
+      "syntax": 0.6666666666666666,
+      "dataflow": 0.625,
+      "codebleu": 0.6458333333333333
+    },
+    {
+      "task_id": 456,
+      "filename": "456.py",
+      "em": 0.0,
+      "bleu": 0.02818780157629645,
+      "wbleu": 0.0322389403377945,
+      "syntax": 0.16666666666666666,
+      "dataflow": 0.7142857142857143,
+      "codebleu": 0.44047619047619047
+    },
+    {
+      "task_id": 458,
+      "filename": "458.py",
+      "em": 0.0,
+      "bleu": 0.06389431042462725,
+      "wbleu": 0.0752421768074461,
+      "syntax": 0.375,
+      "dataflow": 0.6666666666666666,
+      "codebleu": 0.5208333333333333
+    },
+    {
+      "task_id": 460,
+      "filename": "460.py",
+      "em": 0.0,
+      "bleu": 0.5,
+      "wbleu": 0.511501768556221,
+      "syntax": 0.25,
+      "dataflow": 1.0,
+      "codebleu": 0.625
+    },
+    {
+      "task_id": 461,
+      "filename": "461.py",
+      "em": 0.0,
+      "bleu": 0.44145500515939234,
+      "wbleu": 0.4649852108739307,
+      "syntax": 0.7916666666666666,
+      "dataflow": 1.0,
+      "codebleu": 0.8958333333333333
+    },
+    {
+      "task_id": 477,
+      "filename": "477.py",
+      "em": 0.0,
+      "bleu": 0.09554427922043669,
+      "wbleu": 0.10855926040543844,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 556,
+      "filename": "556.py",
+      "em": 0.0,
+      "bleu": 0.18846978629906425,
+      "wbleu": 0.2161248172924419,
+      "syntax": 0.5185185185185185,
+      "dataflow": 0.5,
+      "codebleu": 0.5092592592592593
+    },
+    {
+      "task_id": 577,
+      "filename": "577.py",
+      "em": 0.0,
+      "bleu": 0.022192938454540425,
+      "wbleu": 0.02830047693825885,
+      "syntax": 0.5185185185185185,
+      "dataflow": 1.0,
+      "codebleu": 0.7592592592592593
+    },
+    {
+      "task_id": 58,
+      "filename": "58.py",
+      "em": 0.0,
+      "bleu": 0.005959978627465526,
+      "wbleu": 0.04153509237206396,
+      "syntax": 0.1111111111111111,
+      "dataflow": 1.0,
+      "codebleu": 0.5555555555555556
+    },
+    {
+      "task_id": 59,
+      "filename": "59.py",
+      "em": 0.0,
+      "bleu": 0.016789125215525624,
+      "wbleu": 0.05156626918239822,
+      "syntax": 0.0,
+      "dataflow": 1.0,
+      "codebleu": 0.5
+    },
+    {
+      "task_id": 592,
+      "filename": "592.py",
+      "em": 0.0,
+      "bleu": 0.06678694379891939,
+      "wbleu": 0.08407657861526269,
+      "syntax": 0.16666666666666666,
+      "dataflow": 0.2857142857142857,
+      "codebleu": 0.22619047619047616
+    },
+    {
+      "task_id": 594,
+      "filename": "594.py",
+      "em": 0.0,
+      "bleu": 0.8641944207171431,
+      "wbleu": 0.8767222437646326,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 600,
+      "filename": "600.py",
+      "em": 0.0,
+      "bleu": 0.6298129992394241,
+      "wbleu": 0.644712488543981,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 603,
+      "filename": "603.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 604,
+      "filename": "604.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 605,
+      "filename": "605.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 606,
+      "filename": "606.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 608,
+      "filename": "608.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 617,
+      "filename": "617.py",
+      "em": 0.0,
+      "bleu": 0.8498604018862824,
+      "wbleu": 0.8606189497960606,
+      "syntax": 0.8205128205128205,
+      "dataflow": 0.5652173913043478,
+      "codebleu": 0.6928651059085842
+    },
+    {
+      "task_id": 619,
+      "filename": "619.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 622,
+      "filename": "622.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 624,
+      "filename": "624.py",
+      "em": 0.0,
+      "bleu": 0.03303164318013808,
+      "wbleu": 0.10855926040543844,
+      "syntax": 0.2222222222222222,
+      "dataflow": 1.0,
+      "codebleu": 0.6111111111111112
+    },
+    {
+      "task_id": 629,
+      "filename": "629.py",
+      "em": 0.0,
+      "bleu": 0.07786777655685517,
+      "wbleu": 0.11050470334180998,
+      "syntax": 0.3,
+      "dataflow": 0.8,
+      "codebleu": 0.55
+    },
+    {
+      "task_id": 63,
+      "filename": "63.py",
+      "em": 0.0,
+      "bleu": 0.7297627709554282,
+      "wbleu": 0.741281323081252,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 633,
+      "filename": "633.py",
+      "em": 0.0,
+      "bleu": 0.9304899483313593,
+      "wbleu": 0.9346720309875108,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 635,
+      "filename": "635.py",
+      "em": 0.0,
+      "bleu": 0.007198209131192452,
+      "wbleu": 0.013198214382567065,
+      "syntax": 0.19230769230769232,
+      "dataflow": 0.26666666666666666,
+      "codebleu": 0.2294871794871795
+    },
+    {
+      "task_id": 637,
+      "filename": "637.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 639,
+      "filename": "639.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 64,
+      "filename": "64.py",
+      "em": 0.0,
+      "bleu": 0.008830895300928163,
+      "wbleu": 0.01593635736660335,
+      "syntax": 0.15384615384615385,
+      "dataflow": 0.8,
+      "codebleu": 0.47692307692307695
+    },
+    {
+      "task_id": 68,
+      "filename": "68.py",
+      "em": 0.0,
+      "bleu": 0.038949067388366815,
+      "wbleu": 0.0487241319954127,
+      "syntax": 0.0,
+      "dataflow": 0.2857142857142857,
+      "codebleu": 0.14285714285714285
+    },
+    {
+      "task_id": 72,
+      "filename": "72.py",
+      "em": 0.0,
+      "bleu": 0.018120458368871713,
+      "wbleu": 0.06405505209826226,
+      "syntax": 0.45454545454545453,
+      "dataflow": 1.0,
+      "codebleu": 0.7272727272727273
+    },
+    {
+      "task_id": 725,
+      "filename": "725.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 730,
+      "filename": "730.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 732,
+      "filename": "732.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 733,
+      "filename": "733.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 735,
+      "filename": "735.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 736,
+      "filename": "736.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 737,
+      "filename": "737.py",
+      "em": 0.0,
+      "bleu": 0.19674979811155635,
+      "wbleu": 0.31415402948866555,
+      "syntax": 0.6923076923076923,
+      "dataflow": 1.0,
+      "codebleu": 0.8461538461538461
+    },
+    {
+      "task_id": 738,
+      "filename": "738.py",
+      "em": 0.0,
+      "bleu": 0.21858844577603043,
+      "wbleu": 0.23244969772653679,
+      "syntax": 0.3684210526315789,
+      "dataflow": 1.0,
+      "codebleu": 0.6842105263157895
+    },
+    {
+      "task_id": 742,
+      "filename": "742.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 743,
+      "filename": "743.py",
+      "em": 0.0,
+      "bleu": 0.06804621483119704,
+      "wbleu": 0.07316739223859796,
+      "syntax": 0.07142857142857142,
+      "dataflow": 0.75,
+      "codebleu": 0.4107142857142857
+    },
+    {
+      "task_id": 744,
+      "filename": "744.py",
+      "em": 0.0,
+      "bleu": 0.9036020036098448,
+      "wbleu": 0.9136996825744889,
+      "syntax": 0.7142857142857143,
+      "dataflow": 1.0,
+      "codebleu": 0.8571428571428572
+    },
+    {
+      "task_id": 745,
+      "filename": "745.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 747,
+      "filename": "747.py",
+      "em": 0.0,
+      "bleu": 0.8437402348661122,
+      "wbleu": 0.8607716538474488,
+      "syntax": 0.7542372881355932,
+      "dataflow": 0.38202247191011235,
+      "codebleu": 0.5681298800228528
+    },
+    {
+      "task_id": 748,
+      "filename": "748.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 749,
+      "filename": "749.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 751,
+      "filename": "751.py",
+      "em": 0.0,
+      "bleu": 0.8024680210490397,
+      "wbleu": 0.7985112174630484,
+      "syntax": 0.8679245283018868,
+      "dataflow": 0.925,
+      "codebleu": 0.8964622641509434
+    },
+    {
+      "task_id": 755,
+      "filename": "755.py",
+      "em": 0.0,
+      "bleu": 0.015721757597198516,
+      "wbleu": 0.04118845490097419,
+      "syntax": 0.5,
+      "dataflow": 0.75,
+      "codebleu": 0.625
+    },
+    {
+      "task_id": 757,
+      "filename": "757.py",
+      "em": 0.0,
+      "bleu": 0.9510699415570292,
+      "wbleu": 0.9573479717381596,
+      "syntax": 0.8823529411764706,
+      "dataflow": 1.0,
+      "codebleu": 0.9411764705882353
+    },
+    {
+      "task_id": 760,
+      "filename": "760.py",
+      "em": 0.0,
+      "bleu": 0.08406863224415036,
+      "wbleu": 0.1487964117124549,
+      "syntax": 0.5833333333333334,
+      "dataflow": 1.0,
+      "codebleu": 0.7916666666666667
+    },
+    {
+      "task_id": 763,
+      "filename": "763.py",
+      "em": 0.0,
+      "bleu": 0.9244754047211334,
+      "wbleu": 0.9287259784122379,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 764,
+      "filename": "764.py",
+      "em": 0.0,
+      "bleu": 0.12245315088138854,
+      "wbleu": 0.3180610472500743,
+      "syntax": 0.4583333333333333,
+      "dataflow": 0.6428571428571429,
+      "codebleu": 0.5505952380952381
+    },
+    {
+      "task_id": 766,
+      "filename": "766.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 769,
+      "filename": "769.py",
+      "em": 0.0,
+      "bleu": 0.21711852081087685,
+      "wbleu": 0.23119742295813958,
+      "syntax": 0.8,
+      "dataflow": 1.0,
+      "codebleu": 0.9
+    },
+    {
+      "task_id": 770,
+      "filename": "770.py",
+      "em": 0.0,
+      "bleu": 0.9276077030810346,
+      "wbleu": 0.9311214315236566,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 771,
+      "filename": "771.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 772,
+      "filename": "772.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 776,
+      "filename": "776.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 777,
+      "filename": "777.py",
+      "em": 0.0,
+      "bleu": 0.7721947901921794,
+      "wbleu": 0.781922082312999,
+      "syntax": 0.6774193548387096,
+      "dataflow": 0.7,
+      "codebleu": 0.6887096774193548
+    },
+    {
+      "task_id": 778,
+      "filename": "778.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 780,
+      "filename": "780.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 783,
+      "filename": "783.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 784,
+      "filename": "784.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 785,
+      "filename": "785.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 786,
+      "filename": "786.py",
+      "em": 0.0,
+      "bleu": 0.4172261448611506,
+      "wbleu": 0.6147881529512643,
+      "syntax": 0.6,
+      "dataflow": 1.0,
+      "codebleu": 0.8
+    },
+    {
+      "task_id": 788,
+      "filename": "788.py",
+      "em": 0.0,
+      "bleu": 0.1825741858350554,
+      "wbleu": 0.28574404296988,
+      "syntax": 0.5555555555555556,
+      "dataflow": 1.0,
+      "codebleu": 0.7777777777777778
+    },
+    {
+      "task_id": 79,
+      "filename": "79.py",
+      "em": 0.0,
+      "bleu": 0.8282477531331041,
+      "wbleu": 0.836572897136744,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 791,
+      "filename": "791.py",
+      "em": 0.0,
+      "bleu": 0.02103944595668803,
+      "wbleu": 0.029552847115457196,
+      "syntax": 0.08333333333333333,
+      "dataflow": 0.35714285714285715,
+      "codebleu": 0.22023809523809523
+    },
+    {
+      "task_id": 792,
+      "filename": "792.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 793,
+      "filename": "793.py",
+      "em": 0.0,
+      "bleu": 0.9126728079323112,
+      "wbleu": 0.9172199171732212,
+      "syntax": 0.8297872340425532,
+      "dataflow": 0.2222222222222222,
+      "codebleu": 0.5260047281323876
+    },
+    {
+      "task_id": 796,
+      "filename": "796.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 798,
+      "filename": "798.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 801,
+      "filename": "801.py",
+      "em": 0.0,
+      "bleu": 0.5766735394403276,
+      "wbleu": 0.5960994273268099,
+      "syntax": 0.6666666666666666,
+      "dataflow": 1.0,
+      "codebleu": 0.8333333333333333
+    },
+    {
+      "task_id": 803,
+      "filename": "803.py",
+      "em": 0.0,
+      "bleu": 0.9420254600938036,
+      "wbleu": 0.9458011889076515,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 804,
+      "filename": "804.py",
+      "em": 0.0,
+      "bleu": 0.29615165360116247,
+      "wbleu": 0.31138788080750657,
+      "syntax": 0.3888888888888889,
+      "dataflow": 0.5714285714285714,
+      "codebleu": 0.4801587301587301
+    },
+    {
+      "task_id": 805,
+      "filename": "805.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 806,
+      "filename": "806.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 807,
+      "filename": "807.py",
+      "em": 1.0,
+      "bleu": 1.0,
+      "wbleu": 1.0,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 808,
+      "filename": "808.py",
+      "em": 0.0,
+      "bleu": 0.9457416090031758,
+      "wbleu": 0.9533081448266209,
+      "syntax": 0.7333333333333333,
+      "dataflow": 1.0,
+      "codebleu": 0.8666666666666667
+    },
+    {
+      "task_id": 809,
+      "filename": "809.py",
+      "em": 0.0,
+      "bleu": 0.6147881529512643,
+      "wbleu": 0.7765453555044466,
+      "syntax": 0.6666666666666666,
+      "dataflow": 0.5555555555555556,
+      "codebleu": 0.6111111111111112
+    },
+    {
+      "task_id": 82,
+      "filename": "82.py",
+      "em": 0.0,
+      "bleu": 0.04282963710525157,
+      "wbleu": 0.04576318980860576,
+      "syntax": 0.125,
+      "dataflow": 0.2727272727272727,
+      "codebleu": 0.19886363636363635
+    },
+    {
+      "task_id": 90,
+      "filename": "90.py",
+      "em": 0.0,
+      "bleu": 0.37700638045494705,
+      "wbleu": 0.403527863746399,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    },
+    {
+      "task_id": 98,
+      "filename": "98.py",
+      "em": 0.0,
+      "bleu": 0.4001601601922499,
+      "wbleu": 0.41397900200299415,
+      "syntax": 1.0,
+      "dataflow": 1.0,
+      "codebleu": 1.0
+    }
+  ]
+}

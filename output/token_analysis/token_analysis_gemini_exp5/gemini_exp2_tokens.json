@@ -1,0 +1,189 @@
+{
+  "a": [
+    "array_size",
+    "a_current_idx",
+    "a_current_num",
+    "a_unit_val",
+    "actual_moves",
+    "angular_measure",
+    "any_known_side",
+    "an_item",
+    "a_number",
+    "and_outcome"
+  ],
+  "b": [
+    "bit_length"
+  ],
+  "c": [
+    "current_index",
+    "current_unit",
+    "current_array",
+    "current_char",
+    "current_sum",
+    "current_gap",
+    "current_idx",
+    "current_value",
+    "current_item",
+    "current_num"
+  ],
+  "d": [
+    "defaultdict",
+    "drop_empty"
+  ],
+  "e": [
+    "extract_nth_element",
+    "extract_string",
+    "end",
+    "extract_quotation",
+    "extract_singly",
+    "empty_dit",
+    "even_Power_Sum"
+  ],
+  "f": [
+    "find_First_Missing",
+    "find_even_pair",
+    "Find_Min",
+    "find_adverbs",
+    "finditer",
+    "findall",
+    "Find_Max_Length",
+    "find_solution",
+    "find_Average_Of_Cube",
+    "frequency_lists"
+  ],
+  "g": [
+    "group_tuples",
+    "group"
+  ],
+  "i": [
+    "input_array",
+    "input_collection",
+    "initial_key_index",
+    "input_num",
+    "incoming_string",
+    "idx_current",
+    "input_count",
+    "input_collections",
+    "is_neighbor_vowel",
+    "initial_idx"
+  ],
+  "k": [
+    "key_item",
+    "key_to_values_map",
+    "kept_chars_list",
+    "k_num_values",
+    "k_count",
+    "k_moves",
+    "key_component",
+    "known_value",
+    "k_num_middle_values",
+    "k_middle_mask"
+  ],
+  "l": [
+    "left_insertion",
+    "list_to_float",
+    "largest_subset",
+    "loss_amount",
+    "list_tuple",
+    "list_split"
+  ],
+  "m": [
+    "math",
+    "mid_idx",
+    "matching_units_count",
+    "main_array",
+    "main_array_count",
+    "main_string",
+    "many_counts",
+    "my_marks_list",
+    "many_units",
+    "magnitude_radial"
+  ],
+  "n": [
+    "new_unit",
+    "nested_lists",
+    "new_squares",
+    "num_y",
+    "num_even_combinations",
+    "num_odd_combinations",
+    "new_string",
+    "next_input_collection",
+    "numerator_value",
+    "numeric_item"
+  ],
+  "o": [
+    "original_canvas_string",
+    "output_collection",
+    "output_collections",
+    "output_averages",
+    "output_tuple",
+    "original_array",
+    "outcome_minimal_unit",
+    "output_chars",
+    "overall_maximum_units_count",
+    "occurrence_counts"
+  ],
+  "p": [
+    "previous_number",
+    "power",
+    "pi",
+    "perimeter_pentagon",
+    "polar_rect",
+    "pair_wise"
+  ],
+  "r": [
+    "rotated_array",
+    "rotate_right",
+    "round_and_sum",
+    "remove_lowercase",
+    "remove_nested",
+    "remove_Occ",
+    "rfind",
+    "remove_dirty_chars",
+    "reverse_string_list",
+    "replace_char"
+  ],
+  "s": [
+    "sorted_numbers_collection",
+    "sub_array_count",
+    "s1",
+    "s2",
+    "sub_string",
+    "string_count_chars",
+    "sale_amount",
+    "sub_array",
+    "seek_num",
+    "suffix_units"
+  ],
+  "t": [
+    "text_match_wordz",
+    "text_lowercase_underscore",
+    "test_three_equal",
+    "toggle_middle_bits",
+    "trim_tuple",
+    "two_unique_nums"
+  ],
+  "u": [
+    "u_array_storage",
+    "u_input_n",
+    "unit",
+    "unit_item",
+    "up_idx",
+    "united_output_list",
+    "u_current_val",
+    "updated_string_units",
+    "u_val_prev_one",
+    "uni_items_count"
+  ],
+  "v": [
+    "vowels_chars_union",
+    "value_unit",
+    "value_item",
+    "values_list",
+    "val_one_square",
+    "val_any_square"
+  ],
+  "y": [
+    "y_coefficient_amount"
+  ]
+}

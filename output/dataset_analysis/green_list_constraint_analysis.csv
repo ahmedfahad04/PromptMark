@@ -1,0 +1,11 @@
+Method,Instruction,Prior Bias,"Red Letters
+Used (forbidden)","Green Letters
+Used",Compliance
+REVERSE,"Full green list
+(16 chars)",4/10,3,7,7/10
+NATURAL,"Partial mixed
+(12 chars)",7/10,6,4,9/10
+BEST,"Partial mixed
+(12 chars)",4/10,6,4,5/10
+HUMAN (Baseline),"No constraint
+(natural)",10/10 (baseline),10/10 (expected),0/10 (baseline),N/A

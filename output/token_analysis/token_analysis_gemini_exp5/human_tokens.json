@@ -1,0 +1,194 @@
+{
+  "a": [
+    "arr",
+    "array",
+    "actual_cost",
+    "amount",
+    "array_nums1",
+    "array_nums2",
+    "area",
+    "and_tuples",
+    "add",
+    "average_tuple"
+  ],
+  "b": [
+    "base1",
+    "base2",
+    "bisect_left",
+    "bisect"
+  ],
+  "c": [
+    "ch",
+    "cn",
+    "current_prod",
+    "cmath",
+    "check_element",
+    "cn1",
+    "current_element",
+    "count_bidirectional",
+    "count_Substrings",
+    "capital_words_spaces"
+  ],
+  "d": [
+    "dict1",
+    "dp",
+    "dic_data",
+    "dig",
+    "dict2",
+    "dict3",
+    "directrix",
+    "defaultdict",
+    "drop_empty"
+  ],
+  "e": [
+    "ele",
+    "end",
+    "el",
+    "elem",
+    "element",
+    "empty_dit",
+    "elt",
+    "ele1",
+    "ele2",
+    "extract_nth_element"
+  ],
+  "f": [
+    "find_First_Missing",
+    "find_lucas",
+    "finditer",
+    "first_even",
+    "first_odd",
+    "find_even_pair",
+    "Find_Min",
+    "find_adverbs",
+    "findall",
+    "Find_Max_Length"
+  ],
+  "g": [
+    "gaps",
+    "get_char_count_array",
+    "group_tuples",
+    "groups",
+    "group"
+  ],
+  "h": [
+    "height"
+  ],
+  "i": [
+    "idx",
+    "ip_ind",
+    "iidx",
+    "Input",
+    "item",
+    "inner",
+    "insert_element",
+    "is_perfect_square",
+    "isalpha",
+    "isdigit"
+  ],
+  "k": [
+    "key"
+  ],
+  "l": [
+    "list1",
+    "left",
+    "lst",
+    "l1",
+    "lst1",
+    "lenght",
+    "lst2",
+    "list_data",
+    "lst_to_string",
+    "List"
+  ],
+  "m": [
+    "mid",
+    "monthnum2",
+    "match",
+    "mp",
+    "mxm",
+    "mpis",
+    "math",
+    "maxLength",
+    "merged_dict",
+    "median"
+  ],
+  "n": [
+    "nums",
+    "num",
+    "newList",
+    "numbers",
+    "next_element",
+    "nestedlist",
+    "NO_OF_CHARS",
+    "newch",
+    "nums1",
+    "nums2"
+  ],
+  "o": [
+    "out",
+    "occurance_substring",
+    "otherside_rightangle",
+    "odd_num_sum"
+  ],
+  "p": [
+    "patterns",
+    "pattern",
+    "power",
+    "pi",
+    "perimeter",
+    "pair",
+    "perimeter_pentagon",
+    "polar_rect",
+    "polar",
+    "parabola_directrix"
+  ],
+  "r": [
+    "res",
+    "result",
+    "right",
+    "res_ind",
+    "round_and_sum",
+    "ranges",
+    "res_list",
+    "rotations",
+    "rotate_right",
+    "remove_lowercase"
+  ],
+  "s": [
+    "str1",
+    "start",
+    "sub_set",
+    "string",
+    "str_list",
+    "sequence",
+    "sm",
+    "str2",
+    "swapped",
+    "sub"
+  ],
+  "t": [
+    "temp",
+    "test_list",
+    "test_str",
+    "text",
+    "test_tup1",
+    "test_tup2",
+    "tup",
+    "text1",
+    "total",
+    "test_tup"
+  ],
+  "u": [
+    "union_elements",
+    "unique_product"
+  ],
+  "v": [
+    "vow_list",
+    "value"
+  ],
+  "w": [
+    "words",
+    "word"
+  ]
+}

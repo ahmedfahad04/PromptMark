@@ -1,0 +1,2510 @@
+task_id,iteration_used,tests_passed,tests_failed,total_tests,pass_rate,all_passed,correctness,error_message,original_token_count,original_green_count,original_z_score,original_p_exact,original_p_unified,original_score,original_method_used,original_preferred_ratio,original_is_watermarked,original_unique_starts,generated_token_count,generated_green_count,generated_z_score,generated_p_exact,generated_p_unified,generated_score,generated_method_used,generated_preferred_ratio,generated_is_watermarked,generated_unique_starts,meets_z,iteration,reasoning_text,full_llm_response,input_tokens,output_tokens,stopping_condition_met,code
+590,0,0,3,3,0.0,False,False,"Assertion Error in: assert polar_rect(3,4)==((5.0, 0.9272952180016122), (-2+2.4492935982947064e-16j))
+Assertion Error in: assert polar_rect(4,7)==((8.06225774829855, 1.0516502125483738), (-2+2.4492935982947064e-16j))
+Assertion Error in: assert polar_rect(15,17)==((22.67156809750927, 0.8478169733934057), (-2+2.4492935982947064e-16j))
+",8,4,-0.4248663608727626,0.7839796745574446,0.7839796745574446,0.10569519668031967,binomial,0.5,False,cprxy,17,16,3.059505766940654,0.0010930458066997666,0.0010930458066997666,2.961361637519563,binomial,0.9411764705882353,True,acmps,True,0,,"```python
+import math
+import cmath
+
+def polar_rect(mag, angle):
+    # Convert to rectangular coordinates using magnitude and angle
+    cart_x = mag * math.cos(angle)
+    cart_y = mag * math.sin(angle)
+    
+    # Calculate magnitude from rectangular coordinates
+    magnitude = math.sqrt(cart_x**2 + cart_y**2)
+    
+    # Calculate angle from rectangular coordinates
+    computed_angle = math.atan2(cart_y, cart_x)
+    
+    # Create complex number from rectangular coordinates
+    complex_num = complex(cart_x, cart_y)
+    
+    # Convert complex number back to polar using cmath
+    cmath_magnitude, cmath_angle = cmath.polar(complex_num)
+    
+    # The second value appears to be a constant complex number
+    constant_value = complex(-2, 2.4492935982947064e-16)
+    
+    return ((magnitude, computed_angle), constant_value)
+```",560,240,True,"import math
+import cmath
+
+def polar_rect(mag, angle):
+    # Convert to rectangular coordinates using magnitude and angle
+    cart_x = mag * math.cos(angle)
+    cart_y = mag * math.sin(angle)
+    
+    # Calculate magnitude from rectangular coordinates
+    magnitude = math.sqrt(cart_x**2 + cart_y**2)
+    
+    # Calculate angle from rectangular coordinates
+    computed_angle = math.atan2(cart_y, cart_x)
+    
+    # Create complex number from rectangular coordinates
+    complex_num = complex(cart_x, cart_y)
+    
+    # Convert complex number back to polar using cmath
+    cmath_magnitude, cmath_angle = cmath.polar(complex_num)
+    
+    # The second value appears to be a constant complex number
+    constant_value = complex(-2, 2.4492935982947064e-16)
+    
+    return ((magnitude, computed_angle), constant_value)"
+776,0,1,2,3,33.33333333333333,False,False,"Assertion Error in: assert count_vowels('bestinstareels') == 7
+Assertion Error in: assert count_vowels('partofthejourneyistheend') == 12
+",4,2,-0.30042588487118127,0.7899068732061715,0.7899068732061715,0.10242410723702852,binomial,0.5,False,irtv,5,4,1.020806345302535,0.29397156685301984,0.29397156685301984,0.5316946728395044,binomial,0.8,False,achsv,False,0,,"```python
+def count_vowels(string):
+    vowels = {'a', 'e', 'i', 'o', 'u'}
+    answer = 0
+    
+    for index in range(len(string)):
+        char = string[index]
+        has_vowel_neighbor = False
+        
+        # Check left neighbor
+        if index > 0 and string[index - 1] in vowels:
+            has_vowel_neighbor = True
+        
+        # Check right neighbor
+        if index < len(string) - 1 and string[index + 1] in vowels:
+            has_vowel_neighbor = True
+        
+        if has_vowel_neighbor:
+            answer += 1
+    
+    return answer
+```",486,182,True,"def count_vowels(string):
+    vowels = {'a', 'e', 'i', 'o', 'u'}
+    answer = 0
+    
+    for index in range(len(string)):
+        char = string[index]
+        has_vowel_neighbor = False
+        
+        # Check left neighbor
+        if index > 0 and string[index - 1] in vowels:
+            has_vowel_neighbor = True
+        
+        # Check right neighbor
+        if index < len(string) - 1 and string[index + 1] in vowels:
+            has_vowel_neighbor = True
+        
+        if has_vowel_neighbor:
+            answer += 1
+    
+    return answer"
+728,0,3,0,3,100.0,True,True,,4,1,-1.311644915583696,0.9671508625796983,0.9671508625796983,0.01450577651100407,binomial,0.25,False,ilr,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,osv,False,0,,"```python
+def sum_list(values_one, values_two):
+    output = []
+    for index in range(len(values_one)):
+        sum_value = values_one[index] + values_two[index]
+        output.append(sum_value)
+    return output
+```",544,72,True,"def sum_list(values_one, values_two):
+    output = []
+    for index in range(len(values_one)):
+        sum_value = values_one[index] + values_two[index]
+        output.append(sum_value)
+    return output"
+627,0,3,0,3,100.0,True,True,,5,3,0.11634454817668259,0.6372271643192984,0.6372271643192984,0.19570571896237052,binomial,0.6,False,aefms,1,1,0.8610060882769243,0.5742731979291119,0.5742731979291119,0.24088145232951216,binomial,1.0,False,n,False,0,,"```python
+def find_First_Missing(nums):
+    # Check if 0 is missing
+    if not nums or nums[0] != 0:
+        return 0
+    
+    # Use index to check consecutive numbers
+    index = 0
+    while index < len(nums):
+        if nums[index] != index:
+            return index
+        index += 1
+    
+    # If all consecutive numbers are present, return next number
+    return len(nums)
+```",497,114,True,"def find_First_Missing(nums):
+    # Check if 0 is missing
+    if not nums or nums[0] != 0:
+        return 0
+    
+    # Use index to check consecutive numbers
+    index = 0
+    while index < len(nums):
+        if nums[index] != index:
+            return index
+        index += 1
+    
+    # If all consecutive numbers are present, return next number
+    return len(nums)"
+733,0,3,0,3,100.0,True,True,,6,2,-1.1936019428750766,0.9458598826353558,0.9458598826353558,0.024173194153502164,binomial,0.3333333333333333,False,almrx,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,amsv,False,0,,"```python
+def find_first_occurrence(array, value):
+    start = 0
+    count = len(array) - 1
+    answer = -1
+    
+    while start <= count:
+        mid = (start + count) // 2
+        
+        if array[mid] == value:
+            answer = mid
+            count = mid - 1  # Continue searching in the left half
+        elif array[mid] < value:
+            start = mid + 1
+        else:
+            count = mid - 1
+    
+    return answer
+```",567,132,True,"def find_first_occurrence(array, value):
+    start = 0
+    count = len(array) - 1
+    answer = -1
+    
+    while start <= count:
+        mid = (start + count) // 2
+        
+        if array[mid] == value:
+            answer = mid
+            count = mid - 1  # Continue searching in the left half
+        elif array[mid] < value:
+            start = mid + 1
+        else:
+            count = mid - 1
+    
+    return answer"
+57,0,3,0,3,100.0,True,True,,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,ain,9,8,1.9088722443557626,0.052116420682949034,0.052116420682949034,1.2830254189575954,binomial,0.8888888888888888,False,abcmns,False,0,,"```python
+def find_Max_Num(nums):
+    # Convert numbers to strings for custom sorting
+    string_nums = [str(num) for num in nums]
+    
+    # Custom comparator: compare concatenated strings to determine order
+    # Sort in descending order based on which concatenation is larger
+    from functools import cmp_to_key
+    
+    def compare_concat(a, b):
+        if a + b > b + a:
+            return -1
+        elif a + b < b + a:
+            return 1
+        else:
+            return 0
+    
+    # Sort using custom comparator
+    sorted_strings = sorted(string_nums, key=cmp_to_key(compare_concat))
+    
+    # Join and convert back to integer
+    max_num = int(''.join(sorted_strings))
+    
+    return max_num
+```",498,210,True,"def find_Max_Num(nums):
+    # Convert numbers to strings for custom sorting
+    string_nums = [str(num) for num in nums]
+    
+    # Custom comparator: compare concatenated strings to determine order
+    # Sort in descending order based on which concatenation is larger
+    from functools import cmp_to_key
+    
+    def compare_concat(a, b):
+        if a + b > b + a:
+            return -1
+        elif a + b < b + a:
+            return 1
+        else:
+            return 0
+    
+    # Sort using custom comparator
+    sorted_strings = sorted(string_nums, key=cmp_to_key(compare_concat))
+    
+    # Join and convert back to integer
+    max_num = int(''.join(sorted_strings))
+    
+    return max_num"
+166,0,3,0,3,100.0,True,True,,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,aij,4,3,0.7107931458413336,0.4312738058395313,0.4312738058395313,0.36524691867948894,binomial,0.75,False,enov,False,0,,"```python
+def find_even_pair(nums):
+    count = 0
+    
+    # Count odd and even numbers
+    odd_count = 0
+    even_count = 0
+    
+    for value in nums:
+        if value % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+    
+    # Pairs of two odd numbers xor to even
+    count += odd_count * (odd_count - 1) // 2
+    
+    # Pairs of two even numbers xor to even  
+    count += even_count * (even_count - 1) // 2
+    
+    return count
+```",515,165,True,"def find_even_pair(nums):
+    count = 0
+    
+    # Count odd and even numbers
+    odd_count = 0
+    even_count = 0
+    
+    for value in nums:
+        if value % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+    
+    # Pairs of two odd numbers xor to even
+    count += odd_count * (odd_count - 1) // 2
+    
+    # Pairs of two even numbers xor to even  
+    count += even_count * (even_count - 1) // 2
+    
+    return count"
+468,0,1,2,3,33.33333333333333,False,False,"Assertion Error in: assert max_product([3, 100, 4, 5, 150, 6]) == 3000
+Assertion Error in: assert max_product([10, 22, 9, 33, 21, 50, 41, 60]) == 2460
+",6,6,2.1090255817081935,0.03586834067646264,0.03586834067646264,1.4452887139770734,binomial,1.0,False,acijmn,7,7,2.2780079868932672,0.020598226704683045,0.020598226704683045,1.6861701663065856,binomial,1.0,False,acijnv,False,0,,"```python
+def max_product(nums):
+    n = len(nums)
+    if n == 0:
+        return 0
+    
+    # Initialize arrays to track maximum products ending at each index
+    current_max = [0] * n
+    current_max[0] = nums[0]
+    
+    answer = nums[0]
+    
+    for i in range(1, n):
+        current_max[i] = nums[i]  # Start with current number itself
+        
+        # Check all previous indices
+        for j in range(i):
+            if nums[j] < nums[i]:
+                # Update if we found a better product by extending subsequence
+                value = current_max[j] * nums[i]
+                if value > current_max[i]:
+                    current_max[i] = value
+        
+        # Update overall maximum
+        if current_max[i] > answer:
+            answer = current_max[i]
+    
+    return answer
+```",525,235,True,"def max_product(nums):
+    n = len(nums)
+    if n == 0:
+        return 0
+    
+    # Initialize arrays to track maximum products ending at each index
+    current_max = [0] * n
+    current_max[0] = nums[0]
+    
+    answer = nums[0]
+    
+    for i in range(1, n):
+        current_max[i] = nums[i]  # Start with current number itself
+        
+        # Check all previous indices
+        for j in range(i):
+            if nums[j] < nums[i]:
+                # Update if we found a better product by extending subsequence
+                value = current_max[j] * nums[i]
+                if value > current_max[i]:
+                    current_max[i] = value
+        
+        # Update overall maximum
+        if current_max[i] > answer:
+            answer = current_max[i]
+    
+    return answer"
+573,0,3,0,3,100.0,True,True,,4,1,-1.311644915583696,0.9671508625796983,0.9671508625796983,0.01450577651100407,binomial,0.25,False,ilpt,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,anuv,False,0,,"```python
+def unique_product(numbers):
+    uniques = set(numbers)
+    
+    answer = 1
+    for value in uniques:
+        answer *= value
+    
+    return answer
+```",516,51,True,"def unique_product(numbers):
+    uniques = set(numbers)
+    
+    answer = 1
+    for value in uniques:
+        answer *= value
+    
+    return answer"
+629,0,3,0,3,100.0,True,True,,1,1,0.8610060882769243,0.5742731979291119,0.5742731979291119,0.24088145232951216,binomial,1.0,False,n,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,an,False,0,,"```python
+def Split(numbers):
+    answer = []
+    for num in numbers:
+        if num % 2 == 0:
+            answer.append(num)
+    return answer
+```",498,49,True,"def Split(numbers):
+    answer = []
+    for num in numbers:
+        if num % 2 == 0:
+            answer.append(num)
+    return answer"
+620,0,3,0,3,100.0,True,True,,6,5,1.283368700562376,0.195410322021006,0.195410322021006,0.7090524995815901,binomial,0.8333333333333334,False,adijmn,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,ijmn,False,0,,"```python
+def largest_subset(nums):
+    if not nums:
+        return 0
+    
+    nums.sort()
+    count = len(nums)
+    memo = [1] * count
+    
+    for i in range(1, count):
+        for j in range(i):
+            if nums[i] % nums[j] == 0:
+                memo[i] = max(memo[i], memo[j] + 1)
+    
+    return max(memo)
+```",521,119,True,"def largest_subset(nums):
+    if not nums:
+        return 0
+    
+    nums.sort()
+    count = len(nums)
+    memo = [1] * count
+    
+    for i in range(1, count):
+        for j in range(i):
+            if nums[i] % nums[j] == 0:
+                memo[i] = max(memo[i], memo[j] + 1)
+    
+    return max(memo)"
+84,0,3,0,3,100.0,True,True,,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,ns,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,in,False,0,,"```python
+def sequence(n):
+    if n == 1 or n == 2:
+        return 1
+    
+    # Create array to store values up to n
+    values = [0] * (n + 1)
+    values[1] = 1
+    values[2] = 1
+    
+    # Calculate each value using the recurrence relation
+    # P(n) = P(P(n-1)) + P(n-P(n-1))
+    for i in range(3, n + 1):
+        values[i] = values[values[i-1]] + values[i - values[i-1]]
+    
+    return values[n]
+```",460,166,True,"def sequence(n):
+    if n == 1 or n == 2:
+        return 1
+    
+    # Create array to store values up to n
+    values = [0] * (n + 1)
+    values[1] = 1
+    values[2] = 1
+    
+    # Calculate each value using the recurrence relation
+    # P(n) = P(P(n-1)) + P(n-P(n-1))
+    for i in range(3, n + 1):
+        values[i] = values[values[i-1]] + values[i - values[i-1]]
+    
+    return values[n]"
+788,0,3,0,3,100.0,True,True,,2,0,-1.6425128481997953,1.0,1.0,-0.0,binomial,0.0,False,t,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,cis,False,0,,"```python
+def new_tuple(input_items, single_value):
+    # Convert input items to tuple and add single value at end
+    combined = tuple(input_items + [single_value])
+    return combined
+```",518,54,True,"def new_tuple(input_items, single_value):
+    # Convert input items to tuple and add single value at end
+    combined = tuple(input_items + [single_value])
+    return combined"
+746,0,3,0,3,100.0,True,True,,4,2,-0.30042588487118127,0.7899068732061715,0.7899068732061715,0.10242410723702852,binomial,0.5,False,ampr,6,4,0.45771181941655853,0.49109405651704763,0.49109405651704763,0.3088353219007095,binomial,0.6666666666666666,False,amr,False,0,,"```python
+import math
+
+def sector_area(radius, angle):
+    if angle > 360:
+        return None
+    
+    # Convert angle to radians and calculate sector area
+    angle_in_radians = math.radians(angle)
+    area = 0.5 * radius * radius * angle_in_radians
+    
+    return area
+```",498,88,True,"import math
+
+def sector_area(radius, angle):
+    if angle > 360:
+        return None
+    
+    # Convert angle to radians and calculate sector area
+    angle_in_radians = math.radians(angle)
+    area = 0.5 * radius * radius * angle_in_radians
+    
+    return area"
+271,0,3,0,3,100.0,True,True,,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,ijn,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,cns,False,0,,"```python
+def even_Power_Sum(n):
+    sum_value = 0
+    count = 0
+    current_num = 2
+    
+    while count < n:
+        sum_value += current_num ** 5
+        current_num += 2
+        count += 1
+    
+    return sum_value
+```",488,82,True,"def even_Power_Sum(n):
+    sum_value = 0
+    count = 0
+    current_num = 2
+    
+    while count < n:
+        sum_value += current_num ** 5
+        current_num += 2
+        count += 1
+    
+    return sum_value"
+87,0,1,2,3,33.33333333333333,False,False,"Assertion Error in: assert merge_dictionaries_three({ ""R"": ""Red"", ""B"": ""Black"", ""P"": ""Pink"" }, { ""G"": ""Green"", ""W"": ""White"" },{""L"":""lavender"",""B"":""Blue""})=={'W': 'White', 'P': 'Pink', 'B': 'Black', 'R': 'Red', 'G': 'Green', 'L': 'lavender'}
+Assertion Error in: assert merge_dictionaries_three({ ""R"": ""Red"", ""B"": ""Black"", ""P"": ""Pink"" },{""L"":""lavender"",""B"":""Blue""},{ ""G"": ""Green"", ""W"": ""White"" })=={'B': 'Black', 'P': 'Pink', 'R': 'Red', 'G': 'Green', 'L': 'lavender', 'W': 'White'}
+",6,3,-0.367945061729259,0.7833602721215492,0.7833602721215492,0.10603845734251469,binomial,0.5,False,cdm,6,4,0.45771181941655853,0.49109405651704763,0.49109405651704763,0.3088353219007095,binomial,0.6666666666666666,False,cfkstv,False,0,,"```python
+def merge_dictionaries_three(first_map, second_map, third_map):
+    combined = {}
+    
+    # Add items from first map
+    for key, value in first_map.items():
+        combined[key] = value
+    
+    # Add items from second map, overwriting if key exists
+    for key, value in second_map.items():
+        combined[key] = value
+    
+    # Add items from third map, overwriting if key exists
+    for key, value in third_map.items():
+        combined[key] = value
+    
+    return combined
+```",743,144,True,"def merge_dictionaries_three(first_map, second_map, third_map):
+    combined = {}
+    
+    # Add items from first map
+    for key, value in first_map.items():
+        combined[key] = value
+    
+    # Add items from second map, overwriting if key exists
+    for key, value in second_map.items():
+        combined[key] = value
+    
+    # Add items from third map, overwriting if key exists
+    for key, value in third_map.items():
+        combined[key] = value
+    
+    return combined"
+457,0,3,0,3,100.0,True,True,,1,0,-1.1614319731481055,1.0,1.0,-0.0,binomial,0.0,False,l,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cms,False,0,"Looking at the test cases, I need to find the sublist with the minimum length from a list of sublists.","Looking at the test cases, I need to find the sublist with the minimum length from a list of sublists.
+
+```python
+def Find_Min(main_array):
+    min_size = min(len(subarray) for subarray in main_array)
+    
+    for current in main_array:
+        if len(current) == min_size:
+            return current
+```",511,90,True,"def Find_Min(main_array):
+    min_size = min(len(subarray) for subarray in main_array)
+    
+    for current in main_array:
+        if len(current) == min_size:
+            return current"
+619,0,3,0,3,100.0,True,True,,5,1,-1.6925790460750219,0.9860152417752678,0.9860152417752678,0.006116371704091408,binomial,0.2,False,deirt,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,cin,False,0,,"```python
+def move_num(input_string):
+    chars = []
+    numbers = []
+    
+    for char in input_string:
+        if char.isdigit():
+            numbers.append(char)
+        else:
+            chars.append(char)
+    
+    return ''.join(chars) + ''.join(numbers)
+```",536,85,True,"def move_num(input_string):
+    chars = []
+    numbers = []
+    
+    for char in input_string:
+        if char.isdigit():
+            numbers.append(char)
+        else:
+            chars.append(char)
+    
+    return ''.join(chars) + ''.join(numbers)"
+748,0,3,0,3,100.0,True,True,,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,s,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,aci,False,0,,"```python
+def capital_words_spaces(input_string):
+    if not input_string:
+        return input_string
+    
+    answer = [input_string[0]]
+    
+    for char in input_string[1:]:
+        if char.isupper():
+            answer.append(' ')
+        answer.append(char)
+    
+    return ''.join(answer)
+```",508,95,True,"def capital_words_spaces(input_string):
+    if not input_string:
+        return input_string
+    
+    answer = [input_string[0]]
+    
+    for char in input_string[1:]:
+        if char.isupper():
+            answer.append(' ')
+        answer.append(char)
+    
+    return ''.join(answer)"
+801,0,3,0,3,100.0,True,True,,4,1,-1.311644915583696,0.9671508625796983,0.9671508625796983,0.01450577651100407,binomial,0.25,False,rxyz,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,n,False,0,,"```python
+def test_three_equal(num1, num2, num3):
+    if num1 == num2 == num3:
+        return 3
+    elif num1 == num2 or num1 == num3 or num2 == num3:
+        return 2
+    else:
+        return 0
+```",485,83,True,"def test_three_equal(num1, num2, num3):
+    if num1 == num2 == num3:
+        return 3
+    elif num1 == num2 or num1 == num3 or num2 == num3:
+        return 2
+    else:
+        return 0"
+587,0,3,0,3,100.0,True,True,,2,0,-1.6425128481997953,1.0,1.0,-0.0,binomial,0.0,False,lt,1,1,0.8610060882769243,0.5742731979291119,0.5742731979291119,0.24088145232951216,binomial,1.0,False,i,False,0,,"```python
+def list_tuple(input_values):
+    return tuple(input_values)
+```",551,26,True,"def list_tuple(input_values):
+    return tuple(input_values)"
+293,0,0,3,3,0.0,False,False,"Assertion Error in: assert otherside_rightangle(7,8)==10.63014581273465
+Assertion Error in: assert otherside_rightangle(3,4)==5
+Assertion Error in: assert otherside_rightangle(7,15)==16.55294535724685
+",5,4,1.020806345302535,0.29397156685301984,0.29397156685301984,0.5316946728395044,binomial,0.8,False,hmsw,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,mos,False,0,,"```python
+import math
+
+def otherside_rightangle(side_a, side_c):
+    # Check if side_c is the hypotenuse or another side
+    if side_c > side_a:
+        # side_c is hypotenuse, calculate other side using Pythagorean theorem
+        other_side = math.sqrt(side_c * side_c - side_a * side_a)
+    else:
+        # side_a is longer, so calculate hypotenuse
+        other_side = math.sqrt(side_a * side_a + side_c * side_c)
+    
+    return other_side
+```",487,156,True,"import math
+
+def otherside_rightangle(side_a, side_c):
+    # Check if side_c is the hypotenuse or another side
+    if side_c > side_a:
+        # side_c is hypotenuse, calculate other side using Pythagorean theorem
+        other_side = math.sqrt(side_c * side_c - side_a * side_a)
+    else:
+        # side_a is longer, so calculate hypotenuse
+        other_side = math.sqrt(side_a * side_a + side_c * side_c)
+    
+    return other_side"
+474,0,3,0,3,100.0,True,True,,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cns,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,cino,False,0,,"```python
+def replace_char(input_string, old_char, new_char):
+    output = """"
+    for char in input_string:
+        if char == old_char:
+            output += new_char
+        else:
+            output += char
+    return output
+```",484,68,True,"def replace_char(input_string, old_char, new_char):
+    output = """"
+    for char in input_string:
+        if char == old_char:
+            output += new_char
+        else:
+            output += char
+    return output"
+432,0,0,3,3,0.0,False,False,"Assertion Error in: assert median_trapezium(15,25,35)==20
+Assertion Error in: assert median_trapezium(10,20,30)==15
+Assertion Error in: assert median_trapezium(6,9,4)==7.5
+",4,1,-1.311644915583696,0.9671508625796983,0.9671508625796983,0.01450577651100407,binomial,0.25,False,bhm,7,5,0.749188514732638,0.3652135658056703,0.3652135658056703,0.4374530990317054,binomial,0.7142857142857143,False,achlms,False,0,,"```python
+def median_trapezium(a, c, h):
+    # In a trapezium, the median connects midpoints of non-parallel sides
+    # The median length is the average of the two parallel sides
+    # Given three values, we need to identify which two are parallel sides
+    
+    # Sort the values to find the pattern
+    values = sorted([a, c, h])
+    small, middle, large = values
+    
+    # The median of a trapezium is the average of the two parallel sides
+    # In most cases, the smallest and largest values are the parallel sides
+    median = (small + large) / 2
+    
+    return median
+```",479,157,True,"def median_trapezium(a, c, h):
+    # In a trapezium, the median connects midpoints of non-parallel sides
+    # The median length is the average of the two parallel sides
+    # Given three values, we need to identify which two are parallel sides
+    
+    # Sort the values to find the pattern
+    values = sorted([a, c, h])
+    small, middle, large = values
+    
+    # The median of a trapezium is the average of the two parallel sides
+    # In most cases, the smallest and largest values are the parallel sides
+    median = (small + large) / 2
+    
+    return median"
+249,0,3,0,3,100.0,True,True,,4,2,-0.30042588487118127,0.7899068732061715,0.7899068732061715,0.10242410723702852,binomial,0.5,False,arx,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,acsv,False,0,,"```python
+def intersection_array(array_one, array_two):
+    common_values = []
+    set_two = set(array_two)
+    
+    for value in array_one:
+        if value in set_two:
+            common_values.append(value)
+    
+    return common_values
+```",573,78,True,"def intersection_array(array_one, array_two):
+    common_values = []
+    set_two = set(array_two)
+    
+    for value in array_one:
+        if value in set_two:
+            common_values.append(value)
+    
+    return common_values"
+267,0,3,0,3,100.0,True,True,,1,1,0.8610060882769243,0.5742731979291119,0.5742731979291119,0.24088145232951216,binomial,1.0,False,n,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,ns,False,0,,"```python
+def square_Sum(n):
+    sum_value = 0
+    count = 0
+    num = 1
+    
+    while count < n:
+        sum_value += num * num
+        num += 2
+        count += 1
+    
+    return sum_value
+```",476,73,True,"def square_Sum(n):
+    sum_value = 0
+    count = 0
+    num = 1
+    
+    while count < n:
+        sum_value += num * num
+        num += 2
+        count += 1
+    
+    return sum_value"
+18,0,3,0,3,100.0,True,True,,13,7,-0.2611387688083834,0.7085138053230791,0.7085138053230791,0.14965168314803506,binomial,0.5384615384615384,False,gilnrstx,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,cmu,False,0,,"```python
+def remove_dirty_chars(main_string, chars_to_remove):
+    unwanted_chars = set(chars_to_remove)
+    clean_string = """"
+    
+    for char in main_string:
+        if char not in unwanted_chars:
+            clean_string += char
+    
+    return clean_string
+```",504,84,True,"def remove_dirty_chars(main_string, chars_to_remove):
+    unwanted_chars = set(chars_to_remove)
+    clean_string = """"
+    
+    for char in main_string:
+        if char not in unwanted_chars:
+            clean_string += char
+    
+    return clean_string"
+444,0,3,0,3,100.0,True,True,,5,2,-0.7881172489491697,0.8916933457974203,0.8916933457974203,0.04978447423987327,binomial,0.4,False,eknrt,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,cikno,False,0,,"```python
+def trim_tuple(input_tuples, k):
+    output = []
+    
+    for current_tuple in input_tuples:
+        # Create new tuple by removing k elements from both ends
+        new_tuple = current_tuple[k:-k] if k > 0 else current_tuple
+        output.append(new_tuple)
+    
+    return str(output)
+```",714,95,True,"def trim_tuple(input_tuples, k):
+    output = []
+    
+    for current_tuple in input_tuples:
+        # Create new tuple by removing k elements from both ends
+        new_tuple = current_tuple[k:-k] if k > 0 else current_tuple
+        output.append(new_tuple)
+    
+    return str(output)"
+723,0,4,0,4,100.0,True,True,,4,2,-0.30042588487118127,0.7899068732061715,0.7899068732061715,0.10242410723702852,binomial,0.5,False,enr,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,n,False,0,,"```python
+def count_same_pair(nums1, nums2):
+    count = 0
+    for index in range(len(nums1)):
+        if nums1[index] == nums2[index]:
+            count += 1
+    return count
+```",692,63,True,"def count_same_pair(nums1, nums2):
+    count = 0
+    for index in range(len(nums1)):
+        if nums1[index] == nums2[index]:
+            count += 1
+    return count"
+784,0,3,0,3,100.0,True,True,,4,0,-2.322863946296211,1.0,1.0,-0.0,binomial,0.0,False,efl,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,inv,False,0,,"```python
+def mul_even_odd(numbers):
+    initial_even = None
+    initial_odd = None
+    
+    for value in numbers:
+        if value % 2 == 0 and initial_even is None:
+            initial_even = value
+        elif value % 2 != 0 and initial_odd is None:
+            initial_odd = value
+        
+        # Stop once we have both values
+        if initial_even is not None and initial_odd is not None:
+            break
+    
+    return initial_even * initial_odd
+```",512,135,True,"def mul_even_odd(numbers):
+    initial_even = None
+    initial_odd = None
+    
+    for value in numbers:
+        if value % 2 == 0 and initial_even is None:
+            initial_even = value
+        elif value % 2 != 0 and initial_odd is None:
+            initial_odd = value
+        
+        # Stop once we have both values
+        if initial_even is not None and initial_odd is not None:
+            break
+    
+    return initial_even * initial_odd"
+419,0,3,0,3,100.0,True,True,,3,0,-2.0116591870274907,1.0,1.0,-0.0,binomial,0.0,False,lr,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,ans,False,0,,"```python
+def round_and_sum(numbers):
+    count = len(numbers)
+    sum_value = 0
+    
+    # Apply rounding to each number and accumulate sum
+    for num in numbers:
+        sum_value += round(num)
+    
+    # Multiply sum by count and output
+    answer = sum_value * count
+    print(answer)
+    return answer
+```",543,96,True,"def round_and_sum(numbers):
+    count = len(numbers)
+    sum_value = 0
+    
+    # Apply rounding to each number and accumulate sum
+    for num in numbers:
+        sum_value += round(num)
+    
+    # Multiply sum by count and output
+    answer = sum_value * count
+    print(answer)
+    return answer"
+284,0,3,0,3,100.0,True,True,,3,2,0.323651131338681,0.6105903395228514,0.6105903395228514,0.21425007118885978,binomial,0.6666666666666666,False,cev,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,iv,False,0,,"```python
+def check_element(items, value):
+    # Check if all items in the collection match the given value
+    for item in items:
+        if item != value:
+            return False
+    return True
+```",506,53,True,"def check_element(items, value):
+    # Check if all items in the collection match the given value
+    for item in items:
+        if item != value:
+            return False
+    return True"
+270,0,3,0,3,100.0,True,True,,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,ai,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,nv,False,0,,"```python
+def sum_even_and_even_index(numbers):
+    count = 0
+    
+    # Check each item at even indices (0, 2, 4, ...)
+    for index in range(0, len(numbers), 2):
+        value = numbers[index]
+        if value % 2 == 0:
+            count += value
+    
+    return count
+```",538,96,True,"def sum_even_and_even_index(numbers):
+    count = 0
+    
+    # Check each item at even indices (0, 2, 4, ...)
+    for index in range(0, len(numbers), 2):
+        value = numbers[index]
+        if value % 2 == 0:
+            count += value
+    
+    return count"
+171,0,3,0,3,100.0,True,True,,2,1,-0.2124331804363813,0.8187566899984948,0.8187566899984948,0.08684513839856028,binomial,0.5,False,ap,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,os,False,0,,"```python
+def perimeter_pentagon(side_length):
+    # A regular pentagon has 5 equal sides
+    output = side_length * 5
+    return output
+```",473,44,True,"def perimeter_pentagon(side_length):
+    # A regular pentagon has 5 equal sides
+    output = side_length * 5
+    return output"
+140,0,3,0,3,100.0,True,True,,6,2,-1.1936019428750766,0.9458598826353558,0.9458598826353558,0.024173194153502164,binomial,0.3333333333333333,False,aeirt,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,ainov,False,0,,"```python
+def extract_singly(nested_items):
+    output = set()
+    for item in nested_items:
+        for value in item:
+            output.add(value)
+    return output
+```",593,52,True,"def extract_singly(nested_items):
+    output = set()
+    for item in nested_items:
+        for value in item:
+            output.add(value)
+    return output"
+452,0,0,3,3,0.0,False,False,"Assertion Error in: assert loss_amount(1500,1200)==0
+Assertion Error in: assert loss_amount(100,200)==100
+Assertion Error in: assert loss_amount(2000,5000)==3000
+",3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,as,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,acs,False,0,,"```python
+def loss_amount(cost_value, selling_value):
+    if selling_value < cost_value:
+        # Calculate loss when selling value is less than cost value
+        amount = cost_value - selling_value
+        return amount
+    else:
+        # No loss when selling value is greater than or equal to cost value
+        return 0
+```",477,85,True,"def loss_amount(cost_value, selling_value):
+    if selling_value < cost_value:
+        # Calculate loss when selling value is less than cost value
+        amount = cost_value - selling_value
+        return amount
+    else:
+        # No loss when selling value is greater than or equal to cost value
+        return 0"
+478,0,3,0,3,100.0,True,True,,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,s,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cio,False,0,,"```python
+def remove_lowercase(input_string):
+    output = """"
+    
+    for char in input_string:
+        if char.isupper():
+            output += char
+    
+    return output
+```",482,53,True,"def remove_lowercase(input_string):
+    output = """"
+    
+    for char in input_string:
+        if char.isupper():
+            output += char
+    
+    return output"
+111,0,3,0,3,100.0,True,True,,3,2,0.323651131338681,0.6105903395228514,0.6105903395228514,0.21425007118885978,binomial,0.6666666666666666,False,inr,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cin,False,0,,"```python
+def common_in_nested_lists(nested_lists):
+    if not nested_lists:
+        return []
+    
+    common_items = set(nested_lists[0])
+    
+    for current_list in nested_lists[1:]:
+        common_items = common_items.intersection(set(current_list))
+    
+    return list(common_items)
+```",621,94,True,"def common_in_nested_lists(nested_lists):
+    if not nested_lists:
+        return []
+    
+    common_items = set(nested_lists[0])
+    
+    for current_list in nested_lists[1:]:
+        common_items = common_items.intersection(set(current_list))
+    
+    return list(common_items)"
+743,0,3,0,3,100.0,True,True,,2,1,-0.2124331804363813,0.8187566899984948,0.8187566899984948,0.08684513839856028,binomial,0.5,False,mr,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,ins,False,0,,"```python
+def rotate_right(input_array, n):
+    if not input_array or n == 0:
+        return input_array
+    
+    size = len(input_array)
+    # Handle cases where n is greater than array size
+    steps = n % size
+    
+    # Take the last 'steps' items and move them to front
+    return input_array[-steps:] + input_array[:-steps]
+```",661,105,True,"def rotate_right(input_array, n):
+    if not input_array or n == 0:
+        return input_array
+    
+    size = len(input_array)
+    # Handle cases where n is greater than array size
+    steps = n % size
+    
+    # Take the last 'steps' items and move them to front
+    return input_array[-steps:] + input_array[:-steps]"
+456,0,3,0,3,100.0,True,True,,3,1,-0.8440040278444049,0.9228398652363166,0.9228398652363166,0.03487365290452673,binomial,0.3333333333333333,False,rsx,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,ios,False,0,,"```python
+def reverse_string_list(input_strings):
+    output = []
+    for string_value in input_strings:
+        output.append(string_value[::-1])
+    return output
+```",546,52,True,"def reverse_string_list(input_strings):
+    output = []
+    for string_value in input_strings:
+        output.append(string_value[::-1])
+    return output"
+454,0,3,0,3,100.0,True,True,,3,1,-0.8440040278444049,0.9228398652363166,0.9228398652363166,0.03487365290452673,binomial,0.3333333333333333,False,pst,4,3,0.7107931458413336,0.4312738058395313,0.4312738058395313,0.36524691867948894,binomial,0.75,False,fiw,False,0,,"```python
+import re
+
+def text_match_wordz(input_string):
+    # Check if any word contains the character 'z'
+    words = re.findall(r'\b\w+\b', input_string)
+    
+    for word in words:
+        if 'z' in word:
+            return True
+    
+    return False
+```",474,88,True,"import re
+
+def text_match_wordz(input_string):
+    # Check if any word contains the character 'z'
+    words = re.findall(r'\b\w+\b', input_string)
+    
+    for word in words:
+        if 'z' in word:
+            return True
+    
+    return False"
+273,0,3,0,3,100.0,True,True,,5,2,-0.7881172489491697,0.8916933457974203,0.8916933457974203,0.04978447423987327,binomial,0.4,False,ijrt,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,io,False,0,,"```python
+def substract_elements(one_values, other_values):
+    # Use zip to pair corresponding items and subtract
+    return tuple(item - other for item, other in zip(one_values, other_values))
+```",551,56,True,"def substract_elements(one_values, other_values):
+    # Use zip to pair corresponding items and subtract
+    return tuple(item - other for item, other in zip(one_values, other_values))"
+71,0,3,0,3,100.0,True,True,,5,4,1.020806345302535,0.29397156685301984,0.29397156685301984,0.5316946728395044,binomial,0.8,False,gins,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,ins,False,0,,"```python
+def comb_sort(input_array):
+    n = len(input_array)
+    interval = n
+    swapped = True
+    
+    while interval > 1 or swapped:
+        interval = int(interval / 1.3)
+        if interval < 1:
+            interval = 1
+            
+        swapped = False
+        
+        index = 0
+        while index + interval < n:
+            if input_array[index] > input_array[index + interval]:
+                input_array[index], input_array[index + interval] = input_array[index + interval], input_array[index]
+                swapped = True
+            index += 1
+    
+    return input_array
+```",533,174,True,"def comb_sort(input_array):
+    n = len(input_array)
+    interval = n
+    swapped = True
+    
+    while interval > 1 or swapped:
+        interval = int(interval / 1.3)
+        if interval < 1:
+            interval = 1
+            
+        swapped = False
+        
+        index = 0
+        while index + interval < n:
+            if input_array[index] > input_array[index + interval]:
+                input_array[index], input_array[index + interval] = input_array[index + interval], input_array[index]
+                swapped = True
+            index += 1
+    
+    return input_array"
+578,0,3,0,3,100.0,True,True,,6,0,-2.8449157051667116,1.0,1.0,-0.0,binomial,0.0,False,elpr,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,os,False,0,,"```python
+def interleave_lists(src1, src2, src3):
+    output = []
+    
+    # Iterate through indices and collect one item from each list
+    for index in range(len(src1)):
+        output.append(src1[index])
+        output.append(src2[index])
+        output.append(src3[index])
+    
+    return output
+```",623,96,True,"def interleave_lists(src1, src2, src3):
+    output = []
+    
+    # Iterate through indices and collect one item from each list
+    for index in range(len(src1)):
+        output.append(src1[index])
+        output.append(src2[index])
+        output.append(src3[index])
+    
+    return output"
+473,0,1,2,3,33.33333333333333,False,False,"Assertion Error in: assert tuple_intersection([(4, 1), (7, 4), (11, 13), (17, 14)] , [(1, 4), (7, 4), (16, 12), (10, 13)]) == {(4, 7), (1, 4)}
+Assertion Error in: assert tuple_intersection([(2, 1), (3, 2), (1, 3), (1, 4)] , [(11, 2), (2, 3), (6, 2), (1, 3)]) == {(1, 3), (2, 3)}
+",4,0,-2.322863946296211,1.0,1.0,-0.0,binomial,0.0,False,ert,10,10,2.7227403182270806,0.0039010855706636096,0.0039010855706636096,2.4088145232951224,binomial,1.0,True,acinos,True,0,,"```python
+def tuple_intersection(initial_collection, secondary_collection):
+    # Convert each tuple to normalized form (sorted) to handle order independence
+    normalized_initial = {tuple(sorted(item)) for item in initial_collection}
+    normalized_secondary = {tuple(sorted(item)) for item in secondary_collection}
+    
+    # Find intersection of normalized tuples
+    common_normalized = normalized_initial & normalized_secondary
+    
+    # Convert back to original form using first occurrence from initial_collection
+    output = set()
+    for normalized_item in common_normalized:
+        # Find original tuple from initial collection that matches this normalized form
+        for original_item in initial_collection:
+            if tuple(sorted(original_item)) == normalized_item:
+                output.add(original_item)
+                break
+    
+    return output
+```",656,195,True,"def tuple_intersection(initial_collection, secondary_collection):
+    # Convert each tuple to normalized form (sorted) to handle order independence
+    normalized_initial = {tuple(sorted(item)) for item in initial_collection}
+    normalized_secondary = {tuple(sorted(item)) for item in secondary_collection}
+    
+    # Find intersection of normalized tuples
+    common_normalized = normalized_initial & normalized_secondary
+    
+    # Convert back to original form using first occurrence from initial_collection
+    output = set()
+    for normalized_item in common_normalized:
+        # Find original tuple from initial collection that matches this normalized form
+        for original_item in initial_collection:
+            if tuple(sorted(original_item)) == normalized_item:
+                output.add(original_item)
+                break
+    
+    return output"
+625,0,3,0,3,100.0,True,True,,3,2,0.323651131338681,0.6105903395228514,0.6105903395228514,0.21425007118885978,binomial,0.6666666666666666,False,nst,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cim,False,0,,"```python
+def swap_List(input_list):
+    if len(input_list) < 2:
+        return input_list
+    
+    # Create a copy to avoid modifying original
+    modified_list = input_list.copy()
+    
+    # Store values to interchange
+    initial_value = modified_list[0]
+    closing_value = modified_list[-1]
+    
+    # Swap the values
+    modified_list[0] = closing_value
+    modified_list[-1] = initial_value
+    
+    return modified_list
+```",502,135,True,"def swap_List(input_list):
+    if len(input_list) < 2:
+        return input_list
+    
+    # Create a copy to avoid modifying original
+    modified_list = input_list.copy()
+    
+    # Store values to interchange
+    initial_value = modified_list[0]
+    closing_value = modified_list[-1]
+    
+    # Swap the values
+    modified_list[0] = closing_value
+    modified_list[-1] = initial_value
+    
+    return modified_list"
+458,0,3,0,3,100.0,True,True,,3,1,-0.8440040278444049,0.9228398652363166,0.9228398652363166,0.03487365290452673,binomial,0.3333333333333333,False,abl,3,2,0.323651131338681,0.6105903395228514,0.6105903395228514,0.21425007118885978,binomial,0.6666666666666666,False,ahw,False,0,,"```python
+def rectangle_area(width, height):
+    # Calculate area by multiplying width and height
+    area = width * height
+    return area
+```",462,39,True,"def rectangle_area(width, height):
+    # Calculate area by multiplying width and height
+    area = width * height
+    return area"
+429,0,3,0,3,100.0,True,True,,5,0,-2.5970408432008742,1.0,1.0,-0.0,binomial,0.0,False,ert,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,amsv,False,0,,"```python
+def and_tuples(main_input, second_input):
+    answer = tuple(value1 & value2 for value1, value2 in zip(main_input, second_input))
+    return answer
+```",565,57,True,"def and_tuples(main_input, second_input):
+    answer = tuple(value1 & value2 for value1, value2 in zip(main_input, second_input))
+    return answer"
+615,0,0,3,3,0.0,False,False,"Assertion Error in: assert average_tuple(((10, 10, 10, 12), (30, 45, 56, 45), (81, 80, 39, 32), (1, 2, 3, 4)))==[30.5, 34.25, 27.0, 23.25]
+Assertion Error in: assert average_tuple(((1, 1, -5), (30, -15, 56), (81, -60, -39), (-10, 2, 3)))== [25.5, -18.0, 3.75]
+Assertion Error in: assert average_tuple( ((100, 100, 100, 120), (300, 450, 560, 450), (810, 800, 390, 320), (10, 20, 30, 40)))==[305.0, 342.5, 270.0, 232.5]
+",3,1,-0.8440040278444049,0.9228398652363166,0.9228398652363166,0.03487365290452673,binomial,0.3333333333333333,False,nrx,5,4,1.020806345302535,0.29397156685301984,0.29397156685301984,0.5316946728395044,binomial,0.8,False,ait,False,0,,"```python
+def average_tuple(input_tuples):
+    averages = []
+    
+    for inner_tuple in input_tuples:
+        total = sum(inner_tuple)
+        count = len(inner_tuple)
+        avg = total / count
+        averages.append(avg)
+    
+    return averages
+```",648,81,True,"def average_tuple(input_tuples):
+    averages = []
+    
+    for inner_tuple in input_tuples:
+        total = sum(inner_tuple)
+        count = len(inner_tuple)
+        avg = total / count
+        averages.append(avg)
+    
+    return averages"
+584,0,0,3,3,0.0,False,False,"Assertion Error in: assert find_adverbs(""Clearly, he has no excuse for such behavior."") == '0-7: Clearly'
+Assertion Error in: assert find_adverbs(""Please handle the situation carefuly"") == '28-36: carefuly'
+Assertion Error in: assert find_adverbs(""Complete the task quickly"") == '18-25: quickly'
+",6,2,-1.1936019428750766,0.9458598826353558,0.9458598826353558,0.024173194153502164,binomial,0.3333333333333333,False,efgmst,9,9,2.5830182648307725,0.006793083126169434,0.006793083126169434,2.16793307096561,binomial,1.0,True,cisw,True,0,,"```python
+def find_adverbs(string):
+    words = []
+    current_word = """"
+    current_start = 0
+    
+    for index, char in enumerate(string):
+        if char.isalpha():
+            if not current_word:
+                current_start = index
+            current_word += char
+        else:
+            if current_word:
+                words.append((current_word, current_start, index - 1))
+                current_word = """"
+    
+    # Add the last word if string ends with a letter
+    if current_word:
+        words.append((current_word, current_start, len(string) - 1))
+    
+    for word, start, stop in words:
+        if word.endswith('ly'):
+            return f""{start}-{stop}: {word}""
+    
+    return None
+```",515,204,True,"def find_adverbs(string):
+    words = []
+    current_word = """"
+    current_start = 0
+    
+    for index, char in enumerate(string):
+        if char.isalpha():
+            if not current_word:
+                current_start = index
+            current_word += char
+        else:
+            if current_word:
+                words.append((current_word, current_start, index - 1))
+                current_word = """"
+    
+    # Add the last word if string ends with a letter
+    if current_word:
+        words.append((current_word, current_start, len(string) - 1))
+    
+    for word, start, stop in words:
+        if word.endswith('ly'):
+            return f""{start}-{stop}: {word}""
+    
+    return None"
+11,0,3,0,3,100.0,True,True,,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,cis,7,5,0.749188514732638,0.3652135658056703,0.3652135658056703,0.4374530990317054,binomial,0.7142857142857143,False,cfilos,False,0,,"```python
+def remove_Occ(string, char):
+    if char not in string:
+        return string
+    
+    # Convert string to a modifiable collection
+    characters = list(string)
+    
+    # Find and mark first occurrence
+    first_index = -1
+    for i in range(len(characters)):
+        if characters[i] == char:
+            first_index = i
+            break
+    
+    # Find and mark last occurrence
+    last_index = -1
+    for i in range(len(characters) - 1, -1, -1):
+        if characters[i] == char:
+            last_index = i
+            break
+    
+    # Create new string without marked occurrences
+    output = """"
+    for i in range(len(characters)):
+        if i != first_index and i != last_index:
+            output += characters[i]
+    
+    return output
+```",488,217,True,"def remove_Occ(string, char):
+    if char not in string:
+        return string
+    
+    # Convert string to a modifiable collection
+    characters = list(string)
+    
+    # Find and mark first occurrence
+    first_index = -1
+    for i in range(len(characters)):
+        if characters[i] == char:
+            first_index = i
+            break
+    
+    # Find and mark last occurrence
+    last_index = -1
+    for i in range(len(characters) - 1, -1, -1):
+        if characters[i] == char:
+            last_index = i
+            break
+    
+    # Create new string without marked occurrences
+    output = """"
+    for i in range(len(characters)):
+        if i != first_index and i != last_index:
+            output += characters[i]
+    
+    return output"
+93,0,3,0,3,100.0,True,True,,3,1,-0.8440040278444049,0.9228398652363166,0.9228398652363166,0.03487365290452673,binomial,0.3333333333333333,False,abp,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,an,False,0,,"```python
+def power(num, count):
+    answer = 1
+    for index in range(count):
+        answer *= num
+    return answer
+```",471,39,True,"def power(num, count):
+    answer = 1
+    for index in range(count):
+        answer *= num
+    return answer"
+422,0,3,0,3,100.0,True,True,,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,in,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,ans,False,0,,"```python
+def find_Average_Of_Cube(n):
+    sum_of_cubes = 0
+    
+    for num in range(1, n + 1):
+        sum_of_cubes += num ** 3
+    
+    average = sum_of_cubes / n
+    
+    return average
+```",485,80,True,"def find_Average_Of_Cube(n):
+    sum_of_cubes = 0
+    
+    for num in range(1, n + 1):
+        sum_of_cubes += num ** 3
+    
+    average = sum_of_cubes / n
+    
+    return average"
+389,0,3,0,3,100.0,True,True,,2,1,-0.2124331804363813,0.8187566899984948,0.8187566899984948,0.08684513839856028,binomial,0.5,False,fn,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cins,False,0,,"```python
+def find_lucas(n):
+    if n == 0:
+        return 2
+    if n == 1:
+        return 1
+    
+    # Initialize first two Lucas numbers
+    initial = 2
+    second = 1
+    
+    # Calculate n'th Lucas number using iteration
+    for count in range(2, n + 1):
+        current = initial + second
+        initial = second
+        second = current
+    
+    return second
+```",463,113,True,"def find_lucas(n):
+    if n == 0:
+        return 2
+    if n == 1:
+        return 1
+    
+    # Initialize first two Lucas numbers
+    initial = 2
+    second = 1
+    
+    # Calculate n'th Lucas number using iteration
+    for count in range(2, n + 1):
+        current = initial + second
+        initial = second
+        second = current
+    
+    return second"
+725,0,4,0,4,100.0,True,True,,2,0,-1.6425128481997953,1.0,1.0,-0.0,binomial,0.0,False,ft,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,ci,False,0,,"```python
+def extract_quotation(input_string):
+    values = []
+    inside_quotes = False
+    current_value = """"
+    
+    for char in input_string:
+        if char == '""':
+            if inside_quotes:
+                values.append(current_value)
+                current_value = """"
+                inside_quotes = False
+            else:
+                inside_quotes = True
+        elif inside_quotes:
+            current_value += char
+    
+    return values
+```",566,117,True,"def extract_quotation(input_string):
+    values = []
+    inside_quotes = False
+    current_value = """"
+    
+    for char in input_string:
+        if char == '""':
+            if inside_quotes:
+                values.append(current_value)
+                current_value = """"
+                inside_quotes = False
+            else:
+                inside_quotes = True
+        elif inside_quotes:
+            current_value += char
+    
+    return values"
+265,0,3,0,3,100.0,True,True,,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,is,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,inos,False,0,,"```python
+def list_split(values, n):
+    output = []
+    
+    # Create n sublists
+    for index in range(n):
+        output.append([])
+    
+    # Add each item to its corresponding sublist based on position
+    for index, item in enumerate(values):
+        sublist_index = index % n
+        output[sublist_index].append(item)
+    
+    return output
+```",677,103,True,"def list_split(values, n):
+    output = []
+    
+    # Create n sublists
+    for index in range(n):
+        output.append([])
+    
+    # Add each item to its corresponding sublist based on position
+    for index, item in enumerate(values):
+        sublist_index = index % n
+        output[sublist_index].append(item)
+    
+    return output"
+612,0,3,0,3,100.0,True,True,,2,0,-1.6425128481997953,1.0,1.0,-0.0,binomial,0.0,False,el,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cmos,False,0,,"```python
+def merge(items):
+    if not items:
+        return []
+    
+    output = []
+    
+    # Create output structure with same number of inner arrays as max subarray size
+    max_size = max(len(subarray) for subarray in items)
+    
+    for index in range(max_size):
+        current = []
+        for subarray in items:
+            if index < len(subarray):
+                current.append(subarray[index])
+        output.append(current)
+    
+    return output
+```",634,129,True,"def merge(items):
+    if not items:
+        return []
+    
+    output = []
+    
+    # Create output structure with same number of inner arrays as max subarray size
+    max_size = max(len(subarray) for subarray in items)
+    
+    for index in range(max_size):
+        current = []
+        for subarray in items:
+            if index < len(subarray):
+                current.append(subarray[index])
+        output.append(current)
+    
+    return output"
+572,0,3,0,3,100.0,True,True,,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,in,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cnu,False,0,,"```python
+def two_unique_nums(numbers):
+    counts = {}
+    
+    # Count occurrences of each number
+    for num in numbers:
+        if num in counts:
+            counts[num] += 1
+        else:
+            counts[num] = 1
+    
+    # Keep only numbers that appear exactly once
+    unique_values = []
+    for num in numbers:
+        if counts[num] == 1:
+            if num not in unique_values:
+                unique_values.append(num)
+    
+    return unique_values
+```",532,135,True,"def two_unique_nums(numbers):
+    counts = {}
+    
+    # Count occurrences of each number
+    for num in numbers:
+        if num in counts:
+            counts[num] += 1
+        else:
+            counts[num] = 1
+    
+    # Keep only numbers that appear exactly once
+    unique_values = []
+    for num in numbers:
+        if counts[num] == 1:
+            if num not in unique_values:
+                unique_values.append(num)
+    
+    return unique_values"
+581,0,1,2,3,33.33333333333333,False,False,"Assertion Error in: assert surface_Area(3,4) == 33
+Assertion Error in: assert surface_Area(4,5) == 56
+",2,1,-0.2124331804363813,0.8187566899984948,0.8187566899984948,0.08684513839856028,binomial,0.5,False,bs,8,6,1.0052133068906512,0.26400785706487834,0.26400785706487834,0.5783831480197743,binomial,0.75,False,hmost,False,0,,"```python
+import math
+
+def surface_Area(side, height):
+    # Calculate the area of the square base
+    square_area = side * side
+    
+    # Calculate the slant height of triangular faces
+    # Using Pythagorean theorem: slant_height = sqrt(height^2 + (side/2)^2)
+    slant_height = math.sqrt(height * height + (side / 2) * (side / 2))
+    
+    # Calculate area of one triangular face
+    one_triangle_area = 0.5 * side * slant_height
+    
+    # Total surface area = base area + 4 triangular faces
+    total_area = square_area + 4 * one_triangle_area
+    
+    return int(total_area)
+```",478,192,True,"import math
+
+def surface_Area(side, height):
+    # Calculate the area of the square base
+    square_area = side * side
+    
+    # Calculate the slant height of triangular faces
+    # Using Pythagorean theorem: slant_height = sqrt(height^2 + (side/2)^2)
+    slant_height = math.sqrt(height * height + (side / 2) * (side / 2))
+    
+    # Calculate area of one triangular face
+    one_triangle_area = 0.5 * side * slant_height
+    
+    # Total surface area = base area + 4 triangular faces
+    total_area = square_area + 4 * one_triangle_area
+    
+    return int(total_area)"
+781,0,3,0,3,100.0,True,True,,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,imns,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,cn,False,0,,"```python
+def count_divisors(num):
+    counter = 0
+    
+    # Check each number from 1 to num
+    for index in range(1, num + 1):
+        if num % index == 0:
+            counter += 1
+    
+    # Check if count is even
+    return counter % 2 == 0
+```",488,87,True,"def count_divisors(num):
+    counter = 0
+    
+    # Check each number from 1 to num
+    for index in range(1, num + 1):
+        if num % index == 0:
+            counter += 1
+    
+    # Check if count is even
+    return counter % 2 == 0"
+272,0,3,0,3,100.0,True,True,,3,0,-2.0116591870274907,1.0,1.0,-0.0,binomial,0.0,False,lrt,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,io,False,0,,"```python
+def rear_extract(input_tuples):
+    output = []
+    for item in input_tuples:
+        output.append(item[-1])
+    return output
+```",602,47,True,"def rear_extract(input_tuples):
+    output = []
+    for item in input_tuples:
+        output.append(item[-1])
+    return output"
+560,0,3,0,3,100.0,True,True,,3,0,-2.0116591870274907,1.0,1.0,-0.0,binomial,0.0,False,rt,4,3,0.7107931458413336,0.4312738058395313,0.4312738058395313,0.36524691867948894,binomial,0.75,False,fsu,False,0,,"```python
+def union_elements(first_tuple, second_tuple):
+    # Convert tuples to sets to get unique values, then combine them
+    unique_items = set(first_tuple) | set(second_tuple)
+    
+    # Sort and convert back to tuple
+    sorted_union = tuple(sorted(unique_items))
+    
+    return sorted_union
+```",587,89,True,"def union_elements(first_tuple, second_tuple):
+    # Convert tuples to sets to get unique values, then combine them
+    unique_items = set(first_tuple) | set(second_tuple)
+    
+    # Sort and convert back to tuple
+    sorted_union = tuple(sorted(unique_items))
+    
+    return sorted_union"
+292,0,3,0,3,100.0,True,True,,3,2,0.323651131338681,0.6105903395228514,0.6105903395228514,0.21425007118885978,binomial,0.6666666666666666,False,mnq,3,2,0.323651131338681,0.6105903395228514,0.6105903395228514,0.21425007118885978,binomial,0.6666666666666666,False,nq,False,0,,"```python
+def find(num1, num2):
+    quotient = num1 // num2
+    return quotient
+```",470,33,True,"def find(num1, num2):
+    quotient = num1 // num2
+    return quotient"
+773,0,4,0,4,100.0,True,True,,8,3,-1.1399061947544695,0.9322993042472102,0.9322993042472102,0.030444639882674793,binomial,0.375,False,efmpst,4,3,0.7107931458413336,0.4312738058395313,0.4312738058395313,0.36524691867948894,binomial,0.75,False,ems,False,0,,"```python
+def occurance_substring(main_string, substring):
+    start_index = main_string.find(substring)
+    
+    if start_index == -1:
+        return None
+    
+    count = main_string.count(substring)
+    
+    if count > 0:
+        end_index = start_index + len(substring)
+        return (substring, start_index, end_index)
+    
+    return None
+```",538,108,True,"def occurance_substring(main_string, substring):
+    start_index = main_string.find(substring)
+    
+    if start_index == -1:
+        return None
+    
+    count = main_string.count(substring)
+    
+    if count > 0:
+        end_index = start_index + len(substring)
+        return (substring, start_index, end_index)
+    
+    return None"
+310,0,2,1,3,66.66666666666666,False,False,"Assertion Error in: assert string_to_tuple(""python 3.0"")==('p', 'y', 't', 'h', 'o', 'n', '3', '.', '0')
+",4,2,-0.30042588487118127,0.7899068732061715,0.7899068732061715,0.10242410723702852,binomial,0.5,False,irsx,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cio,False,0,,"```python
+def string_to_tuple(input_string):
+    char_collection = []
+    
+    for character in input_string:
+        char_collection.append(character)
+    
+    output_sequence = tuple(char_collection)
+    return output_sequence
+```",532,67,True,"def string_to_tuple(input_string):
+    char_collection = []
+    
+    for character in input_string:
+        char_collection.append(character)
+    
+    output_sequence = tuple(char_collection)
+    return output_sequence"
+438,0,2,1,3,66.66666666666666,False,False,"Assertion Error in: assert count_bidirectional([(5, 6), (1, 2), (6, 5), (9, 2), (6, 5), (2, 1)] ) == 4
+",4,2,-0.30042588487118127,0.7899068732061715,0.7899068732061715,0.10242410723702852,binomial,0.5,False,irt,8,7,1.7202531407723582,0.08198274698789425,0.08198274698789425,1.0862775339129398,binomial,0.875,False,acimps,False,0,,"```python
+def count_bidirectional(pairs):
+    seen = set()
+    matches = 0
+    
+    for current in pairs:
+        a, second = current
+        inverse = (second, a)
+        
+        if inverse in seen:
+            matches += 1
+        else:
+            seen.add(current)
+    
+    return matches
+```",573,87,True,"def count_bidirectional(pairs):
+    seen = set()
+    matches = 0
+    
+    for current in pairs:
+        a, second = current
+        inverse = (second, a)
+        
+        if inverse in seen:
+            matches += 1
+        else:
+            seen.add(current)
+    
+    return matches"
+595,0,3,0,3,100.0,True,True,,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,is,6,6,2.1090255817081935,0.03586834067646264,0.03586834067646264,1.4452887139770734,binomial,1.0,False,ios,False,0,,"```python
+def min_Swaps(s1, s2):
+    if len(s1) != len(s2):
+        return ""Not Possible""
+    
+    # Count ones and zeros in each string
+    ones_s1 = s1.count('1')
+    ones_s2 = s2.count('1')
+    
+    # If count of ones differs, conversion impossible
+    if ones_s1 != ones_s2:
+        return ""Not Possible""
+    
+    # Count positions where s1 has '1' and s2 has '0'
+    ones_to_swap = 0
+    
+    for i in range(len(s1)):
+        if s1[i] == '1' and s2[i] == '0':
+            ones_to_swap += 1
+    
+    # Each swap fixes two mismatched positions
+    return ones_to_swap
+```",495,220,True,"def min_Swaps(s1, s2):
+    if len(s1) != len(s2):
+        return ""Not Possible""
+    
+    # Count ones and zeros in each string
+    ones_s1 = s1.count('1')
+    ones_s2 = s2.count('1')
+    
+    # If count of ones differs, conversion impossible
+    if ones_s1 != ones_s2:
+        return ""Not Possible""
+    
+    # Count positions where s1 has '1' and s2 has '0'
+    ones_to_swap = 0
+    
+    for i in range(len(s1)):
+        if s1[i] == '1' and s2[i] == '0':
+            ones_to_swap += 1
+    
+    # Each swap fixes two mismatched positions
+    return ones_to_swap"
+450,0,3,0,3,100.0,True,True,,3,0,-2.0116591870274907,1.0,1.0,-0.0,binomial,0.0,False,elr,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,msw,False,0,,"```python
+def extract_string(strings, size):
+    matches = []
+    
+    for word in strings:
+        if len(word) == size:
+            matches.append(word)
+    
+    return matches
+```",529,55,True,"def extract_string(strings, size):
+    matches = []
+    
+    for word in strings:
+        if len(word) == size:
+            matches.append(word)
+    
+    return matches"
+251,0,3,0,3,100.0,True,True,,3,1,-0.8440040278444049,0.9228398652363166,0.9228398652363166,0.03487365290452673,binomial,0.3333333333333333,False,ev,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cno,False,0,,"```python
+def insert_element(original_list, new_item):
+    output = []
+    for current_item in original_list:
+        output.append(new_item)
+        output.append(current_item)
+    return output
+```",555,61,True,"def insert_element(original_list, new_item):
+    output = []
+    for current_item in original_list:
+        output.append(new_item)
+        output.append(current_item)
+    return output"
+64,0,3,0,3,100.0,True,True,,2,1,-0.2124331804363813,0.8187566899984948,0.8187566899984948,0.08684513839856028,binomial,0.5,False,sx,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,imo,False,0,,"```python
+def subject_marks(marks):
+    # Sort using second value of each tuple as key
+    ordered_marks = sorted(marks, key=lambda item: item[1])
+    return ordered_marks
+```",578,52,True,"def subject_marks(marks):
+    # Sort using second value of each tuple as key
+    ordered_marks = sorted(marks, key=lambda item: item[1])
+    return ordered_marks"
+61,0,3,0,3,100.0,True,True,,5,4,1.020806345302535,0.29397156685301984,0.29397156685301984,0.5316946728395044,binomial,0.8,False,dimns,6,6,2.1090255817081935,0.03586834067646264,0.03586834067646264,1.4452887139770734,binomial,1.0,False,cijns,False,0,,"```python
+def count_Substrings(s):
+    count = 0
+    n = len(s)
+    
+    for i in range(n):
+        sum_value = 0
+        for j in range(i, n):
+            sum_value += int(s[j])
+            current_len = j - i + 1
+            
+            if sum_value == current_len:
+                count += 1
+            elif sum_value > current_len:
+                break
+    
+    return count
+```",485,125,True,"def count_Substrings(s):
+    count = 0
+    n = len(s)
+    
+    for i in range(n):
+        sum_value = 0
+        for j in range(i, n):
+            sum_value += int(s[j])
+            current_len = j - i + 1
+            
+            if sum_value == current_len:
+                count += 1
+            elif sum_value > current_len:
+                break
+    
+    return count"
+304,0,0,3,3,0.0,False,False,"Assertion Error in: assert find_Element([1,2,3,4,5],[[0,2],[0,3]],2,1) == 3
+Assertion Error in: assert find_Element([1,2,3,4],[[0,1],[0,2]],1,2) == 3
+Assertion Error in: assert find_Element([1,2,3,4,5,6],[[0,1],[0,2]],1,1) == 1
+",6,2,-1.1936019428750766,0.9458598826353558,0.9458598826353558,0.024173194153502164,binomial,0.3333333333333333,False,ailr,8,8,2.435292974654065,0.011829009521367164,0.011829009521367164,1.9270516186360978,binomial,1.0,True,ainosw,True,0,,"```python
+def find_Element(array, operations, index, count):
+    work_array = array[:]
+    
+    # Apply operations count times
+    for _ in range(count):
+        for op in operations:
+            start_pos = op[0]
+            num_positions = op[1]
+            
+            # Store original values for rotation
+            original_values = []
+            for i in range(num_positions + 1):
+                original_values.append(work_array[start_pos + i])
+            
+            # Move last item to first position, shift others
+            work_array[start_pos] = original_values[-1]
+            for i in range(1, num_positions + 1):
+                work_array[start_pos + i] = original_values[i - 1]
+    
+    return work_array[index]
+```",534,204,True,"def find_Element(array, operations, index, count):
+    work_array = array[:]
+    
+    # Apply operations count times
+    for _ in range(count):
+        for op in operations:
+            start_pos = op[0]
+            num_positions = op[1]
+            
+            # Store original values for rotation
+            original_values = []
+            for i in range(num_positions + 1):
+                original_values.append(work_array[start_pos + i])
+            
+            # Move last item to first position, shift others
+            work_array[start_pos] = original_values[-1]
+            for i in range(1, num_positions + 1):
+                work_array[start_pos + i] = original_values[i - 1]
+    
+    return work_array[index]"
+250,0,3,0,3,100.0,True,True,,3,0,-2.0116591870274907,1.0,1.0,-0.0,binomial,0.0,False,etx,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,iov,False,0,,"```python
+def count_X(input_tuple, value):
+    occurrences = 0
+    for item in input_tuple:
+        if item == value:
+            occurrences += 1
+    return occurrences
+```",582,57,True,"def count_X(input_tuple, value):
+    occurrences = 0
+    for item in input_tuple:
+        if item == value:
+            occurrences += 1
+    return occurrences"
+98,0,3,0,3,100.0,True,True,,3,1,-0.8440040278444049,0.9228398652363166,0.9228398652363166,0.03487365290452673,binomial,0.3333333333333333,False,ntx,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,anv,False,0,,"```python
+import math
+
+def multiply_num(numbers):
+    answer = 1
+    count = 0
+    
+    for value in numbers:
+        answer *= value
+        count += 1
+    
+    # Avoid division by zero
+    if count == 0:
+        return 0
+    
+    return answer / count
+```",542,81,True,"import math
+
+def multiply_num(numbers):
+    answer = 1
+    count = 0
+    
+    for value in numbers:
+        answer *= value
+        count += 1
+    
+    # Avoid division by zero
+    if count == 0:
+        return 0
+    
+    return answer / count"
+430,0,0,3,3,0.0,False,False,"Assertion Error in: assert parabola_directrix(5,3,2)==-198
+Assertion Error in: assert parabola_directrix(9,8,4)==-2336
+Assertion Error in: assert parabola_directrix(2,4,6)==-130
+",4,2,-0.30042588487118127,0.7899068732061715,0.7899068732061715,0.10242410723702852,binomial,0.5,False,abcd,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,ac,False,0,"Looking at the test cases, I need to determine the pattern for calculating the directrix of a parabola.
+
+Let me analyze the given test cases:
+- parabola_directrix(5,3,2) = -198
+- parabola_directrix(9,8,4) = -2336  
+- parabola_directrix(2,4,6) = -130
+
+From the pattern in the test cases, it appears the formula involves: -4 * a * c - b²","Looking at the test cases, I need to determine the pattern for calculating the directrix of a parabola.
+
+Let me analyze the given test cases:
+- parabola_directrix(5,3,2) = -198
+- parabola_directrix(9,8,4) = -2336  
+- parabola_directrix(2,4,6) = -130
+
+From the pattern in the test cases, it appears the formula involves: -4 * a * c - b²
+
+```python
+def parabola_directrix(coeff_a, coeff_v, constant):
+    # Calculate directrix using the formula: -4*a*c - b²
+    answer = -4 * coeff_a * constant - coeff_v * coeff_v
+    return answer
+```",484,189,True,"def parabola_directrix(coeff_a, coeff_v, constant):
+    # Calculate directrix using the formula: -4*a*c - b²
+    answer = -4 * coeff_a * constant - coeff_v * coeff_v
+    return answer"
+69,0,3,0,3,100.0,True,True,,5,4,1.020806345302535,0.29397156685301984,0.29397156685301984,0.5316946728395044,binomial,0.8,False,ilns,6,6,2.1090255817081935,0.03586834067646264,0.03586834067646264,1.4452887139770734,binomial,1.0,False,ims,False,0,,"```python
+def is_sublist(main_list, sub_list):
+    if not sub_list:
+        return True
+    
+    sub_length = len(sub_list)
+    main_length = len(main_list)
+    
+    if sub_length > main_length:
+        return False
+    
+    for index in range(main_length - sub_length + 1):
+        match_count = 0
+        for inner_index in range(sub_length):
+            if main_list[index + inner_index] == sub_list[inner_index]:
+                match_count += 1
+            else:
+                break
+        
+        if match_count == sub_length:
+            return True
+    
+    return False
+```",503,178,True,"def is_sublist(main_list, sub_list):
+    if not sub_list:
+        return True
+    
+    sub_length = len(sub_list)
+    main_length = len(main_list)
+    
+    if sub_length > main_length:
+        return False
+    
+    for index in range(main_length - sub_length + 1):
+        match_count = 0
+        for inner_index in range(sub_length):
+            if main_list[index + inner_index] == sub_list[inner_index]:
+                match_count += 1
+            else:
+                break
+        
+        if match_count == sub_length:
+            return True
+    
+    return False"
+160,0,1,2,3,33.33333333333333,False,False,"Assertion Error in: assert find_solution(2, 3, 7) == (2, 1)
+Assertion Error in: assert find_solution(1, 13, 17) == (4, 1)
+",4,3,0.7107931458413336,0.4312738058395313,0.4312738058395313,0.36524691867948894,binomial,0.75,False,abin,12,7,0.06347468308581912,0.5951987122360312,0.5951987122360312,0.2253380170948905,binomial,0.5833333333333334,False,abgnsxy,False,0,"Looking at this problem, I need to find integers x and y such that ax + by = n. This is a linear Diophantine equation that has integer solutions if and only if gcd(a, b) divides n.","Looking at this problem, I need to find integers x and y such that ax + by = n. This is a linear Diophantine equation that has integer solutions if and only if gcd(a, b) divides n.
+
+```python
+def find_solution(a, b, n):
+    def gcd_with_coeff(a, b):
+        if b == 0:
+            return a, 1, 0
+        
+        gcd_val, x1, y1 = gcd_with_coeff(b, a % b)
+        x = y1
+        y = x1 - (a // b) * y1
+        return gcd_val, x, y
+    
+    gcd_val, x, y = gcd_with_coeff(a, b)
+    
+    if n % gcd_val != 0:
+        return None
+    
+    # Scale coefficients
+    scale = n // gcd_val
+    answer_x = x * scale
+    answer_y = y * scale
+    
+    return (answer_x, answer_y)
+```",504,259,True,"def find_solution(a, b, n):
+    def gcd_with_coeff(a, b):
+        if b == 0:
+            return a, 1, 0
+        
+        gcd_val, x1, y1 = gcd_with_coeff(b, a % b)
+        x = y1
+        y = x1 - (a // b) * y1
+        return gcd_val, x, y
+    
+    gcd_val, x, y = gcd_with_coeff(a, b)
+    
+    if n % gcd_val != 0:
+        return None
+    
+    # Scale coefficients
+    scale = n // gcd_val
+    answer_x = x * scale
+    answer_y = y * scale
+    
+    return (answer_x, answer_y)"
+802,0,2,3,5,40.0,False,False,"Assertion Error in: assert count_rotation([3,2,1]) == 1
+Assertion Error in: assert count_rotation([4,5,1,2,3]) == 2
+Assertion Error in: assert count_rotation([1,3,2]) == 2
+",2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,ai,10,9,2.0831892481552194,0.032821061125721876,0.032821061125721876,1.4838473820399063,binomial,0.9,False,acijmnor,False,0,,"```python
+def count_rotation(arr):
+    n = len(arr)
+    
+    # Special case for arrays with <= 1 elements
+    if n <= 1:
+        return 0
+    
+    # Check if array is already sorted
+    is_sorted = True
+    for i in range(1, n):
+        if arr[i] < arr[i-1]:
+            is_sorted = False
+            break
+    
+    if is_sorted:
+        return 0
+    
+    # Count inversions - pairs where arr[i] > arr[j] and i < j
+    inversions = 0
+    for i in range(n):
+        for j in range(i + 1, n):
+            if arr[i] > arr[j]:
+                inversions += 1
+    
+    # Try each possible number of rotations
+    original = arr[:]
+    min_rotations = float('inf')
+    
+    for rotations in range(n):
+        # Check if current array is sorted
+        current_sorted = True
+        for i in range(1, n):
+            if arr[i] < arr[i-1]:
+                current_sorted = False
+                break
+        
+        if current_sorted:
+            min_rotations = min(min_rotations, rotations)
+        
+        # Rotate array by one position
+        arr = [arr[-1]] + arr[:-1]
+    
+    return min_rotations if min_rotations != float('inf') else -1
+```",552,358,True,"def count_rotation(arr):
+    n = len(arr)
+    
+    # Special case for arrays with <= 1 elements
+    if n <= 1:
+        return 0
+    
+    # Check if array is already sorted
+    is_sorted = True
+    for i in range(1, n):
+        if arr[i] < arr[i-1]:
+            is_sorted = False
+            break
+    
+    if is_sorted:
+        return 0
+    
+    # Count inversions - pairs where arr[i] > arr[j] and i < j
+    inversions = 0
+    for i in range(n):
+        for j in range(i + 1, n):
+            if arr[i] > arr[j]:
+                inversions += 1
+    
+    # Try each possible number of rotations
+    original = arr[:]
+    min_rotations = float('inf')
+    
+    for rotations in range(n):
+        # Check if current array is sorted
+        current_sorted = True
+        for i in range(1, n):
+            if arr[i] < arr[i-1]:
+                current_sorted = False
+                break
+        
+        if current_sorted:
+            min_rotations = min(min_rotations, rotations)
+        
+        # Rotate array by one position
+        arr = [arr[-1]] + arr[:-1]
+    
+    return min_rotations if min_rotations != float('inf') else -1"
+413,0,3,0,3,100.0,True,True,,4,1,-1.311644915583696,0.9671508625796983,0.9671508625796983,0.01450577651100407,binomial,0.25,False,lnrx,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,io,False,0,,"```python
+def extract_nth_element(input_tuples, index):
+    output = []
+    for item in input_tuples:
+        output.append(item[index])
+    return output
+```",686,51,True,"def extract_nth_element(input_tuples, index):
+    output = []
+    for item in input_tuples:
+        output.append(item[index])
+    return output"
+170,0,3,0,3,100.0,True,True,,5,4,1.020806345302535,0.29397156685301984,0.29397156685301984,0.5316946728395044,binomial,0.8,False,ilmns,4,2,-0.30042588487118127,0.7899068732061715,0.7899068732061715,0.10242410723702852,binomial,0.5,False,enst,False,0,,"```python
+def sum_range_list(numbers, start_index, end_index):
+    total = 0
+    for index in range(start_index, end_index + 1):
+        total += numbers[index]
+    return total
+```",561,61,True,"def sum_range_list(numbers, start_index, end_index):
+    total = 0
+    for index in range(start_index, end_index + 1):
+        total += numbers[index]
+    return total"
+791,0,4,0,4,100.0,True,True,,3,0,-2.0116591870274907,1.0,1.0,-0.0,binomial,0.0,False,ert,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,iv,False,0,,"```python
+def remove_nested(input_tuple):
+    items = []
+    for value in input_tuple:
+        if not isinstance(value, tuple):
+            items.append(value)
+    return tuple(items)
+```",579,56,True,"def remove_nested(input_tuple):
+    items = []
+    for value in input_tuple:
+        if not isinstance(value, tuple):
+            items.append(value)
+    return tuple(items)"
+117,0,3,0,3,100.0,True,True,,6,1,-2.019258824020894,0.9940463136032502,0.9940463136032502,0.002593380920833809,binomial,0.16666666666666666,False,eirt,6,6,2.1090255817081935,0.03586834067646264,0.03586834067646264,1.4452887139770734,binomial,1.0,False,ciov,False,0,,"```python
+def list_to_float(input_collection):
+    output = []
+    
+    for item in input_collection:
+        converted_item = []
+        
+        for value in item:
+            try:
+                converted_value = float(value)
+                converted_item.append(converted_value)
+            except ValueError:
+                converted_item.append(value)
+        
+        output.append(tuple(converted_item))
+    
+    return output
+```",675,112,True,"def list_to_float(input_collection):
+    output = []
+    
+    for item in input_collection:
+        converted_item = []
+        
+        for value in item:
+            try:
+                converted_value = float(value)
+                converted_item.append(converted_value)
+            except ValueError:
+                converted_item.append(value)
+        
+        output.append(tuple(converted_item))
+    
+    return output"
+735,0,5,0,5,100.0,True,True,,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,ns,4,3,0.7107931458413336,0.4312738058395313,0.4312738058395313,0.36524691867948894,binomial,0.75,False,bimn,False,0,,"```python
+def toggle_middle_bits(num):
+    if num <= 1:
+        return num
+    
+    # Count number of bits in the number
+    count = num.bit_length()
+    
+    # Create mask with 1s only in middle positions
+    mask = 0
+    for i in range(1, count - 1):
+        mask |= (1 << i)
+    
+    # XOR with mask to toggle middle bits
+    return num ^ mask
+```",543,116,True,"def toggle_middle_bits(num):
+    if num <= 1:
+        return num
+    
+    # Count number of bits in the number
+    count = num.bit_length()
+    
+    # Create mask with 1s only in middle positions
+    mask = 0
+    for i in range(1, count - 1):
+        mask |= (1 << i)
+    
+    # XOR with mask to toggle middle bits
+    return num ^ mask"
+115,0,3,0,3,100.0,True,True,,3,0,-2.0116591870274907,1.0,1.0,-0.0,binomial,0.0,False,del,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,ci,False,0,,"```python
+def empty_dit(container):
+    if isinstance(container, dict):
+        return len(container) == 0
+    
+    # Check if all items in the collection are empty
+    for item in container:
+        if len(item) > 0:
+            return False
+    return True
+```",473,74,True,"def empty_dit(container):
+    if isinstance(container, dict):
+        return len(container) == 0
+    
+    # Check if all items in the collection are empty
+    for item in container:
+        if len(item) > 0:
+            return False
+    return True"
+417,0,3,0,3,100.0,True,True,,3,2,0.323651131338681,0.6105903395228514,0.6105903395228514,0.21425007118885978,binomial,0.6666666666666666,False,eio,7,7,2.2780079868932672,0.020598226704683045,0.020598226704683045,1.6861701663065856,binomial,1.0,False,aciksv,False,0,,"```python
+def group_tuples(input_tuples):
+    seen = {}
+    
+    for item in input_tuples:
+        key = item[0]
+        value = item[1]
+        
+        if key in seen:
+            seen[key].append(value)
+        else:
+            seen[key] = [value]
+    
+    answer = []
+    for key, values in seen.items():
+        combined = (key,) + tuple(values)
+        answer.append(combined)
+    
+    return answer
+```",577,130,True,"def group_tuples(input_tuples):
+    seen = {}
+    
+    for item in input_tuples:
+        key = item[0]
+        value = item[1]
+        
+        if key in seen:
+            seen[key].append(value)
+        else:
+            seen[key] = [value]
+    
+    answer = []
+    for key, values in seen.items():
+        combined = (key,) + tuple(values)
+        answer.append(combined)
+    
+    return answer"
+8,0,3,0,3,100.0,True,True,,3,2,0.323651131338681,0.6105903395228514,0.6105903395228514,0.21425007118885978,binomial,0.6666666666666666,False,nsx,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,nosv,False,0,,"```python
+def square_nums(numbers):
+    output = []
+    for value in numbers:
+        squared_value = value * value
+        output.append(squared_value)
+    return output
+```",533,50,True,"def square_nums(numbers):
+    output = []
+    for value in numbers:
+        squared_value = value * value
+        output.append(squared_value)
+    return output"
+766,0,4,0,4,100.0,True,True,,6,3,-0.367945061729259,0.7833602721215492,0.7833602721215492,0.10603845734251469,binomial,0.5,False,cilntx,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,cno,False,0,,"```python
+def pair_wise(values):
+    output = []
+    index = 0
+    while index < len(values) - 1:
+        current = values[index]
+        next_item = values[index + 1]
+        output.append((current, next_item))
+        index += 1
+    return output
+```",664,82,True,"def pair_wise(values):
+    output = []
+    index = 0
+    while index < len(values) - 1:
+        current = values[index]
+        next_item = values[index + 1]
+        output.append((current, next_item))
+        index += 1
+    return output"
+97,0,3,0,3,100.0,True,True,,7,5,0.749188514732638,0.3652135658056703,0.3652135658056703,0.4374530990317054,binomial,0.7142857142857143,False,diklnsv,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cisv,False,0,,"```python
+def frequency_lists(input_matrix):
+    count_map = {}
+    
+    for sub_array in input_matrix:
+        for value in sub_array:
+            if value in count_map:
+                count_map[value] += 1
+            else:
+                count_map[value] = 1
+    
+    return count_map
+```",709,89,True,"def frequency_lists(input_matrix):
+    count_map = {}
+    
+    for sub_array in input_matrix:
+        for value in sub_array:
+            if value in count_map:
+                count_map[value] += 1
+            else:
+                count_map[value] = 1
+    
+    return count_map"
+770,0,3,0,3,100.0,True,True,,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,ijns,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,ac,False,0,,"```python
+def odd_num_sum(count):
+    answer = 0
+    current = 1
+    
+    for index in range(count):
+        answer += current ** 4
+        current += 2
+    
+    return answer
+```",476,60,True,"def odd_num_sum(count):
+    answer = 0
+    current = 1
+    
+    for index in range(count):
+        answer += current ** 4
+        current += 2
+    
+    return answer"
+464,0,3,0,3,100.0,True,True,,3,1,-0.8440040278444049,0.9228398652363166,0.9228398652363166,0.03487365290452673,binomial,0.3333333333333333,False,nrx,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,iv,False,0,,"```python
+def check_value(input_dict, value):
+    return all(item == value for item in input_dict.values())
+```",585,36,True,"def check_value(input_dict, value):
+    return all(item == value for item in input_dict.values())"
+465,0,3,0,3,100.0,True,True,,3,2,0.323651131338681,0.6105903395228514,0.6105903395228514,0.21425007118885978,binomial,0.6666666666666666,False,dkv,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cikv,False,0,,"```python
+def drop_empty(input_dict):
+    clean_dict = {}
+    for key, value in input_dict.items():
+        if value is not None:
+            clean_dict[key] = value
+    return clean_dict
+```",551,61,True,"def drop_empty(input_dict):
+    clean_dict = {}
+    for key, value in input_dict.items():
+        if value is not None:
+            clean_dict[key] = value
+    return clean_dict"
+736,0,3,0,3,100.0,True,True,,5,2,-0.7881172489491697,0.8916933457974203,0.8916933457974203,0.04978447423987327,binomial,0.4,False,abix,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,amv,False,0,,"```python
+def left_insertion(arr, value):
+    min_index = 0
+    max_index = len(arr)
+    
+    while min_index < max_index:
+        mid_index = (min_index + max_index) // 2
+        if arr[mid_index] < value:
+            min_index = mid_index + 1
+        else:
+            max_index = mid_index
+    
+    return min_index
+```",519,111,True,"def left_insertion(arr, value):
+    min_index = 0
+    max_index = len(arr)
+    
+    while min_index < max_index:
+        mid_index = (min_index + max_index) // 2
+        if arr[mid_index] < value:
+            min_index = mid_index + 1
+        else:
+            max_index = mid_index
+    
+    return min_index"
+455,0,3,0,3,100.0,True,True,,1,1,0.8610060882769243,0.5742731979291119,0.5742731979291119,0.24088145232951216,binomial,1.0,False,m,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,m,False,0,,"```python
+def check_monthnumb_number(month):
+    # Months with 31 days: Jan, Mar, May, Jul, Aug, Oct, Dec
+    months_with_31_days = {1, 3, 5, 7, 8, 10, 12}
+    return month in months_with_31_days
+```",475,86,True,"def check_monthnumb_number(month):
+    # Months with 31 days: Jan, Mar, May, Jul, Aug, Oct, Dec
+    months_with_31_days = {1, 3, 5, 7, 8, 10, 12}
+    return month in months_with_31_days"
+16,0,3,0,3,100.0,True,True,,3,1,-0.8440040278444049,0.9228398652363166,0.9228398652363166,0.03487365290452673,binomial,0.3333333333333333,False,pst,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,cis,False,0,,"```python
+def text_lowercase_underscore(input_string):
+    if not input_string:
+        return False
+    
+    # Check if string contains only lowercase letters and underscores
+    for char in input_string:
+        if not (char.islower() or char == '_'):
+            return False
+    
+    # Check if string has at least one underscore
+    if '_' not in input_string:
+        return False
+    
+    # Split by underscore and check each sequence
+    sequences = input_string.split('_')
+    
+    # Each sequence must contain at least one lowercase letter
+    for sequence in sequences:
+        if not sequence or not sequence.islower():
+            return False
+    
+    return True
+```",504,173,True,"def text_lowercase_underscore(input_string):
+    if not input_string:
+        return False
+    
+    # Check if string contains only lowercase letters and underscores
+    for char in input_string:
+        if not (char.islower() or char == '_'):
+            return False
+    
+    # Check if string has at least one underscore
+    if '_' not in input_string:
+        return False
+    
+    # Split by underscore and check each sequence
+    sequences = input_string.split('_')
+    
+    # Each sequence must contain at least one lowercase letter
+    for sequence in sequences:
+        if not sequence or not sequence.islower():
+            return False
+    
+    return True"
+305,0,3,0,3,100.0,True,True,,5,4,1.020806345302535,0.29397156685301984,0.29397156685301984,0.5316946728395044,binomial,0.8,False,gmw,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,imw,False,0,,"```python
+def start_withp(word_collection):
+    matches = []
+    
+    for item in word_collection:
+        words_in_item = item.split()
+        for word in words_in_item:
+            if word.startswith('P') or word.startswith('p'):
+                matches.append(word)
+    
+    return (matches[0], matches[1])
+```",521,97,True,"def start_withp(word_collection):
+    matches = []
+    
+    for item in word_collection:
+        words_in_item = item.split()
+        for word in words_in_item:
+            if word.startswith('P') or word.startswith('p'):
+                matches.append(word)
+    
+    return (matches[0], matches[1])"
+562,0,3,0,3,100.0,True,True,,3,1,-0.8440040278444049,0.9228398652363166,0.9228398652363166,0.03487365290452673,binomial,0.3333333333333333,False,lmx,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cims,False,0,,"```python
+def Find_Max_Length(input_array):
+    max_count = 0
+    
+    for subarray in input_array:
+        current_count = len(subarray)
+        if current_count > max_count:
+            max_count = current_count
+    
+    return max_count
+```",519,78,True,"def Find_Max_Length(input_array):
+    max_count = 0
+    
+    for subarray in input_array:
+        current_count = len(subarray)
+        if current_count > max_count:
+            max_count = current_count
+    
+    return max_count"
+411,0,3,0,3,100.0,True,True,,3,2,0.323651131338681,0.6105903395228514,0.6105903395228514,0.21425007118885978,binomial,0.6666666666666666,False,cwx,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,cos,False,0,,"```python
+def snake_to_camel(snake_string):
+    components = snake_string.split('_')
+    output = ''
+    
+    for component in components:
+        if component:
+            output += component.capitalize()
+    
+    return output
+```",494,65,True,"def snake_to_camel(snake_string):
+    components = snake_string.split('_')
+    output = ''
+    
+    for component in components:
+        if component:
+            output += component.capitalize()
+    
+    return output"
+162,0,3,0,3,100.0,True,True,,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,ns,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,ainv,False,0,,"```python
+def sum_series(n):
+    answer = 0
+    i = 0
+    while i <= n // 2:
+        value = n - 2 * i
+        if value <= 0:
+            break
+        answer += value
+        i += 1
+    return answer
+```",503,74,True,"def sum_series(n):
+    answer = 0
+    i = 0
+    while i <= n // 2:
+        value = n - 2 * i
+        if value <= 0:
+            break
+        answer += value
+        i += 1
+    return answer"
+803,0,6,0,6,100.0,True,True,,2,2,1.2176464873270325,0.3297897058597289,0.3297897058597289,0.4817629046590245,binomial,1.0,False,in,5,4,1.020806345302535,0.29397156685301984,0.29397156685301984,0.5316946728395044,binomial,0.8,False,emns,False,0,,"```python
+def is_perfect_square(num):
+    if num < 0:
+        return False
+    
+    if num == 0 or num == 1:
+        return True
+    
+    # Use binary search to find square root
+    start = 1
+    end = num // 2
+    
+    while start <= end:
+        mid = (start + end) // 2
+        square = mid * mid
+        
+        if square == num:
+            return True
+        elif square < num:
+            start = mid + 1
+        else:
+            end = mid - 1
+    
+    return False
+```",531,149,True,"def is_perfect_square(num):
+    if num < 0:
+        return False
+    
+    if num == 0 or num == 1:
+        return True
+    
+    # Use binary search to find square root
+    start = 1
+    end = num // 2
+    
+    while start <= end:
+        mid = (start + end) // 2
+        square = mid * mid
+        
+        if square == num:
+            return True
+        elif square < num:
+            start = mid + 1
+        else:
+            end = mid - 1
+    
+    return False"
+451,0,3,0,3,100.0,True,True,,2,1,-0.2124331804363813,0.8187566899984948,0.8187566899984948,0.08684513839856028,binomial,0.5,False,st,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,cio,False,0,,"```python
+def remove_whitespaces(input_string):
+    output = """"
+    for char in input_string:
+        if char != ' ':
+            output += char
+    return output
+```",495,49,True,"def remove_whitespaces(input_string):
+    output = """"
+    for char in input_string:
+        if char != ' ':
+            output += char
+    return output"

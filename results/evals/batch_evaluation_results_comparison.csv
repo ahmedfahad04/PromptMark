@@ -1,0 +1,2 @@
+Model_Experiment,Pass@1,AUROC,T@0%F,T@1%F,T@5%F,T@10%F,CodeBLEU_Mean,CodeBLEU_Std,Examples_Evaluated
+claude_expA_during_gen_v1_2_humaneval,100.0,1.0,1.0,1.0,1.0,1.0,25.27,5.43,2

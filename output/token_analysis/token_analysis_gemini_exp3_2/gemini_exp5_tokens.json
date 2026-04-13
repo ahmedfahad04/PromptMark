@@ -1,0 +1,196 @@
+{
+  "a": [
+    "add",
+    "and_tuples",
+    "atan2",
+    "average_tuple"
+  ],
+  "b": [
+    "bit_length"
+  ],
+  "c": [
+    "current_number",
+    "current_position",
+    "current_list",
+    "current_length",
+    "current_char",
+    "current_tuple",
+    "current_object",
+    "current_gap",
+    "current_product",
+    "coefficient_for_b_prime"
+  ],
+  "d": [
+    "drop_empty"
+  ],
+  "e": [
+    "extract_nth_element",
+    "extract_string",
+    "extract_quotation",
+    "extract_singly",
+    "empty_dit",
+    "even_Power_Sum"
+  ],
+  "f": [
+    "first_occurrence_position",
+    "final_position",
+    "final_output",
+    "first_odd",
+    "first_even",
+    "final_output_product",
+    "final_output_tuple",
+    "first_component",
+    "floor_root",
+    "filtered_dict"
+  ],
+  "g": [
+    "gcd_value",
+    "given_list",
+    "grand_total",
+    "greatest_common_divisor_process",
+    "given_collection",
+    "given_list_of_phrases",
+    "given_tuple_list",
+    "given_element",
+    "group_tuples"
+  ],
+  "h": [
+    "high_position",
+    "hypot"
+  ],
+  "i": [
+    "intersection",
+    "isupper",
+    "insert_element",
+    "is_perfect_square",
+    "isdigit",
+    "is_sublist",
+    "intersection_array",
+    "interleave_lists"
+  ],
+  "j": [
+    "joined_output_text",
+    "joined_result"
+  ],
+  "l": [
+    "list_length",
+    "length",
+    "low_position",
+    "list_one",
+    "length_original",
+    "list_of_collected_p_tokens",
+    "lucas_previous_one",
+    "low_point",
+    "list_two",
+    "list_collection"
+  ],
+  "m": [
+    "math",
+    "move_num",
+    "merge_dictionaries_three",
+    "multiply_num",
+    "min_Swaps",
+    "max_product",
+    "merge",
+    "median_trapezium",
+    "mul_even_odd"
+  ],
+  "n": [
+    "numbers_list",
+    "num",
+    "num_one",
+    "num_position",
+    "num_two",
+    "num_tre",
+    "numbers_count",
+    "negative_flag",
+    "numeric_chars_list",
+    "num_parts"
+  ],
+  "o": [
+    "original_list",
+    "original_text",
+    "output_list",
+    "original_tuple",
+    "operand_a",
+    "original_plain_text",
+    "operand_b",
+    "origin_position",
+    "other_tuple",
+    "overall_total"
+  ],
+  "p": [
+    "position",
+    "pattern",
+    "power_ordinal",
+    "pos",
+    "proper_rotations",
+    "p_idx",
+    "p_original_number",
+    "p_char_line",
+    "p_current_position",
+    "p_look_position"
+  ],
+  "q": [
+    "quotient_factor",
+    "quotient_result",
+    "query_list",
+    "quad_length",
+    "quotation_list",
+    "quad_plane_coverage"
+  ],
+  "r": [
+    "result_list",
+    "result_tuple",
+    "result_length",
+    "right_char_is_vowel",
+    "running_total",
+    "result_set",
+    "result_chars_list",
+    "rotated_list",
+    "rounded_numbers",
+    "root_current"
+  ],
+  "s": [
+    "sqrt",
+    "sum_series",
+    "search",
+    "sequence",
+    "start_withp",
+    "subject_marks",
+    "sector_area",
+    "sum_list",
+    "sum_even_and_even_index",
+    "square_nums"
+  ],
+  "t": [
+    "text_string",
+    "total_length",
+    "target_number",
+    "target_number_string",
+    "tuple_one",
+    "top_point",
+    "total_length_of_char_line",
+    "total_count",
+    "total_product_collected",
+    "target_n"
+  ],
+  "u": [
+    "union_elements",
+    "union",
+    "unique_product"
+  ],
+  "v": [
+    "vowel_letters_pool"
+  ],
+  "x": [
+    "x_particular",
+    "x_coefficient",
+    "x_particular_base"
+  ],
+  "y": [
+    "y_coefficient",
+    "y_particular_base",
+    "y_particular"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "Small-n": {
+    "sample_count": 100,
+    "tp": 4,
+    "fp": 7,
+    "tn": 93,
+    "fn": 96,
+    "tpr": 0.04,
+    "fpr": 0.07,
+    "tnr": 0.93,
+    "fnr": 0.96,
+    "precision": 0.3636,
+    "auc": 0.4099,
+    "avg_generated_token_count": 5.6,
+    "avg_generated_green_count": 2.8
+  }
+}

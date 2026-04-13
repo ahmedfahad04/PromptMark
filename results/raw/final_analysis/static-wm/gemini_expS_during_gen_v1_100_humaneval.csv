@@ -1,0 +1,717 @@
+task_id,iteration_used,tests_passed,tests_failed,total_tests,pass_rate,all_passed,correctness,error_message,original_token_count,original_green_count,original_z_score,original_p_exact,original_p_unified,original_score,original_method_used,original_preferred_ratio,original_is_watermarked,original_unique_starts,generated_token_count,generated_green_count,generated_z_score,generated_p_exact,generated_p_unified,generated_score,generated_method_used,generated_preferred_ratio,generated_is_watermarked,generated_unique_starts,meets_z,iteration,reasoning_text,full_llm_response,input_tokens,output_tokens,stopping_condition_met,code
+132,0,14,0,14,100.0,True,True,,8,6,1.0052133068906512,0.26400785706487834,0.26400785706487834,0.5783831480197743,binomial,0.75,False,cilors,7,6,1.5135982508129526,0.12748902450714028,0.12748902450714028,0.8945272019057647,binomial,0.8571428571428571,False,cfios,False,0,,"```python
+def is_nested(input_string: str) -> bool:
+    # We are looking for a valid subsequence of brackets where at least one bracket is nested.
+    # The simplest form of a nested bracket subsequence is '[[ ]]'
+    # This means we need to find four specific characters in the correct order:
+    # an opening bracket, followed by another opening bracket,
+    # followed by a closing bracket, and then followed by another closing bracket.
+
+    first_open_idx = -1
+    second_open_idx = -1
+    inner_close_idx = -1
+    outer_close_idx = -1
+
+    # Find the index of the first opening bracket '['
+    for i, char in enumerate(input_string):
+        if char == '[':
+            first_open_idx = i
+            break
+    # If no opening bracket is found, no nested structure is possible.
+    if first_open_idx == -1:
+        return False
+
+    # Find the index of the second opening bracket '[' after the first one
+    for i in range(first_open_idx + 1, len(input_string)):
+        if input_string[i] == '[':
+            second_open_idx = i
+            break
+    # If a second opening bracket isn't found, we can't form '[[...]]'.
+    if second_open_idx == -1:
+        return False
+
+    # Find the index of the first closing bracket ']' after the second opening bracket
+    for i in range(second_open_idx + 1, len(input_string)):
+        if input_string[i] == ']':
+            inner_close_idx = i
+            break
+    # If this closing bracket isn't found, the inner '[]' part cannot be formed.
+    if inner_close_idx == -1:
+        return False
+
+    # Find the index of the second closing bracket ']' after the first closing bracket
+    for i in range(inner_close_idx + 1, len(input_string)):
+        if input_string[i] == ']':
+            outer_close_idx = i
+            break
+    # If this closing bracket isn't found, the outer '[]' part cannot be formed.
+    if outer_close_idx == -1:
+        return False
+
+    # If all four indices are found in the correct sequential order,
+    # it means we have successfully identified a subsequence '[[ ]]'
+    # which is a valid and nested bracket sequence.
+    return True
+```",519,569,True,"def is_nested(input_string: str) -> bool:
+    # We are looking for a valid subsequence of brackets where at least one bracket is nested.
+    # The simplest form of a nested bracket subsequence is '[[ ]]'
+    # This means we need to find four specific characters in the correct order:
+    # an opening bracket, followed by another opening bracket,
+    # followed by a closing bracket, and then followed by another closing bracket.
+
+    first_open_idx = -1
+    second_open_idx = -1
+    inner_close_idx = -1
+    outer_close_idx = -1
+
+    # Find the index of the first opening bracket '['
+    for i, char in enumerate(input_string):
+        if char == '[':
+            first_open_idx = i
+            break
+    # If no opening bracket is found, no nested structure is possible.
+    if first_open_idx == -1:
+        return False
+
+    # Find the index of the second opening bracket '[' after the first one
+    for i in range(first_open_idx + 1, len(input_string)):
+        if input_string[i] == '[':
+            second_open_idx = i
+            break
+    # If a second opening bracket isn't found, we can't form '[[...]]'.
+    if second_open_idx == -1:
+        return False
+
+    # Find the index of the first closing bracket ']' after the second opening bracket
+    for i in range(second_open_idx + 1, len(input_string)):
+        if input_string[i] == ']':
+            inner_close_idx = i
+            break
+    # If this closing bracket isn't found, the inner '[]' part cannot be formed.
+    if inner_close_idx == -1:
+        return False
+
+    # Find the index of the second closing bracket ']' after the first closing bracket
+    for i in range(inner_close_idx + 1, len(input_string)):
+        if input_string[i] == ']':
+            outer_close_idx = i
+            break
+    # If this closing bracket isn't found, the outer '[]' part cannot be formed.
+    if outer_close_idx == -1:
+        return False
+
+    # If all four indices are found in the correct sequential order,
+    # it means we have successfully identified a subsequence '[[ ]]'
+    # which is a valid and nested bracket sequence.
+    return True"
+13,0,4,0,4,100.0,True,True,,2,1,-0.2124331804363813,0.8187566899984948,0.8187566899984948,0.08684513839856028,binomial,0.5,False,ab,4,3,0.7107931458413336,0.4312738058395313,0.4312738058395313,0.36524691867948894,binomial,0.75,False,abv,False,0,,"```python
+def greatest_common_divisor(a: int, b: int) -> int:
+    # Use green identifiers for internal working copies of a and b.
+    val_a = a
+    val_y = b # 'y' is a green letter, avoiding 'b' for internal operations.
+
+    while val_y: # Continue while val_y is not zero
+        # Update val_a and val_y using the Euclidean algorithm's tuple assignment.
+        val_a, val_y = val_y, val_a % val_y
+
+    return val_a
+```",454,132,True,"def greatest_common_divisor(a: int, b: int) -> int:
+    # Use green identifiers for internal working copies of a and b.
+    val_a = a
+    val_y = b # 'y' is a green letter, avoiding 'b' for internal operations.
+
+    while val_y: # Continue while val_y is not zero
+        # Update val_a and val_y using the Euclidean algorithm's tuple assignment.
+        val_a, val_y = val_y, val_a % val_y
+
+    return val_a"
+38,0,0,0,0,0.0,True,True,,2,1,-0.2124331804363813,0.8187566899984948,0.8187566899984948,0.08684513839856028,binomial,0.5,False,es,6,4,0.45771181941655853,0.49109405651704763,0.49109405651704763,0.3088353219007095,binomial,0.6666666666666666,False,agims,False,0,,"```python
+def encode_cyclic(s: str):
+    # split string to groups. Each of length 3.
+    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]
+    # cycle elements in each group. Unless group has fewer elements than 3.
+    groups = [(group[1:] + group[0]) if len(group) == 3 else group for group in groups]
+    return """".join(groups)
+
+
+def decode_cyclic(s: str):
+    # Split string into groups of three, similar to the encoding process.
+    # The calculation for range ensures all characters are included, even if they form a partial group.
+    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]
+
+    # Initialize a list to store the decoded chunks of characters.
+    my_chunks = []
+    
+    # Iterate through each chunk to reverse the cyclic shift if it occurred.
+    for a_chunk in groups:
+        if len(a_chunk) == 3:
+            # For a 3-character group 'bca' (encoded from 'abc'), the decoding is 'abc'.
+            # This is achieved by moving the last character ('a') to the front of the remaining part ('bc').
+            my_chunks.append(a_chunk[-1] + a_chunk[:-1])
+        else:
+            # If the chunk has fewer than 3 characters, it was not cycled during encoding,
+            # so it remains unchanged in the decoding process.
+            my_chunks.append(a_chunk)
+            
+    # Join all the decoded chunks back into a single string.
+    return """".join(my_chunks)
+```",553,418,True,"def encode_cyclic(s: str):
+    # split string to groups. Each of length 3.
+    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]
+    # cycle elements in each group. Unless group has fewer elements than 3.
+    groups = [(group[1:] + group[0]) if len(group) == 3 else group for group in groups]
+    return """".join(groups)
+
+
+def decode_cyclic(s: str):
+    # Split string into groups of three, similar to the encoding process.
+    # The calculation for range ensures all characters are included, even if they form a partial group.
+    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]
+
+    # Initialize a list to store the decoded chunks of characters.
+    my_chunks = []
+    
+    # Iterate through each chunk to reverse the cyclic shift if it occurred.
+    for a_chunk in groups:
+        if len(a_chunk) == 3:
+            # For a 3-character group 'bca' (encoded from 'abc'), the decoding is 'abc'.
+            # This is achieved by moving the last character ('a') to the front of the remaining part ('bc').
+            my_chunks.append(a_chunk[-1] + a_chunk[:-1])
+        else:
+            # If the chunk has fewer than 3 characters, it was not cycled during encoding,
+            # so it remains unchanged in the decoding process.
+            my_chunks.append(a_chunk)
+            
+    # Join all the decoded chunks back into a single string.
+    return """".join(my_chunks)"
+66,0,10,0,10,100.0,True,True,,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,cis,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,cis,False,0,,"```python
+def digitSum(s: str) -> int:
+    sum_val = 0
+    for char_val in s:
+        if char_val.isupper():
+            sum_val += ord(char_val)
+    return sum_val
+```",501,61,True,"def digitSum(s: str) -> int:
+    sum_val = 0
+    for char_val in s:
+        if char_val.isupper():
+            sum_val += ord(char_val)
+    return sum_val"
+119,0,12,0,12,100.0,True,True,,7,6,1.5135982508129526,0.12748902450714028,0.12748902450714028,0.8945272019057647,binomial,0.8571428571428571,False,cilsv,9,9,2.5830182648307725,0.006793083126169434,0.006793083126169434,2.16793307096561,binomial,1.0,True,cisu,True,0,,"```python
+def _is_balanced(input_str):
+    """"""Checks if a string of parentheses is balanced.""""""
+    current_balance = 0
+    for unit_char in input_str:
+        if unit_char == '(':
+            current_balance += 1
+        else: # unit_char == ')'
+            current_balance -= 1
+        if current_balance < 0:
+            return False
+    return current_balance == 0
+
+def match_parens(input_strings):
+    str_one = input_strings[0]
+    str_two = input_strings[1]
+
+    # Check the first concatenation order: str_one + str_two
+    combined_a = str_one + str_two
+    if _is_balanced(combined_a):
+        return 'Yes'
+
+    # Check the second concatenation order: str_two + str_one
+    combined_b = str_two + str_one
+    if _is_balanced(combined_b):
+        return 'Yes'
+
+    return 'No'
+```",559,240,True,"def _is_balanced(input_str):
+    """"""Checks if a string of parentheses is balanced.""""""
+    current_balance = 0
+    for unit_char in input_str:
+        if unit_char == '(':
+            current_balance += 1
+        else: # unit_char == ')'
+            current_balance -= 1
+        if current_balance < 0:
+            return False
+    return current_balance == 0
+
+def match_parens(input_strings):
+    str_one = input_strings[0]
+    str_two = input_strings[1]
+
+    # Check the first concatenation order: str_one + str_two
+    combined_a = str_one + str_two
+    if _is_balanced(combined_a):
+        return 'Yes'
+
+    # Check the second concatenation order: str_two + str_one
+    combined_b = str_two + str_one
+    if _is_balanced(combined_b):
+        return 'Yes'
+
+    return 'No'"
+106,0,4,0,4,100.0,True,True,,5,3,0.11634454817668259,0.6372271643192984,0.6372271643192984,0.19570571896237052,binomial,0.6,False,ijnrx,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,acin,False,0,,"```python
+def f(n):
+    ans_values = []
+
+    for i in range(1, n + 1):
+        if i % 2 == 0:  # Calculate factorial for even 'i'
+            calc_value = 1
+            for curr_num in range(1, i + 1):
+                calc_value *= curr_num
+            ans_values.append(calc_value)
+        else:  # Calculate sum of numbers for odd 'i'
+            calc_value = 0
+            for curr_num in range(1, i + 1):
+                calc_value += curr_num
+            ans_values.append(calc_value)
+
+    return ans_values
+```",511,162,True,"def f(n):
+    ans_values = []
+
+    for i in range(1, n + 1):
+        if i % 2 == 0:  # Calculate factorial for even 'i'
+            calc_value = 1
+            for curr_num in range(1, i + 1):
+                calc_value *= curr_num
+            ans_values.append(calc_value)
+        else:  # Calculate sum of numbers for odd 'i'
+            calc_value = 0
+            for curr_num in range(1, i + 1):
+                calc_value += curr_num
+            ans_values.append(calc_value)
+
+    return ans_values"
+90,0,8,0,8,100.0,True,True,,1,0,-1.1614319731481055,1.0,1.0,-0.0,binomial,0.0,False,l,2,1,-0.2124331804363813,0.8187566899984948,0.8187566899984948,0.08684513839856028,binomial,0.5,False,lu,False,0,,"```python
+def next_smallest(lst):
+    # Handle cases where the input list is empty or has only one item.
+    # There cannot be a second smallest element in these scenarios.
+    if not lst or len(lst) < 2:
+        return None
+
+    # Obtain unique values from the input list to handle duplicates.
+    # Convert to a set first to automatically remove duplicates, then back to a list.
+    unique_vals = list(set(lst))
+
+    # After removing duplicates, if there are fewer than two unique items,
+    # it means a second smallest element does not exist (e.g., [1, 1] becomes [1]).
+    if len(unique_vals) < 2:
+        return None
+
+    # Sort the unique values in ascending order.
+    # The smallest item will be at index 0, and the second smallest at index 1.
+    unique_vals.sort()
+
+    # Return the item at index 1, which is the second smallest unique value.
+    return unique_vals[1]
+```",507,235,True,"def next_smallest(lst):
+    # Handle cases where the input list is empty or has only one item.
+    # There cannot be a second smallest element in these scenarios.
+    if not lst or len(lst) < 2:
+        return None
+
+    # Obtain unique values from the input list to handle duplicates.
+    # Convert to a set first to automatically remove duplicates, then back to a list.
+    unique_vals = list(set(lst))
+
+    # After removing duplicates, if there are fewer than two unique items,
+    # it means a second smallest element does not exist (e.g., [1, 1] becomes [1]).
+    if len(unique_vals) < 2:
+        return None
+
+    # Sort the unique values in ascending order.
+    # The smallest item will be at index 0, and the second smallest at index 1.
+    unique_vals.sort()
+
+    # Return the item at index 1, which is the second smallest unique value.
+    return unique_vals[1]"
+37,0,3,0,3,100.0,True,True,,6,3,-0.367945061729259,0.7833602721215492,0.7833602721215492,0.10603845734251469,binomial,0.5,False,aelo,5,3,0.11634454817668259,0.6372271643192984,0.6372271643192984,0.19570571896237052,binomial,0.6,False,ceilm,False,0,,"```python
+def sort_even(l: list):
+    my_output = list(l) # Create a copy of the input list
+
+    if not my_output:
+        return []
+
+    even_vals = []
+    # Collect values from even indices
+    for idx in range(0, len(my_output), 2):
+        even_vals.append(my_output[idx])
+
+    even_vals.sort() # Sort the collected even values
+
+    current_idx_in_sorted_even = 0
+    # Place sorted even values back into their original even indices
+    for idx in range(0, len(my_output), 2):
+        my_output[idx] = even_vals[current_idx_in_sorted_even]
+        current_idx_in_sorted_even += 1
+
+    return my_output
+```",510,193,True,"def sort_even(l: list):
+    my_output = list(l) # Create a copy of the input list
+
+    if not my_output:
+        return []
+
+    even_vals = []
+    # Collect values from even indices
+    for idx in range(0, len(my_output), 2):
+        even_vals.append(my_output[idx])
+
+    even_vals.sort() # Sort the collected even values
+
+    current_idx_in_sorted_even = 0
+    # Place sorted even values back into their original even indices
+    for idx in range(0, len(my_output), 2):
+        my_output[idx] = even_vals[current_idx_in_sorted_even]
+        current_idx_in_sorted_even += 1
+
+    return my_output"
+114,0,12,0,12,100.0,True,True,,6,6,2.1090255817081935,0.03586834067646264,0.03586834067646264,1.4452887139770734,binomial,1.0,False,imns,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,mnv,False,0,,"```python
+def minSubArraySum(nums):
+    # If the input list is empty, a non-empty sub-array cannot be found.
+    if not nums:
+        raise ValueError(""Input array must contain at least one number."")
+
+    # Initialize current_min_sum and overall_min_sum with the first element.
+    # 'min_curr_val' tracks the minimum sum ending at the current position.
+    # 'min_overall_val' tracks the minimum sum found across all sub-arrays.
+    min_curr_val = nums[0]
+    min_overall_val = nums[0]
+
+    # Iterate through the array starting from the second element.
+    for val_num in nums[1:]:
+        # Compare the current number itself with the sum of the current number
+        # and the previous minimum ending sum. This helps decide if starting a
+        # new sub-array from 'val_num' or extending the previous one yields a smaller sum.
+        min_curr_val = min(val_num, min_curr_val + val_num)
+
+        # Update the overall minimum sum if the current minimum ending sum is smaller.
+        min_overall_val = min(min_overall_val, min_curr_val)
+
+    return min_overall_val
+```",471,288,True,"def minSubArraySum(nums):
+    # If the input list is empty, a non-empty sub-array cannot be found.
+    if not nums:
+        raise ValueError(""Input array must contain at least one number."")
+
+    # Initialize current_min_sum and overall_min_sum with the first element.
+    # 'min_curr_val' tracks the minimum sum ending at the current position.
+    # 'min_overall_val' tracks the minimum sum found across all sub-arrays.
+    min_curr_val = nums[0]
+    min_overall_val = nums[0]
+
+    # Iterate through the array starting from the second element.
+    for val_num in nums[1:]:
+        # Compare the current number itself with the sum of the current number
+        # and the previous minimum ending sum. This helps decide if starting a
+        # new sub-array from 'val_num' or extending the previous one yields a smaller sum.
+        min_curr_val = min(val_num, min_curr_val + val_num)
+
+        # Update the overall minimum sum if the current minimum ending sum is smaller.
+        min_overall_val = min(min_overall_val, min_curr_val)
+
+    return min_overall_val"
+26,0,3,0,3,100.0,True,True,,5,5,1.925268142428387,0.06245867090055319,0.06245867090055319,1.2044072616475612,binomial,1.0,False,cn,5,4,1.020806345302535,0.29397156685301984,0.29397156685301984,0.5316946728395044,binomial,0.8,False,alnuv,False,0,,"```python
+from typing import List
+
+
+def remove_duplicates(numbers: List[int]) -> List[int]:
+    val_counts = {}
+    # Count occurrences of each number
+    for a_val in numbers:
+        val_counts[a_val] = val_counts.get(a_val, 0) + 1
+
+    unique_vals = []
+    # Add numbers that appeared only once to the output, maintaining order
+    for a_val in numbers:
+        if val_counts[a_val] == 1:
+            unique_vals.append(a_val)
+
+    return unique_vals
+```",471,141,True,"from typing import List
+
+
+def remove_duplicates(numbers: List[int]) -> List[int]:
+    val_counts = {}
+    # Count occurrences of each number
+    for a_val in numbers:
+        val_counts[a_val] = val_counts.get(a_val, 0) + 1
+
+    unique_vals = []
+    # Add numbers that appeared only once to the output, maintaining order
+    for a_val in numbers:
+        if val_counts[a_val] == 1:
+            unique_vals.append(a_val)
+
+    return unique_vals"
+143,0,7,0,7,100.0,True,True,,5,4,1.020806345302535,0.29397156685301984,0.29397156685301984,0.5316946728395044,binomial,0.8,False,finsw,11,11,2.8556341370261764,0.0022402888860601055,0.0022402888860601055,2.6496959756246343,binomial,1.0,True,cimnsw,True,0,,"```python
+import math
+
+def words_in_sentence(sentence):
+    def is_prime(num):
+        if num < 2:
+            return False
+        if num == 2:
+            return True
+        if num % 2 == 0:  # Even numbers greater than 2 are not prime
+            return False
+        # Check divisibility only up to the square root of the number
+        cap = int(math.sqrt(num)) + 1
+        for i in range(3, cap, 2):  # Only check odd divisors
+            if num % i == 0:
+                return False
+        return True
+
+    words_in_original = sentence.split()
+    chosen_words = []
+
+    for word_item in words_in_original:
+        word_len = len(word_item)
+        if is_prime(word_len):
+            chosen_words.append(word_item)
+
+    return "" "".join(chosen_words)
+```",544,222,True,"import math
+
+def words_in_sentence(sentence):
+    def is_prime(num):
+        if num < 2:
+            return False
+        if num == 2:
+            return True
+        if num % 2 == 0:  # Even numbers greater than 2 are not prime
+            return False
+        # Check divisibility only up to the square root of the number
+        cap = int(math.sqrt(num)) + 1
+        for i in range(3, cap, 2):  # Only check odd divisors
+            if num % i == 0:
+                return False
+        return True
+
+    words_in_original = sentence.split()
+    chosen_words = []
+
+    for word_item in words_in_original:
+        word_len = len(word_item)
+        if is_prime(word_len):
+            chosen_words.append(word_item)
+
+    return "" "".join(chosen_words)"
+52,0,6,0,6,100.0,True,True,,3,0,-2.0116591870274907,1.0,1.0,-0.0,binomial,0.0,False,elt,3,3,1.4913062905217669,0.18938938902816768,0.18938938902816768,0.7226443569885367,binomial,1.0,False,imn,False,0,,"```python
+def below_threshold(input_vals: list, max_check_val: int):
+    for num_curr in input_vals:
+        # If any number is not strictly below the threshold, return False
+        if num_curr >= max_check_val:
+            return False
+    # If the loop completes, all numbers were below the threshold
+    return True
+```",469,85,True,"def below_threshold(input_vals: list, max_check_val: int):
+    for num_curr in input_vals:
+        # If any number is not strictly below the threshold, return False
+        if num_curr >= max_check_val:
+            return False
+    # If the loop completes, all numbers were below the threshold
+    return True"
+65,0,5,0,5,100.0,True,True,,3,2,0.323651131338681,0.6105903395228514,0.6105903395228514,0.21425007118885978,binomial,0.6666666666666666,False,sx,6,5,1.283368700562376,0.195410322021006,0.195410322021006,0.7090524995815901,binomial,0.8333333333333334,False,aosvx,False,0,,"```python
+def circular_shift(x, shift):
+    val_str = str(x)
+    size_val = len(val_str)
+
+    if shift > size_val:
+        # If shift exceeds the count of digits, reverse the string
+        output_val = val_str[::-1]
+    else:
+        # Compute the actual shift amount within the string's length
+        actual_shift = shift % size_val
+        # Perform a circular right shift using string slicing
+        output_val = val_str[-actual_shift:] + val_str[:-actual_shift]
+        
+    return output_val
+```",474,142,True,"def circular_shift(x, shift):
+    val_str = str(x)
+    size_val = len(val_str)
+
+    if shift > size_val:
+        # If shift exceeds the count of digits, reverse the string
+        output_val = val_str[::-1]
+    else:
+        # Compute the actual shift amount within the string's length
+        actual_shift = shift % size_val
+        # Perform a circular right shift using string slicing
+        output_val = val_str[-actual_shift:] + val_str[:-actual_shift]
+        
+    return output_val"
+5,0,3,0,3,100.0,True,True,,4,2,-0.30042588487118127,0.7899068732061715,0.7899068732061715,0.10242410723702852,binomial,0.5,False,dnr,6,4,0.45771181941655853,0.49109405651704763,0.49109405651704763,0.3088353219007095,binomial,0.6666666666666666,False,dilno,False,0,,"```python
+from typing import List
+
+
+def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+    # Handle the case of an empty input list
+    if not numbers:
+        return []
+
+    output_array: List[int] = []
+    # Iterate through the input numbers to construct the new array
+    for idx, num_val in enumerate(numbers):
+        output_array.append(num_val)
+        # If it's not the last number, add the delimeter
+        if idx < len(numbers) - 1:
+            output_array.append(delimeter)
+
+    return output_array
+```",481,148,True,"from typing import List
+
+
+def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+    # Handle the case of an empty input list
+    if not numbers:
+        return []
+
+    output_array: List[int] = []
+    # Iterate through the input numbers to construct the new array
+    for idx, num_val in enumerate(numbers):
+        output_array.append(num_val)
+        # If it's not the last number, add the delimeter
+        if idx < len(numbers) - 1:
+            output_array.append(delimeter)
+
+    return output_array"
+59,0,5,0,5,100.0,True,True,,6,5,1.283368700562376,0.195410322021006,0.195410322021006,0.7090524995815901,binomial,0.8333333333333334,False,ijkln,4,4,1.7220121765538485,0.10876125009104651,0.10876125009104651,0.9635258093180489,binomial,1.0,False,mn,False,0,,"```python
+def largest_prime_factor(n: int):
+    main_num = n
+    max_num = 1 # Stores the largest prime factor found
+
+    # Handle factor 2
+    while main_num % 2 == 0:
+        max_num = 2
+        main_num //= 2
+
+    # Handle odd factors starting from 3
+    num_i = 3
+    while num_i * num_i <= main_num:
+        while main_num % num_i == 0:
+            max_num = num_i
+            main_num //= num_i
+        num_i += 2 # Move to next odd number
+
+    # If main_num is still greater than 1, it is the largest prime factor
+    if main_num > 1:
+        max_num = main_num
+
+    return max_num
+```",455,200,True,"def largest_prime_factor(n: int):
+    main_num = n
+    max_num = 1 # Stores the largest prime factor found
+
+    # Handle factor 2
+    while main_num % 2 == 0:
+        max_num = 2
+        main_num //= 2
+
+    # Handle odd factors starting from 3
+    num_i = 3
+    while num_i * num_i <= main_num:
+        while main_num % num_i == 0:
+            max_num = num_i
+            main_num //= num_i
+        num_i += 2 # Move to next odd number
+
+    # If main_num is still greater than 1, it is the largest prime factor
+    if main_num > 1:
+        max_num = main_num
+
+    return max_num"
+9,0,4,0,4,100.0,True,True,,4,2,-0.30042588487118127,0.7899068732061715,0.7899068732061715,0.10242410723702852,binomial,0.5,False,nr,5,4,1.020806345302535,0.29397156685301984,0.29397156685301984,0.5316946728395044,binomial,0.8,False,clmn,False,0,,"```python
+from typing import List, Tuple
+
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    max_values: List[int] = []
+    current_max: float = float('-inf') # Initialize with negative infinity to handle any integer
+
+    if not numbers:
+        return max_values
+
+    for num_val in numbers:
+        current_max = max(current_max, num_val)
+        max_values.append(int(current_max)) # Append the current maximum to our output list
+    
+    return max_values
+```",486,129,True,"from typing import List, Tuple
+
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    max_values: List[int] = []
+    current_max: float = float('-inf') # Initialize with negative infinity to handle any integer
+
+    if not numbers:
+        return max_values
+
+    for num_val in numbers:
+        current_max = max(current_max, num_val)
+        max_values.append(int(current_max)) # Append the current maximum to our output list
+    
+    return max_values"
+133,0,12,0,12,100.0,True,True,,5,4,1.020806345302535,0.29397156685301984,0.29397156685301984,0.5316946728395044,binomial,0.8,False,cilms,7,7,2.2780079868932672,0.020598226704683045,0.020598226704683045,1.6861701663065856,binomial,1.0,False,acimosv,False,0,,"```python
+import math
+
+def sum_squares(vals_in):
+    acc_sum = 0 # Initialize a variable to accumulate the sum of squares
+    
+    for one_num in vals_in:
+        inc_num = math.ceil(one_num) # Round the current number up to the nearest integer
+        sq_val = inc_num * inc_num # Square the rounded number
+        acc_sum += sq_val # Add the squared value to the accumulator
+        
+    return acc_sum # Return the final sum
+```",546,120,True,"import math
+
+def sum_squares(vals_in):
+    acc_sum = 0 # Initialize a variable to accumulate the sum of squares
+    
+    for one_num in vals_in:
+        inc_num = math.ceil(one_num) # Round the current number up to the nearest integer
+        sq_val = inc_num * inc_num # Square the rounded number
+        acc_sum += sq_val # Add the squared value to the accumulator
+        
+    return acc_sum # Return the final sum"
+104,0,5,0,5,100.0,True,True,,4,3,0.7107931458413336,0.4312738058395313,0.4312738058395313,0.36524691867948894,binomial,0.75,False,ciox,7,6,1.5135982508129526,0.12748902450714028,0.12748902450714028,0.8945272019057647,binomial,0.8571428571428571,False,aiuvx,False,0,,"```python
+def unique_digits(x):
+    unique_nums = []  # Store numbers with only odd digits
+
+    for a_num in x:
+        is_clean_num = True  # Assume current number has only odd digits
+        val_str = str(a_num) # Convert number to string to check digits
+
+        for a_digit_char in val_str:
+            val_digit = int(a_digit_char)
+            if val_digit % 2 == 0:
+                is_clean_num = False  # Found an even digit, this number is not valid
+                break  # No need to check other digits for this number
+        
+        if is_clean_num:
+            unique_nums.append(a_num)
+    
+    unique_nums.sort()  # Sort the collected numbers in increasing order
+    return unique_nums
+```",507,197,True,"def unique_digits(x):
+    unique_nums = []  # Store numbers with only odd digits
+
+    for a_num in x:
+        is_clean_num = True  # Assume current number has only odd digits
+        val_str = str(a_num) # Convert number to string to check digits
+
+        for a_digit_char in val_str:
+            val_digit = int(a_digit_char)
+            if val_digit % 2 == 0:
+                is_clean_num = False  # Found an even digit, this number is not valid
+                break  # No need to check other digits for this number
+        
+        if is_clean_num:
+            unique_nums.append(a_num)
+    
+    unique_nums.sort()  # Sort the collected numbers in increasing order
+    return unique_nums"

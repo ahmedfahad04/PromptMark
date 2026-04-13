@@ -1,0 +1,34 @@
+{
+  "timestamp": "2025-11-12T08:40:00.228551",
+  "total_codes_analyzed": 0,
+  "models_configured": [
+    "gemini_best",
+    "claude_mbpp",
+    "claude_humaneval",
+    "human_mbpp",
+    "human_humaneval"
+  ],
+  "model_code_counts": {
+    "gemini_best": 97,
+    "claude_mbpp": 100,
+    "claude_humaneval": 164,
+    "human_mbpp": 100,
+    "human_humaneval": 164
+  },
+  "total_unique_tokens_combined": 1926,
+  "model_unique_token_counts": {
+    "gemini_best": 583,
+    "claude_mbpp": 485,
+    "claude_humaneval": 765,
+    "human_mbpp": 245,
+    "human_humaneval": 209
+  },
+  "letter_coverage_combined": 26,
+  "letter_coverage_per_model": {
+    "gemini_best": 23,
+    "claude_mbpp": 19,
+    "claude_humaneval": 22,
+    "human_mbpp": 21,
+    "human_humaneval": 22
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "a": [
+    "add",
+    "a_val",
+    "a_input",
+    "and_tuples",
+    "atan2",
+    "average_tuple"
+  ],
+  "b": [
+    "b_div_d",
+    "b_val",
+    "b_input",
+    "bit_length"
+  ],
+  "c": [
+    "check_tuple",
+    "count_bidirectional",
+    "count_Substrings",
+    "capital_words_spaces",
+    "count_vowels",
+    "count_divisors",
+    "common_in_nested_lists",
+    "count_X",
+    "comb_sort",
+    "count_rotation"
+  ],
+  "d": [
+    "data_list",
+    "dgap",
+    "data_tuple",
+    "d_val",
+    "dp_lengths_list",
+    "d_val_one",
+    "d_list_val",
+    "data_frequency_map",
+    "d_offset_c",
+    "dswapped"
+  ],
+  "e": [
+    "extract_nth_element",
+    "extract_string",
+    "extract_quotation",
+    "extract_singly",
+    "empty_dit",
+    "even_Power_Sum"
+  ],
+  "f": [
+    "first_val",
+    "first_val_two_multiple",
+    "first_val_not_two_multiple",
+    "final_val",
+    "final_distinct_values_set",
+    "final_list",
+    "focus_char_klm",
+    "final_lex_word",
+    "first_s_val",
+    "final_list_data"
+  ],
+  "g": [
+    "group_tuples",
+    "group"
+  ],
+  "i": [
+    "intersection",
+    "insert_element",
+    "isupper",
+    "is_perfect_square",
+    "islower",
+    "isdigit",
+    "is_sublist",
+    "intersection_array",
+    "interleave_lists"
+  ],
+  "j": [
+    "jdx_klm",
+    "jndex",
+    "j_val",
+    "j_final_start_position",
+    "j_list_chars",
+    "j_val_idx",
+    "j_loop_location",
+    "j_loop_mark",
+    "jumbled_text",
+    "j_index"
+  ],
+  "k": [
+    "k_val",
+    "k_idx",
+    "k_dex",
+    "known_special_values",
+    "k_dict_link_val",
+    "kept_labels",
+    "key_string",
+    "k_first_elm",
+    "k_key",
+    "known_tuples"
+  ],
+  "l": [
+    "l_data",
+    "line_dlsk",
+    "l_length",
+    "list_data",
+    "list_values",
+    "l_tuple",
+    "list_sub",
+    "l_val",
+    "l_idx",
+    "list_first"
+  ],
+  "m": [
+    "mlist",
+    "math",
+    "mid_lmt",
+    "min_d_list",
+    "m_idx",
+    "max_subset_size",
+    "market_value",
+    "matched_results",
+    "matched_value",
+    "m_value_median"
+  ],
+  "n": [
+    "n_val",
+    "n_dlsk",
+    "num_val",
+    "num_second",
+    "new_list",
+    "num_even_tally",
+    "num_odd_tally",
+    "n_target",
+    "num_find",
+    "num_first"
+  ],
+  "o": [
+    "occurance_substring",
+    "otherside_rightangle",
+    "odd_num_sum"
+  ],
+  "p": [
+    "power",
+    "pi",
+    "perimeter_pentagon",
+    "polar_rect",
+    "parabola_directrix",
+    "pair_wise"
+  ],
+  "r": [
+    "rotate_right",
+    "round_and_sum",
+    "remove_lowercase",
+    "remove_nested",
+    "rstrip",
+    "remove_Occ",
+    "rfind",
+    "remove_dirty_chars",
+    "reverse_string_list",
+    "replace_char"
+  ],
+  "s": [
+    "second_val",
+    "seq_vals",
+    "sqrt",
+    "sorted_nums_list",
+    "second_s_val",
+    "start_loc_idx",
+    "sub_list_val",
+    "s_start_idx",
+    "scanned_letter",
+    "s_value"
+  ],
+  "t": [
+    "total_sum",
+    "t_current_sum",
+    "total_value_count",
+    "text_data_list",
+    "temp_string_data",
+    "total_sum_val",
+    "top_lmt",
+    "t_idx",
+    "t_val_data",
+    "tracked_distinct_pairs"
+  ],
+  "u": [
+    "union_elements",
+    "unique_product"
+  ],
+  "v": [
+    "vowels_dlsk",
+    "v_actual_length",
+    "val_token",
+    "v_factor_a",
+    "valid_list",
+    "value_num",
+    "v_value",
+    "v_val",
+    "versed_form",
+    "val_first"
+  ],
+  "x": [
+    "x_particular",
+    "x_final",
+    "x_next",
+    "x_val",
+    "x_val_base"
+  ],
+  "y": [
+    "y_next",
+    "y_particular",
+    "y_val",
+    "y_val_base",
+    "y_final"
+  ],
+  "z": [
+    "z_logic",
+    "z_is_all_matched"
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "overall_comparison": {
+    "sweet_mbpp_avg": 0.6118475184717588,
+    "experiments_avg": 0.28033287382205996,
+    "difference": 0.3315146446496988,
+    "percent_decrease": 54.182559320946346
+  },
+  "component_comparison": [
+    {
+      "Component": "BLEU",
+      "Sweet-MBPP": 0.495814432177141,
+      "Experiments": 0.04497866242777889,
+      "Difference": 0.4508357697493621,
+      "% Decrease": 90.92832731183806
+    },
+    {
+      "Component": "Syntax",
+      "Sweet-MBPP": 0.6390923204937442,
+      "Experiments": 0.37104761231144595,
+      "Difference": 0.26804470818229825,
+      "% Decrease": 41.941469109692115
+    },
+    {
+      "Component": "Dataflow",
+      "Sweet-MBPP": 0.7971732348671231,
+      "Experiments": 0.6261966806318628,
+      "Difference": 0.17097655423526026,
+      "% Decrease": 21.447854337929385
+    }
+  ],
+  "experiment_performance": {
+    "EXP_1-1_MBPP_After_GEN_100": {
+      "Avg_CodeBLEU": 0.5985,
+      "Total_Samples": 559,
+      "Num_Models": 6
+    },
+    "EXP_3_V1_V2_MBPP": {
+      "Avg_CodeBLEU": 0.2538,
+      "Total_Samples": 838,
+      "Num_Models": 10
+    },
+    "EXP_1_MBPP_100": {
+      "Avg_CodeBLEU": 0.2511,
+      "Total_Samples": 570,
+      "Num_Models": 6
+    },
+    "EXP_3_1_2_3_V1_V2_MBPP": {
+      "Avg_CodeBLEU": 0.2511,
+      "Total_Samples": 674,
+      "Num_Models": 7
+    },
+    "EXP_1-1_MBPP_With_Comments_100": {
+      "Avg_CodeBLEU": 0.246,
+      "Total_Samples": 594,
+      "Num_Models": 6
+    },
+    "EXP_2_V1_V2": {
+      "Avg_CodeBLEU": 0.246,
+      "Total_Samples": 583,
+      "Num_Models": 6
+    },
+    "EXP_2-1_2-2_V1_V2_MBPP": {
+      "Avg_CodeBLEU": 0.2448,
+      "Total_Samples": 768,
+      "Num_Models": 7
+    },
+    "EXP_X_1_V1_V2_V3": {
+      "Avg_CodeBLEU": 0.2278,
+      "Total_Samples": 599,
+      "Num_Models": 6
+    }
+  },
+  "statistical_summary": [
+    {
+      "Metric": "CodeBLEU",
+      "Sweet_Mean": 0.6118475184717588,
+      "Sweet_Std": 0.3453071993031319,
+      "Exp_Mean": 0.28448804042314896,
+      "Exp_Std": 0.15499279917413525,
+      "Mean_Diff": 0.3273594780486098,
+      "Std_Diff": 0.19031440012899667
+    },
+    {
+      "Metric": "BLEU",
+      "Sweet_Mean": 0.495814432177141,
+      "Sweet_Std": 0.4326318861769864,
+      "Exp_Mean": 0.04497866242777889,
+      "Exp_Std": 0.11951100832139477,
+      "Mean_Diff": 0.4508357697493621,
+      "Std_Diff": 0.3131208778555916
+    },
+    {
+      "Metric": "Syntax",
+      "Sweet_Mean": 0.6390923204937442,
+      "Sweet_Std": 0.3638934878380899,
+      "Exp_Mean": 0.37104761231144595,
+      "Exp_Std": 0.26670995825190874,
+      "Mean_Diff": 0.26804470818229825,
+      "Std_Diff": 0.09718352958618115
+    },
+    {
+      "Metric": "Dataflow",
+      "Sweet_Mean": 0.7971732348671231,
+      "Sweet_Std": 0.2865572109115357,
+      "Exp_Mean": 0.6261966806318628,
+      "Exp_Std": 0.2489365600965084,
+      "Mean_Diff": 0.17097655423526026,
+      "Std_Diff": 0.03762065081502727
+    }
+  ],
+  "best_experiment": {
+    "name": "EXP_1-1_MBPP_After_GEN_100",
+    "avg_codebleu": 0.5985
+  },
+  "worst_experiment": {
+    "name": "EXP_X_1_V1_V2_V3",
+    "avg_codebleu": 0.2278
+  }
+}

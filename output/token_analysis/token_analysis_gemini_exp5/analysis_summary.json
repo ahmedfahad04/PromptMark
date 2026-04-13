@@ -1,0 +1,34 @@
+{
+  "timestamp": "2025-11-02T22:39:01.668317",
+  "total_codes_analyzed": 0,
+  "models_configured": [
+    "gemini_exp3",
+    "gemini_exp3_2",
+    "gemini_exp5",
+    "gemini_uncommon",
+    "human"
+  ],
+  "model_code_counts": {
+    "gemini_exp3": 97,
+    "gemini_exp3_2": 100,
+    "gemini_exp5": 97,
+    "gemini_uncommon": 98,
+    "human": 100
+  },
+  "total_unique_tokens_combined": 1895,
+  "model_unique_token_counts": {
+    "gemini_exp3": 583,
+    "gemini_exp3_2": 573,
+    "gemini_exp5": 461,
+    "gemini_uncommon": 557,
+    "human": 245
+  },
+  "letter_coverage_combined": 26,
+  "letter_coverage_per_model": {
+    "gemini_exp3": 23,
+    "gemini_exp3_2": 26,
+    "gemini_exp5": 23,
+    "gemini_uncommon": 26,
+    "human": 21
+  }
+}

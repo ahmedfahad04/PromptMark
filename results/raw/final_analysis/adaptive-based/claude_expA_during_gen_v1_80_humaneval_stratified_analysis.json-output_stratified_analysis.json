@@ -1,0 +1,32 @@
+{
+  "Small-n": {
+    "sample_count": 78,
+    "tp": 56,
+    "fp": 0,
+    "tn": 78,
+    "fn": 22,
+    "tpr": 0.7179,
+    "fpr": 0.0,
+    "tnr": 1.0,
+    "fnr": 0.2821,
+    "precision": 1.0,
+    "auc": 0.9218,
+    "avg_generated_token_count": 11.1,
+    "avg_generated_green_count": 9.7
+  },
+  "Large-n": {
+    "sample_count": 1,
+    "tp": 1,
+    "fp": 0,
+    "tn": 1,
+    "fn": 0,
+    "tpr": 1.0,
+    "fpr": 0.0,
+    "tnr": 1.0,
+    "fnr": 0.0,
+    "precision": 1.0,
+    "auc": 1.0,
+    "avg_generated_token_count": 73.0,
+    "avg_generated_green_count": 73.0
+  }
+}

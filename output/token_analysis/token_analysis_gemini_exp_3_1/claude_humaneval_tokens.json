@@ -1,0 +1,222 @@
+{
+  "a": [
+    "arr",
+    "all_primes",
+    "adjusted_output",
+    "adjacent_values",
+    "active_word",
+    "active_element",
+    "audio_input",
+    "array",
+    "all_words",
+    "active_char"
+  ],
+  "b": [
+    "below_zero",
+    "by_length",
+    "below_threshold",
+    "bf"
+  ],
+  "c": [
+    "current_position",
+    "class_name",
+    "ch",
+    "correct_bracketing",
+    "capacity",
+    "ceil",
+    "coeff",
+    "can_arrange",
+    "check_if_last_char_is_a_letter",
+    "change_base"
+  ],
+  "d": [
+    "digit_list",
+    "divisor",
+    "digit_accumulator",
+    "digit",
+    "digit_value",
+    "divider",
+    "digit_input",
+    "digits_list",
+    "digit_count",
+    "dividend"
+  ],
+  "e": [
+    "element",
+    "each_letter",
+    "each_char",
+    "encoded_result",
+    "eligible_integer",
+    "expression_parts",
+    "extracted_digits",
+    "edge_list",
+    "encrypted_output",
+    "each_word"
+  ],
+  "f": [
+    "fib",
+    "flip_case",
+    "filter_integers",
+    "factorize",
+    "find_closest_elements",
+    "find_max",
+    "fib4",
+    "fruit_distribution",
+    "fix_spaces",
+    "filter_by_prefix"
+  ],
+  "g": [
+    "group",
+    "groups_by_remainder",
+    "groups",
+    "grid",
+    "grade_outcomes",
+    "grid_size",
+    "get_combinations",
+    "gap_length",
+    "greatest_integer",
+    "global_min"
+  ],
+  "h": [
+    "hashlib",
+    "hexdigest",
+    "hex_key",
+    "has_close_elements",
+    "histogram",
+    "how_many_times"
+  ],
+  "i": [
+    "input_text",
+    "input_list",
+    "item",
+    "input_value",
+    "input_string",
+    "index_position",
+    "integer_value",
+    "integer",
+    "idx",
+    "input_number"
+  ],
+  "k": [
+    "kappa",
+    "key",
+    "k_largest"
+  ],
+  "l": [
+    "letter",
+    "lst",
+    "List",
+    "left_edge",
+    "limit",
+    "list_length",
+    "latest",
+    "largest_divisor",
+    "letter_occurrences",
+    "lower_integer"
+  ],
+  "m": [
+    "math",
+    "message",
+    "matched_opening",
+    "md5",
+    "make_a_pile",
+    "make_palindrome",
+    "minPath",
+    "multiply",
+    "max_fill",
+    "maximum"
+  ],
+  "n": [
+    "numbers",
+    "nums",
+    "new_position",
+    "number",
+    "numerical_letter_grade",
+    "next_smallest"
+  ],
+  "o": [
+    "output_list",
+    "original_input",
+    "output_array",
+    "ordered_list",
+    "open_count",
+    "original_list",
+    "original_text",
+    "overall_amount",
+    "original_integer",
+    "occurrence_amount"
+  ],
+  "p": [
+    "position",
+    "present_element",
+    "potential_prime",
+    "pattern",
+    "prime_list",
+    "paren_string",
+    "pos",
+    "prefix_part",
+    "perimeter_divided",
+    "poly"
+  ],
+  "r": [
+    "remove_vowels",
+    "right_angle_triangle",
+    "reverse_delete",
+    "remove_duplicates",
+    "rounded_avg",
+    "rescale_to_unit",
+    "rolling_max"
+  ],
+  "s": [
+    "sort_array",
+    "solve",
+    "sum_squares",
+    "strings",
+    "substring",
+    "sentence",
+    "separate_paren_groups",
+    "string_to_md5",
+    "strlen",
+    "simplify"
+  ],
+  "t": [
+    "Tuple",
+    "threshold",
+    "triangle_area",
+    "tri",
+    "truncate_number",
+    "triples_sum_to_zero",
+    "total_match"
+  ],
+  "u": [
+    "upper_edge",
+    "upper_limit",
+    "upper_index",
+    "upper_integer",
+    "updated_string",
+    "upper_pick",
+    "unique_letters",
+    "unique_count",
+    "upper_element",
+    "uvalue_min"
+  ],
+  "v": [
+    "valid_digits",
+    "value",
+    "vowels_count",
+    "valid_date"
+  ],
+  "w": [
+    "word",
+    "working_value",
+    "words",
+    "words_string",
+    "words_in_sentence",
+    "will_it_fly"
+  ],
+  "x": [
+    "xs",
+    "xor_digit",
+    "x_or_y"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "total_samples_evaluated": 115,
+  "codebleu_scores": {
+    "average": 0.6118475184717588,
+    "std_dev": 0.3453071993031319,
+    "min": 0.0606105970016443,
+    "max": 1.0,
+    "median": 0.6533889326694833
+  },
+  "component_scores": {
+    "bleu": {
+      "average": 0.495814432177141,
+      "std_dev": 0.4326318861769864
+    },
+    "syntax": {
+      "average": 0.6390923204937442,
+      "std_dev": 0.3638934878380899
+    },
+    "dataflow": {
+      "average": 0.7971732348671231,
+      "std_dev": 0.2865572109115357
+    }
+  },
+  "perfect_matches": {
+    "count": 34,
+    "percentage": 29.565217391304348
+  }
+}

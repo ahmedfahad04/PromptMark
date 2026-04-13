@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-12T08:40:06.958052",
+    "models": [
+      "gemini_best",
+      "claude_mbpp",
+      "claude_humaneval",
+      "human_mbpp",
+      "human_humaneval"
+    ],
+    "total_models": 5
+  },
+  "individual_models": {
+    "gemini_best": {
+      "total_unique_tokens": 583,
+      "code_count": 97,
+      "avg_frequency": 2.6826758147512866,
+      "std_frequency": 1.9794376186140705,
+      "max_frequency": 20,
+      "top_5_tokens": [
+        "l_data",
+        "data_list",
+        "line_dlsk",
+        "k_val",
+        "l_length"
+      ],
+      "letter_coverage": 23
+    },
+    "claude_mbpp": {
+      "total_unique_tokens": 485,
+      "code_count": 100,
+      "avg_frequency": 3.2309278350515465,
+      "std_frequency": 4.398719608098306,
+      "max_frequency": 70,
+      "top_5_tokens": [
+        "position",
+        "text_content",
+        "numbers",
+        "current_number",
+        "number"
+      ],
+      "letter_coverage": 24
+    },
+    "claude_humaneval": {
+      "total_unique_tokens": 765,
+      "code_count": 164,
+      "avg_frequency": 3.573856209150327,
+      "std_frequency": 4.875586389962838,
+      "max_frequency": 47,
+      "top_5_tokens": [
+        "output_list",
+        "letter",
+        "element",
+        "lst",
+        "input_text"
+      ],
+      "letter_coverage": 25
+    },
+    "human_mbpp": {
+      "total_unique_tokens": 245,
+      "code_count": 100,
+      "avg_frequency": 3.1183673469387756,
+      "std_frequency": 4.373187016511271,
+      "max_frequency": 35,
+      "top_5_tokens": [
+        "res",
+        "result",
+        "ele",
+        "arr",
+        "temp"
+      ],
+      "letter_coverage": 25
+    },
+    "human_humaneval": {
+      "total_unique_tokens": 209,
+      "code_count": 164,
+      "avg_frequency": 4.77511961722488,
+      "std_frequency": 5.296216317555622,
+      "max_frequency": 48,
+      "top_5_tokens": [
+        "lst",
+        "arr",
+        "ans",
+        "result",
+        "num"
+      ],
+      "letter_coverage": 25
+    }
+  },
+  "pairwise_comparisons": {
+    "gemini_best_vs_claude_mbpp": {
+      "shared_tokens": 112,
+      "gemini_best_unique": 471,
+      "claude_mbpp_unique": 373,
+      "total_union": 956,
+      "overlap_percentage": 11.715481171548117
+    },
+    "gemini_best_vs_claude_humaneval": {
+      "shared_tokens": 11,
+      "gemini_best_unique": 572,
+      "claude_humaneval_unique": 754,
+      "total_union": 1337,
+      "overlap_percentage": 0.8227374719521316
+    },
+    "gemini_best_vs_human_mbpp": {
+      "shared_tokens": 109,
+      "gemini_best_unique": 474,
+      "human_mbpp_unique": 136,
+      "total_union": 719,
+      "overlap_percentage": 15.159944367176633
+    },
+    "gemini_best_vs_human_humaneval": {
+      "shared_tokens": 8,
+      "gemini_best_unique": 575,
+      "human_humaneval_unique": 201,
+      "total_union": 784,
+      "overlap_percentage": 1.0204081632653061
+    },
+    "claude_mbpp_vs_claude_humaneval": {
+      "shared_tokens": 19,
+      "claude_mbpp_unique": 466,
+      "claude_humaneval_unique": 746,
+      "total_union": 1231,
+      "overlap_percentage": 1.5434606011372867
+    },
+    "claude_mbpp_vs_human_mbpp": {
+      "shared_tokens": 120,
+      "claude_mbpp_unique": 365,
+      "human_mbpp_unique": 125,
+      "total_union": 610,
+      "overlap_percentage": 19.672131147540984
+    },
+    "claude_mbpp_vs_human_humaneval": {
+      "shared_tokens": 17,
+      "claude_mbpp_unique": 468,
+      "human_humaneval_unique": 192,
+      "total_union": 677,
+      "overlap_percentage": 2.511078286558346
+    },
+    "claude_humaneval_vs_human_mbpp": {
+      "shared_tokens": 30,
+      "claude_humaneval_unique": 735,
+      "human_mbpp_unique": 215,
+      "total_union": 980,
+      "overlap_percentage": 3.061224489795918
+    },
+    "claude_humaneval_vs_human_humaneval": {
+      "shared_tokens": 63,
+      "claude_humaneval_unique": 702,
+      "human_humaneval_unique": 146,
+      "total_union": 911,
+      "overlap_percentage": 6.915477497255763
+    },
+    "human_mbpp_vs_human_humaneval": {
+      "shared_tokens": 35,
+      "human_mbpp_unique": 210,
+      "human_humaneval_unique": 174,
+      "total_union": 419,
+      "overlap_percentage": 8.353221957040573
+    }
+  }
+}

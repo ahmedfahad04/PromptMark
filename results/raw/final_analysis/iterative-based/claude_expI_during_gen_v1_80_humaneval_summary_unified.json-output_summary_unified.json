@@ -1,0 +1,33 @@
+{
+  "experiment_info": {
+    "dataset_size": 79,
+    "detection_method": "unified (exact binomial p-value)",
+    "date": "2026-02-25T14:06:05.148298"
+  },
+  "thresholds": {
+    "z_threshold": 2.12,
+    "p_threshold": 0.017003022647632787,
+    "p_threshold_note": "Computed as norm.sf(Z_THRESHOLD) for consistency",
+    "small_sample_threshold": 30,
+    "gamma_note": "Should be empirically calibrated from original code corpus"
+  },
+  "confusion_matrix": {
+    "tp": 41,
+    "fp": 0,
+    "tn": 79,
+    "fn": 38
+  },
+  "performance_metrics": {
+    "tpr_sensitivity": 0.519,
+    "fpr_false_positive_rate": 0.0,
+    "tnr_specificity": 1.0,
+    "fnr_false_negative_rate": 0.481,
+    "precision": 1.0,
+    "accuracy": 0.7595,
+    "f1_score": 0.6833,
+    "auroc": 0.9016
+  },
+  "code_quality": {
+    "avg_pass_rate": 96.2
+  }
+}

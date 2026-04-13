@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-03T10:29:39.498851",
+    "models": [
+      "gemini_best",
+      "gemini_natural",
+      "gemini_reverse",
+      "gemini_reversev2",
+      "human"
+    ],
+    "total_models": 5
+  },
+  "individual_models": {
+    "gemini_best": {
+      "total_unique_tokens": 583,
+      "code_count": 97,
+      "avg_frequency": 2.6826758147512866,
+      "std_frequency": 1.9794376186140705,
+      "max_frequency": 20,
+      "top_5_tokens": [
+        "l_data",
+        "data_list",
+        "line_dlsk",
+        "k_val",
+        "l_length"
+      ],
+      "letter_coverage": 23
+    },
+    "gemini_natural": {
+      "total_unique_tokens": 461,
+      "code_count": 97,
+      "avg_frequency": 3.2711496746203905,
+      "std_frequency": 4.846249145717721,
+      "max_frequency": 60,
+      "top_5_tokens": [
+        "original_list",
+        "result_list",
+        "current_number",
+        "current_position",
+        "numbers_list"
+      ],
+      "letter_coverage": 25
+    },
+    "gemini_reverse": {
+      "total_unique_tokens": 557,
+      "code_count": 98,
+      "avg_frequency": 2.535008976660682,
+      "std_frequency": 1.5617552874942884,
+      "max_frequency": 13,
+      "top_5_tokens": [
+        "math",
+        "whole_length",
+        "given_list",
+        "p_objects_list",
+        "output_bag"
+      ],
+      "letter_coverage": 26
+    },
+    "gemini_reversev2": {
+      "total_unique_tokens": 513,
+      "code_count": 95,
+      "avg_frequency": 2.491228070175439,
+      "std_frequency": 1.6521062971219023,
+      "max_frequency": 16,
+      "top_5_tokens": [
+        "whole_list",
+        "given_list",
+        "value_a",
+        "value_b",
+        "gap_value"
+      ],
+      "letter_coverage": 26
+    },
+    "human": {
+      "total_unique_tokens": 245,
+      "code_count": 100,
+      "avg_frequency": 3.1183673469387756,
+      "std_frequency": 4.373187016511271,
+      "max_frequency": 35,
+      "top_5_tokens": [
+        "res",
+        "result",
+        "ele",
+        "arr",
+        "temp"
+      ],
+      "letter_coverage": 25
+    }
+  },
+  "pairwise_comparisons": {
+    "gemini_best_vs_gemini_natural": {
+      "shared_tokens": 118,
+      "gemini_best_unique": 465,
+      "gemini_natural_unique": 343,
+      "total_union": 926,
+      "overlap_percentage": 12.742980561555076
+    },
+    "gemini_best_vs_gemini_reverse": {
+      "shared_tokens": 116,
+      "gemini_best_unique": 467,
+      "gemini_reverse_unique": 441,
+      "total_union": 1024,
+      "overlap_percentage": 11.328125
+    },
+    "gemini_best_vs_gemini_reversev2": {
+      "shared_tokens": 115,
+      "gemini_best_unique": 468,
+      "gemini_reversev2_unique": 398,
+      "total_union": 981,
+      "overlap_percentage": 11.722731906218145
+    },
+    "gemini_best_vs_human": {
+      "shared_tokens": 109,
+      "gemini_best_unique": 474,
+      "human_unique": 136,
+      "total_union": 719,
+      "overlap_percentage": 15.159944367176633
+    },
+    "gemini_natural_vs_gemini_reverse": {
+      "shared_tokens": 130,
+      "gemini_natural_unique": 331,
+      "gemini_reverse_unique": 427,
+      "total_union": 888,
+      "overlap_percentage": 14.63963963963964
+    },
+    "gemini_natural_vs_gemini_reversev2": {
+      "shared_tokens": 127,
+      "gemini_natural_unique": 334,
+      "gemini_reversev2_unique": 386,
+      "total_union": 847,
+      "overlap_percentage": 14.994096812278631
+    },
+    "gemini_natural_vs_human": {
+      "shared_tokens": 110,
+      "gemini_natural_unique": 351,
+      "human_unique": 135,
+      "total_union": 596,
+      "overlap_percentage": 18.456375838926174
+    },
+    "gemini_reverse_vs_gemini_reversev2": {
+      "shared_tokens": 148,
+      "gemini_reverse_unique": 409,
+      "gemini_reversev2_unique": 365,
+      "total_union": 922,
+      "overlap_percentage": 16.052060737527114
+    },
+    "gemini_reverse_vs_human": {
+      "shared_tokens": 112,
+      "gemini_reverse_unique": 445,
+      "human_unique": 133,
+      "total_union": 690,
+      "overlap_percentage": 16.231884057971016
+    },
+    "gemini_reversev2_vs_human": {
+      "shared_tokens": 109,
+      "gemini_reversev2_unique": 404,
+      "human_unique": 136,
+      "total_union": 649,
+      "overlap_percentage": 16.795069337442218
+    }
+  }
+}

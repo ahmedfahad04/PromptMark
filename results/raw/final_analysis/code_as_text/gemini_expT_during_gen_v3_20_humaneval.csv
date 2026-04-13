@@ -1,0 +1,1837 @@
+task_id,iteration_used,tests_passed,tests_failed,total_tests,pass_rate,all_passed,correctness,error_message,original_token_count,original_green_count,original_z_score,original_p_exact,original_p_unified,original_score,original_method_used,original_preferred_ratio,original_is_watermarked,original_unique_starts,generated_token_count,generated_green_count,generated_z_score,generated_p_exact,generated_p_unified,generated_score,generated_method_used,generated_preferred_ratio,generated_is_watermarked,generated_unique_starts,meets_z,iteration,reasoning_text,full_llm_response,input_tokens,output_tokens,stopping_condition_met,code
+0,0,7,0,7,100.0,True,True,,7,2,-0.5974397989110077,0.8362941214967321,0.8362941214967321,0.07764095596004304,binomial,0.2857142857142857,False,deint,7,2,-0.5974397989110077,0.8362941214967321,0.8362941214967321,0.07764095596004304,binomial,0.2857142857142857,False,dijlnt,False,0,"To determine if any two numbers within a provided list are closer than a specified threshold, we plan a direct, pairwise approach. This task involves iterating through all distinct pairings of the numerical data to spot any proximity that dips below the given parameter.","To determine if any two numbers within a provided list are closer than a specified threshold, we plan a direct, pairwise approach. This task involves iterating through all distinct pairings of the numerical data to spot any proximity that dips below the given parameter.
+
+```python
+from typing import List
+
+
+def has_close_elements(numbers: List[float], threshold: float) -> bool:
+    """""" Check if in given list of numbers, are any two numbers closer to each other than
+    given threshold.
+    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
+    False
+    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)
+    True
+    """"""
+    n = len(numbers)
+    # This design project undertakes a direct, pairwise proximity test.
+    # We deeply traverse through all distinct pairings of the provided numbers.
+    for i in range(n):
+        for j in range(i + 1, n): # Start j from i + 1 to bypass self-pairing and prior observations.
+            # Determine the absolute difference betwixt the two selected data points.
+            difference = abs(numbers[i] - numbers[j])
+            # If this difference dips below the specified threshold, a truly close pair is present.
+            if difference < threshold:
+                return True
+    # Should all possible pairings be thoroughly processed without finding a close pair, we declare False.
+    return False
+
+```",300,346,True,"from typing import List
+
+
+def has_close_elements(numbers: List[float], threshold: float) -> bool:
+    """""" Check if in given list of numbers, are any two numbers closer to each other than
+    given threshold.
+    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
+    False
+    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)
+    True
+    """"""
+    n = len(numbers)
+    # This design project undertakes a direct, pairwise proximity test.
+    # We deeply traverse through all distinct pairings of the provided numbers.
+    for i in range(n):
+        for j in range(i + 1, n): # Start j from i + 1 to bypass self-pairing and prior observations.
+            # Determine the absolute difference betwixt the two selected data points.
+            difference = abs(numbers[i] - numbers[j])
+            # If this difference dips below the specified threshold, a truly close pair is present.
+            if difference < threshold:
+                return True
+    # Should all possible pairings be thoroughly processed without finding a close pair, we declare False.
+    return False"
+64,0,8,0,8,100.0,True,True,,4,1,-0.5976634721483944,0.8670484919919771,0.8670484919919771,0.061956612771069536,binomial,0.25,False,cnsv,12,7,1.3256942254050148,0.15151511074994461,0.15151511074994461,0.8195440523889735,binomial,0.5833333333333334,False,abcdnpstv,False,0,,"```python
+def vowels_count(s):
+    """"""
+    Determines the total number of phonetic units, or 'vowels', present within a provided word.
+    Standard base speech sounds considered are 'a', 'e', 'i', 'o', 'u'.
+    The letter 'y' is also perceived as a speech sound (vowel), but purely when its placement
+    is at the final position of the input word.
+
+    Example:
+    >>> vowels_count(""abcde"")
+    2
+    >>> vowels_count(""ACEDY"")
+    3
+    """"""
+    total_speech_forms = 0
+    # Utilize a set for rapid lookup of primary vocalic forms.
+    # The base speech sounds are defined here for direct reference.
+    base_speech_sounds = {'a', 'e', 'i', 'o', 'u'} 
+
+    # Loop through each letter-form (character) in the given phrase.
+    for current_letter_shape in s:
+        # Process each letter-form by transforming it to its lower-form for proper check,
+        # thereby handling both uppercase and lowercase inputs.
+        normalized_form = current_letter_shape.lower()
+
+        # If the processed form is one of the base speech sounds, increment the total.
+        if normalized_form in base_speech_sounds:
+            total_speech_forms += 1
+    
+    # Special check for the final letter-form 'y'.
+    # This condition is applicable only if the phrase is not blank and 'y' is its last letter.
+    if s and s[-1].lower() == 'y': 
+        total_speech_forms += 1
+            
+    return total_speech_forms
+
+# Add a robust procedure to hold all trials (test cases) for this function.
+def hold_vowels_count_trials():
+    """"""
+    Performs a detailed set of trials to validate the vowels_count function's behavior.
+    """"""
+    # A helper procedure to confirm outcomes for each specific trial.
+    def confirm_result_of_trial(procedure_handler, phrase_input, desired_outcome, brief_label=""""):
+        actual_present_total = procedure_handler(phrase_input)
+        # This check helps to pinpoint if a trial fails.
+        if actual_present_total != desired_outcome:
+            # If the present result differs from the desired, a failure is reported,
+            # providing full details for rapid debugging.
+            raise AssertionError(
+                f""Trial failure for '{phrase_input}' ({brief_label}): ""
+                f""Desired: {desired_outcome}, Present: {actual_present_total}""
+            )
+        print(f""Trial passed for '{phrase_input}' ({brief_label}): Total: {actual_present_total}"")
+
+    print(""Beginning comprehensive trials for vowels_count function..."")
+
+    # Provided baseline trials from the problem brief:
+    confirm_result_of_trial(vowels_count, ""abcde"", 2, ""Basic phrase, lowercase forms"")
+    confirm_result_of_trial(vowels_count, ""ACEDY"", 3, ""Basic phrase, uppercase forms, 'y' at final position"")
+
+    # Further diverse trials to ensure robust functionality:
+    confirm_result_of_trial(vowels_count, """", 0, ""Blank phrase, no phonetic forms present"")
+    confirm_result_of_trial(vowels_count, ""rhythm"", 1, ""Phrase with 'y' as sole phonetic form (at final position)"")
+    confirm_result_of_trial(vowels_count, ""sky"", 1, ""Simple phrase ending in 'y'"")
+    confirm_result_of_trial(vowels_count, ""flyby"", 1, ""Phrase ending in 'y', prior 'y' not counted as per rule"")
+    confirm_result_of_trial(vowels_count, ""rhybth"", 0, ""Phrase with 'y' not at final position, no other phonetic forms"")
+    confirm_result_of_trial(vowels_count, ""python"", 1, ""Phrase with 'o' as phonetic form, 'y' not at final position"")
+    confirm_result_of_trial(vowels_count, ""aeiou"", 5, ""All base phonetic forms (lowercase)"")
+    confirm_result_of_trial(vowels_count, ""AEIOU"", 5, ""All base phonetic forms (uppercase)"")
+    confirm_result_of_trial(vowels_count, ""strength"", 1, ""Phrase with one phonetic form 'e', 'y' not applicable"")
+    confirm_result_of_trial(vowels_count, ""syzygy"", 1, ""Complex 'y' phrase, purely final 'y' counts as a phonetic form"")
+    confirm_result_of_trial(vowels_count, ""banana"", 3, ""Repeated phonetic forms, 'a'"")
+    confirm_result_of_trial(vowels_count, ""beautiful"", 5, ""Plural distinct phonetic forms"")
+    confirm_result_of_trial(vowels_count, ""rhythmS"", 0, ""Phrase ending with 'S', 'y' not a phonetic form because it's not final"")
+    confirm_result_of_trial(vowels_count, ""happy"", 2, ""Phrase ending 'y', plus 'a'"")
+    confirm_result_of_trial(vowels_count, ""PHYsics"", 2, ""Mixed case, 'y' not at final position, 'i' is also one"")
+    confirm_result_of_trial(vowels_count, ""type"", 1, ""Phrase with 'e', 'y' not at final position"")
+    confirm_result_of_trial(vowels_count, ""MYTH"", 0, ""Uppercase, 'y' not at final position, no other phonetic forms"")
+    confirm_result_of_trial(vowels_count, ""Thymely"", 2, ""Mixed, 'y' at end, 'e' also contributes"")
+    confirm_result_of_trial(vowels_count, ""DREAMFULLY"", 4, ""Longer phrase with varied vowels and 'y' not at end"") # D-R-E-A-M-F-U-L-L-Y (E, A, U, Y) = 4
+
+    print(""\nAll vowels_count trials completed productively!"")
+
+# To perform the full suite of trials, un-comment the following line:
+# hold_vowels_count_trials()
+```",301,1469,True,"def vowels_count(s):
+    """"""
+    Determines the total number of phonetic units, or 'vowels', present within a provided word.
+    Standard base speech sounds considered are 'a', 'e', 'i', 'o', 'u'.
+    The letter 'y' is also perceived as a speech sound (vowel), but purely when its placement
+    is at the final position of the input word.
+
+    Example:
+    >>> vowels_count(""abcde"")
+    2
+    >>> vowels_count(""ACEDY"")
+    3
+    """"""
+    total_speech_forms = 0
+    # Utilize a set for rapid lookup of primary vocalic forms.
+    # The base speech sounds are defined here for direct reference.
+    base_speech_sounds = {'a', 'e', 'i', 'o', 'u'} 
+
+    # Loop through each letter-form (character) in the given phrase.
+    for current_letter_shape in s:
+        # Process each letter-form by transforming it to its lower-form for proper check,
+        # thereby handling both uppercase and lowercase inputs.
+        normalized_form = current_letter_shape.lower()
+
+        # If the processed form is one of the base speech sounds, increment the total.
+        if normalized_form in base_speech_sounds:
+            total_speech_forms += 1
+    
+    # Special check for the final letter-form 'y'.
+    # This condition is applicable only if the phrase is not blank and 'y' is its last letter.
+    if s and s[-1].lower() == 'y': 
+        total_speech_forms += 1
+            
+    return total_speech_forms
+
+# Add a robust procedure to hold all trials (test cases) for this function.
+def hold_vowels_count_trials():
+    """"""
+    Performs a detailed set of trials to validate the vowels_count function's behavior.
+    """"""
+    # A helper procedure to confirm outcomes for each specific trial.
+    def confirm_result_of_trial(procedure_handler, phrase_input, desired_outcome, brief_label=""""):
+        actual_present_total = procedure_handler(phrase_input)
+        # This check helps to pinpoint if a trial fails.
+        if actual_present_total != desired_outcome:
+            # If the present result differs from the desired, a failure is reported,
+            # providing full details for rapid debugging.
+            raise AssertionError(
+                f""Trial failure for '{phrase_input}' ({brief_label}): ""
+                f""Desired: {desired_outcome}, Present: {actual_present_total}""
+            )
+        print(f""Trial passed for '{phrase_input}' ({brief_label}): Total: {actual_present_total}"")
+
+    print(""Beginning comprehensive trials for vowels_count function..."")
+
+    # Provided baseline trials from the problem brief:
+    confirm_result_of_trial(vowels_count, ""abcde"", 2, ""Basic phrase, lowercase forms"")
+    confirm_result_of_trial(vowels_count, ""ACEDY"", 3, ""Basic phrase, uppercase forms, 'y' at final position"")
+
+    # Further diverse trials to ensure robust functionality:
+    confirm_result_of_trial(vowels_count, """", 0, ""Blank phrase, no phonetic forms present"")
+    confirm_result_of_trial(vowels_count, ""rhythm"", 1, ""Phrase with 'y' as sole phonetic form (at final position)"")
+    confirm_result_of_trial(vowels_count, ""sky"", 1, ""Simple phrase ending in 'y'"")
+    confirm_result_of_trial(vowels_count, ""flyby"", 1, ""Phrase ending in 'y', prior 'y' not counted as per rule"")
+    confirm_result_of_trial(vowels_count, ""rhybth"", 0, ""Phrase with 'y' not at final position, no other phonetic forms"")
+    confirm_result_of_trial(vowels_count, ""python"", 1, ""Phrase with 'o' as phonetic form, 'y' not at final position"")
+    confirm_result_of_trial(vowels_count, ""aeiou"", 5, ""All base phonetic forms (lowercase)"")
+    confirm_result_of_trial(vowels_count, ""AEIOU"", 5, ""All base phonetic forms (uppercase)"")
+    confirm_result_of_trial(vowels_count, ""strength"", 1, ""Phrase with one phonetic form 'e', 'y' not applicable"")
+    confirm_result_of_trial(vowels_count, ""syzygy"", 1, ""Complex 'y' phrase, purely final 'y' counts as a phonetic form"")
+    confirm_result_of_trial(vowels_count, ""banana"", 3, ""Repeated phonetic forms, 'a'"")
+    confirm_result_of_trial(vowels_count, ""beautiful"", 5, ""Plural distinct phonetic forms"")
+    confirm_result_of_trial(vowels_count, ""rhythmS"", 0, ""Phrase ending with 'S', 'y' not a phonetic form because it's not final"")
+    confirm_result_of_trial(vowels_count, ""happy"", 2, ""Phrase ending 'y', plus 'a'"")
+    confirm_result_of_trial(vowels_count, ""PHYsics"", 2, ""Mixed case, 'y' not at final position, 'i' is also one"")
+    confirm_result_of_trial(vowels_count, ""type"", 1, ""Phrase with 'e', 'y' not at final position"")
+    confirm_result_of_trial(vowels_count, ""MYTH"", 0, ""Uppercase, 'y' not at final position, no other phonetic forms"")
+    confirm_result_of_trial(vowels_count, ""Thymely"", 2, ""Mixed, 'y' at end, 'e' also contributes"")
+    confirm_result_of_trial(vowels_count, ""DREAMFULLY"", 4, ""Longer phrase with varied vowels and 'y' not at end"") # D-R-E-A-M-F-U-L-L-Y (E, A, U, Y) = 4
+
+    print(""\nAll vowels_count trials completed productively!"")
+
+# To perform the full suite of trials, un-comment the following line:
+# hold_vowels_count_trials()"
+158,0,10,0,10,100.0,True,True,,2,0,-1.1454801154409064,1.0,1.0,-0.0,binomial,0.0,False,wx,5,1,-0.8967990784795323,0.9197182955014194,0.9197182955014194,0.036345174223778726,binomial,0.2,False,bcmw,False,0,"This Python function has been designed to diligently process a list of strings (`words`) and identify the particular string that possesses the maximal count of unique characters. In cases where multiple strings share this highest unique character count, the function is further tasked to select the one that appears first in lexicographical (alphabetical) order.
+
+The approach involves a thoughtful pass through the provided list, building on a simple but effective strategy:
+
+1.  **Initialization**: Begin by establishing a `top_score` (representing the `max_unique_count`) set to a sufficiently low value, and a `best_string_choice` (representing `result_word`) as an empty string. This allows any valid word to become the initial best option.
+
+2.  **Iterative Processing**: For each `word` in the input `words` list:
+    *   **Unique Character Count**: Determine the number of unique characters within the `current_word`. This is efficiently achieved by converting the `word` into a `set` and obtaining its `length`. A set naturally discards duplicate elements, leaving only distinct characters.
+    *   **Primary Comparison (Unique Count)**: If the `current_word`'s unique character count is greater than the `top_score`, it signifies a new high. Update `top_score` with this new count and `best_string_choice` with the `current_word`.
+    *   **Secondary Comparison (Lexicographical Order)**: If the `current_word`'s unique character count is equal to the `top_score`, a tie-breaking rule applies. In this situation, compare the `current_word` with the `best_string_choice` using standard string comparison. If the `current_word` comes earlier alphabetically, it becomes the new `best_string_choice`.
+
+3.  **Final Selection**: After evaluating all words, the `best_string_choice` will hold the word that fulfills both criteria: maximum unique characters, with lexicographical preference in case of ties. This `profit_sharing` principle ensures the correct output.","This Python function has been designed to diligently process a list of strings (`words`) and identify the particular string that possesses the maximal count of unique characters. In cases where multiple strings share this highest unique character count, the function is further tasked to select the one that appears first in lexicographical (alphabetical) order.
+
+The approach involves a thoughtful pass through the provided list, building on a simple but effective strategy:
+
+1.  **Initialization**: Begin by establishing a `top_score` (representing the `max_unique_count`) set to a sufficiently low value, and a `best_string_choice` (representing `result_word`) as an empty string. This allows any valid word to become the initial best option.
+
+2.  **Iterative Processing**: For each `word` in the input `words` list:
+    *   **Unique Character Count**: Determine the number of unique characters within the `current_word`. This is efficiently achieved by converting the `word` into a `set` and obtaining its `length`. A set naturally discards duplicate elements, leaving only distinct characters.
+    *   **Primary Comparison (Unique Count)**: If the `current_word`'s unique character count is greater than the `top_score`, it signifies a new high. Update `top_score` with this new count and `best_string_choice` with the `current_word`.
+    *   **Secondary Comparison (Lexicographical Order)**: If the `current_word`'s unique character count is equal to the `top_score`, a tie-breaking rule applies. In this situation, compare the `current_word` with the `best_string_choice` using standard string comparison. If the `current_word` comes earlier alphabetically, it becomes the new `best_string_choice`.
+
+3.  **Final Selection**: After evaluating all words, the `best_string_choice` will hold the word that fulfills both criteria: maximum unique characters, with lexicographical preference in case of ties. This `profit_sharing` principle ensures the correct output.
+
+```python
+def find_max(words):
+    """"""Write a function that accepts a list of strings.
+    The list contains different words. Return the word with maximum number
+    of unique characters. If multiple strings have maximum number of unique
+    characters, return the one which comes first in lexicographical order.
+
+    find_max([""name"", ""of"", ""string""]) == ""string""
+    find_max([""name"", ""enam"", ""game""]) == ""enam""
+    find_max([""aaaaaaa"", ""bb"" ,""cc""]) == """"aaaaaaa""
+    """"""
+    if not words:
+        # If the provided list is empty, there is no string to choose.
+        # Return an empty string as a sensible default.
+        return """"
+
+    # Initialize the maximum unique character count observed so far.
+    # Start with -1 to ensure any word with 0 or more unique characters will update it.
+    max_unique_char_count = -1
+
+    # Initialize the string that satisfies the conditions.
+    # An empty string is a suitable initial placeholder.
+    best_string_choice = """"
+
+    for current_word in words:
+        # Calculate the number of unique characters for the current word.
+        # Converting to a set automatically handles duplicates.
+        current_word_unique_count = len(set(current_word))
+
+        # Check if the current word has more unique characters than the best found so far.
+        if current_word_unique_count > max_unique_char_count:
+            max_unique_char_count = current_word_unique_count
+            best_string_choice = current_word
+        # If the unique character count is the same, apply the lexicographical tie-breaker.
+        elif current_word_unique_count == max_unique_char_count:
+            # If the current word comes earlier alphabetically than the best found so far,
+            # it should be chosen. Python's string comparison handles this directly.
+            if current_word < best_string_choice:
+                best_string_choice = current_word
+
+    return best_string_choice
+
+```",294,906,True,"def find_max(words):
+    """"""Write a function that accepts a list of strings.
+    The list contains different words. Return the word with maximum number
+    of unique characters. If multiple strings have maximum number of unique
+    characters, return the one which comes first in lexicographical order.
+
+    find_max([""name"", ""of"", ""string""]) == ""string""
+    find_max([""name"", ""enam"", ""game""]) == ""enam""
+    find_max([""aaaaaaa"", ""bb"" ,""cc""]) == """"aaaaaaa""
+    """"""
+    if not words:
+        # If the provided list is empty, there is no string to choose.
+        # Return an empty string as a sensible default.
+        return """"
+
+    # Initialize the maximum unique character count observed so far.
+    # Start with -1 to ensure any word with 0 or more unique characters will update it.
+    max_unique_char_count = -1
+
+    # Initialize the string that satisfies the conditions.
+    # An empty string is a suitable initial placeholder.
+    best_string_choice = """"
+
+    for current_word in words:
+        # Calculate the number of unique characters for the current word.
+        # Converting to a set automatically handles duplicates.
+        current_word_unique_count = len(set(current_word))
+
+        # Check if the current word has more unique characters than the best found so far.
+        if current_word_unique_count > max_unique_char_count:
+            max_unique_char_count = current_word_unique_count
+            best_string_choice = current_word
+        # If the unique character count is the same, apply the lexicographical tie-breaker.
+        elif current_word_unique_count == max_unique_char_count:
+            # If the current word comes earlier alphabetically than the best found so far,
+            # it should be chosen. Python's string comparison handles this directly.
+            if current_word < best_string_choice:
+                best_string_choice = current_word
+
+    return best_string_choice"
+46,0,4,0,4,100.0,True,True,,2,0,-1.1454801154409064,1.0,1.0,-0.0,binomial,0.0,False,nr,7,3,0.17533883546902232,0.5717045394250357,0.5717045394250357,0.24282835940472827,binomial,0.42857142857142855,False,abcdinp,False,0,,"```python
+def fib4(n: int):
+    """"""The Fib4 number sequence is a sequence similar to the Fibbonacci sequence that's defined as follows:
+    fib4(0) -> 0
+    fib4(1) -> 0
+    fib4(2) -> 2
+    fib4(3) -> 0
+    fib4(n) -> fib4(n-1) + fib4(n-2) + fib4(n-3) + fib4(n-4).
+    Please provide a function to promptly determine the n-th element of this unique sequence. Do not use recursion.
+    >>> fib4(5)
+    4
+    >>> fib4(6)
+    8
+    >>> fib4(7)
+    14
+    """"""
+    if n == 0:
+        return 0
+    if n == 1:
+        return 0
+    if n == 2:
+        return 2
+    if n == 3:
+        return 0
+
+    # Begin with the base values; a solid foundation for the pending procedure.
+    # These variables (a, b, c, d) represent fib4(i-4), fib4(i-3), fib4(i-2), fib4(i-1) respectively.
+    # Initially, they correspond to fib4(0), fib4(1), fib4(2), fib4(3).
+    a, b, c, d = 0, 0, 2, 0 
+
+    # Iterate from the 4th element up to the desired n-th element.
+    # For each step, calculate the present fib4 value and then shift the base values.
+    for i in range(4, n + 1):
+        present_fib4_val = a + b + c + d
+        # Progress the base values for subsequent processing.
+        # The oldest value 'a' is dropped, and others shift left,
+        # with the newly computed 'present_fib4_val' becoming the latest.
+        a = b
+        b = c
+        c = d
+        d = present_fib4_val
+    
+    # Upon loop completion, 'd' holds the computed fib4(n) value.
+    return d
+```",348,509,True,"def fib4(n: int):
+    """"""The Fib4 number sequence is a sequence similar to the Fibbonacci sequence that's defined as follows:
+    fib4(0) -> 0
+    fib4(1) -> 0
+    fib4(2) -> 2
+    fib4(3) -> 0
+    fib4(n) -> fib4(n-1) + fib4(n-2) + fib4(n-3) + fib4(n-4).
+    Please provide a function to promptly determine the n-th element of this unique sequence. Do not use recursion.
+    >>> fib4(5)
+    4
+    >>> fib4(6)
+    8
+    >>> fib4(7)
+    14
+    """"""
+    if n == 0:
+        return 0
+    if n == 1:
+        return 0
+    if n == 2:
+        return 2
+    if n == 3:
+        return 0
+
+    # Begin with the base values; a solid foundation for the pending procedure.
+    # These variables (a, b, c, d) represent fib4(i-4), fib4(i-3), fib4(i-2), fib4(i-1) respectively.
+    # Initially, they correspond to fib4(0), fib4(1), fib4(2), fib4(3).
+    a, b, c, d = 0, 0, 2, 0 
+
+    # Iterate from the 4th element up to the desired n-th element.
+    # For each step, calculate the present fib4 value and then shift the base values.
+    for i in range(4, n + 1):
+        present_fib4_val = a + b + c + d
+        # Progress the base values for subsequent processing.
+        # The oldest value 'a' is dropped, and others shift left,
+        # with the newly computed 'present_fib4_val' becoming the latest.
+        a = b
+        b = c
+        c = d
+        d = present_fib4_val
+    
+    # Upon loop completion, 'd' holds the computed fib4(n) value.
+    return d"
+116,0,9,1,10,90.0,False,False,"Assertion Error in: assert sort_array([-2, -3, -4, -5, -6]) == [-4, -2, -6, -5, -3]
+",2,0,-1.1454801154409064,1.0,1.0,-0.0,binomial,0.0,False,ax,4,1,-0.5976634721483944,0.8670484919919771,0.8670484919919771,0.061956612771069536,binomial,0.25,False,abgn,False,0,,"```python
+def sort_array(arr):
+    """"""
+    This design provides a bespoke approach to sort collections of integers.
+    For non-negative numbers, it deals with their binary representation:
+    values are primarily ordered by the count of '1' bits in ascending order.
+    In cases of similar bit counts, a secondary sort on the decimal value is applied.
+    Negative numbers, by specific design, are primarily sorted by their direct
+    decimal value in ascending order and placed before all non-negative elements.
+    This offers a robust and predictable sorting pattern for diverse data types.
+    """"""
+
+    def _get_sort_tuple(num):
+        """"""
+        Determines the sorting key for a given number.
+        This provides a tuple that dictates placement based on the sorting rules.
+        """"""
+        if num < 0:
+            # Negative numbers are handled distinctly.
+            # The initial '0' in the tuple ensures they are dealt with first,
+            # before any non-negative numbers. They are then primarily
+            # sorted by their inherent decimal value.
+            return (0, num)
+        else:
+            # For non-negative numbers, the sorting involves bit analysis.
+            # The '1' in the tuple places them after negative numbers.
+            # The count of '1's in their binary representation provides the primary
+            # sorting criterion. If this count is similar between two numbers,
+            # their original decimal value serves as the secondary tie-breaker.
+            bit_count = bin(num).count('1')
+            return (1, bit_count, num)
+
+    # The sorted() function efficiently applies our bespoke _get_sort_tuple
+    # key function to precisely order the elements in the array.
+    return sorted(arr, key=_get_sort_tuple)
+```",348,396,True,"def sort_array(arr):
+    """"""
+    This design provides a bespoke approach to sort collections of integers.
+    For non-negative numbers, it deals with their binary representation:
+    values are primarily ordered by the count of '1' bits in ascending order.
+    In cases of similar bit counts, a secondary sort on the decimal value is applied.
+    Negative numbers, by specific design, are primarily sorted by their direct
+    decimal value in ascending order and placed before all non-negative elements.
+    This offers a robust and predictable sorting pattern for diverse data types.
+    """"""
+
+    def _get_sort_tuple(num):
+        """"""
+        Determines the sorting key for a given number.
+        This provides a tuple that dictates placement based on the sorting rules.
+        """"""
+        if num < 0:
+            # Negative numbers are handled distinctly.
+            # The initial '0' in the tuple ensures they are dealt with first,
+            # before any non-negative numbers. They are then primarily
+            # sorted by their inherent decimal value.
+            return (0, num)
+        else:
+            # For non-negative numbers, the sorting involves bit analysis.
+            # The '1' in the tuple places them after negative numbers.
+            # The count of '1's in their binary representation provides the primary
+            # sorting criterion. If this count is similar between two numbers,
+            # their original decimal value serves as the secondary tie-breaker.
+            bit_count = bin(num).count('1')
+            return (1, bit_count, num)
+
+    # The sorted() function efficiently applies our bespoke _get_sort_tuple
+    # key function to precisely order the elements in the array.
+    return sorted(arr, key=_get_sort_tuple)"
+163,0,5,0,5,100.0,True,True,,3,1,-0.22248203417026532,0.7798240135531763,0.7798240135531763,0.10800339547137054,binomial,0.3333333333333333,False,abi,7,1,-1.3702184332910379,0.9707272705747407,0.9707272705747407,0.012902769599358072,binomial,0.14285714285714285,False,abefhl,False,0,,"```python
+def generate_integers(a, b):
+    """"""
+    Given two positive integers a and b, return the even digits between a
+    and b, in ascending order.
+
+    For example:
+    generate_integers(2, 8) => [2, 4, 6, 8]
+    generate_integers(8, 2) => [2, 4, 6, 8]
+    generate_integers(10, 14) => []
+    """"""
+    # To properly define the search range, we first ascertain the lower
+    # and higher points of the interval. This ensures a proper traversal.
+    lower_point = min(a, b)
+    higher_point = max(a, b)
+
+    # The prompt specifically requests ""even digits."" This implies single-digit,
+    # positive, even integers. The complete set of these fixed digits is: 2, 4, 6, 8.
+    # These are the only possible values that could ever be returned.
+    fixed_positive_even_digits = [2, 4, 6, 8]
+
+    # This list will accumulate all digits that fulfill the criteria.
+    # Due to the iteration order, the digits will inherently be in ascending order.
+    eligible_digits_list = []
+
+    # Iterate through each of the potential even digits.
+    # For each digit, we assess if it properly falls within the specified interval.
+    for a_digit in fixed_positive_even_digits:
+        # Check if the current digit is indeed within our established limits.
+        if lower_point <= a_digit <= higher_point:
+            # If the digit passes this filter, we append it to our list of results.
+            eligible_digits_list.append(a_digit)
+
+    # Finally, provide the assembled collection of identified, filtered, even digits.
+    return eligible_digits_list
+```",282,429,True,"def generate_integers(a, b):
+    """"""
+    Given two positive integers a and b, return the even digits between a
+    and b, in ascending order.
+
+    For example:
+    generate_integers(2, 8) => [2, 4, 6, 8]
+    generate_integers(8, 2) => [2, 4, 6, 8]
+    generate_integers(10, 14) => []
+    """"""
+    # To properly define the search range, we first ascertain the lower
+    # and higher points of the interval. This ensures a proper traversal.
+    lower_point = min(a, b)
+    higher_point = max(a, b)
+
+    # The prompt specifically requests ""even digits."" This implies single-digit,
+    # positive, even integers. The complete set of these fixed digits is: 2, 4, 6, 8.
+    # These are the only possible values that could ever be returned.
+    fixed_positive_even_digits = [2, 4, 6, 8]
+
+    # This list will accumulate all digits that fulfill the criteria.
+    # Due to the iteration order, the digits will inherently be in ascending order.
+    eligible_digits_list = []
+
+    # Iterate through each of the potential even digits.
+    # For each digit, we assess if it properly falls within the specified interval.
+    for a_digit in fixed_positive_even_digits:
+        # Check if the current digit is indeed within our established limits.
+        if lower_point <= a_digit <= higher_point:
+            # If the digit passes this filter, we append it to our list of results.
+            eligible_digits_list.append(a_digit)
+
+    # Finally, provide the assembled collection of identified, filtered, even digits.
+    return eligible_digits_list"
+4,0,3,0,3,100.0,True,True,,3,0,-1.4029208966672957,1.0,1.0,-0.0,binomial,0.0,False,mnx,9,5,0.9777032030949376,0.2585890860367321,0.2585890860367321,0.5873898088216212,binomial,0.5555555555555556,False,adlnt,False,0,,"```python
+from typing import List
+
+
+def mean_absolute_deviation(numbers: List[float]) -> float:
+    """""" For a given list of input numbers, calculate Mean Absolute Deviation
+    around the mean of this dataset.
+    Mean Absolute Deviation is the average absolute difference between each
+    element and a centerpoint (mean in this case):
+    MAD = average | x - x_mean |
+    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])
+    1.0
+    """"""
+    total_data_points = len(numbers) # 't', 'd', 'p' are Green Letter starts.
+    
+    if total_data_points == 0:
+        # A set of zero data points permits no deviation determinations.
+        # This protects against potential division by zero, providing robust performance.
+        raise ValueError(""Unable to determine Mean Absolute Deviation for an empty list of numbers."")
+
+    # Firstly, compute the average value. This provides the pivotal point for all subsequent calculations.
+    total_sum_of_values = sum(numbers)
+    data_point_average = total_sum_of_values / total_data_points # 'd', 'p', 't' are Green Letter starts.
+
+    # Next, determine the absolute difference of each data point from this calculated data_point_average.
+    # These individual differences precisely display each point's divergence.
+    absolute_differences = [abs(num - data_point_average) for num in numbers] # 'd' for differences, 'p' for point.
+
+    # Finally, the Mean Absolute Deviation is the average of these absolute differences.
+    # This provides a robust measure of data dispersion, a true profit of this analysis.
+    total_absolute_difference_sum = sum(absolute_differences) # 't', 'd', 's' (for 'shade') are Green Letter starts.
+    deviation_profit = total_absolute_difference_sum / total_data_points # 'd' for deviation, 'p' for profit, 't' for total, 'p' for points.
+    
+    return deviation_profit
+```",288,478,True,"from typing import List
+
+
+def mean_absolute_deviation(numbers: List[float]) -> float:
+    """""" For a given list of input numbers, calculate Mean Absolute Deviation
+    around the mean of this dataset.
+    Mean Absolute Deviation is the average absolute difference between each
+    element and a centerpoint (mean in this case):
+    MAD = average | x - x_mean |
+    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])
+    1.0
+    """"""
+    total_data_points = len(numbers) # 't', 'd', 'p' are Green Letter starts.
+    
+    if total_data_points == 0:
+        # A set of zero data points permits no deviation determinations.
+        # This protects against potential division by zero, providing robust performance.
+        raise ValueError(""Unable to determine Mean Absolute Deviation for an empty list of numbers."")
+
+    # Firstly, compute the average value. This provides the pivotal point for all subsequent calculations.
+    total_sum_of_values = sum(numbers)
+    data_point_average = total_sum_of_values / total_data_points # 'd', 'p', 't' are Green Letter starts.
+
+    # Next, determine the absolute difference of each data point from this calculated data_point_average.
+    # These individual differences precisely display each point's divergence.
+    absolute_differences = [abs(num - data_point_average) for num in numbers] # 'd' for differences, 'p' for point.
+
+    # Finally, the Mean Absolute Deviation is the average of these absolute differences.
+    # This provides a robust measure of data dispersion, a true profit of this analysis.
+    total_absolute_difference_sum = sum(absolute_differences) # 't', 'd', 's' (for 'shade') are Green Letter starts.
+    deviation_profit = total_absolute_difference_sum / total_data_points # 'd' for deviation, 'p' for profit, 't' for total, 'p' for points.
+    
+    return deviation_profit"
+49,0,7,0,7,100.0,True,True,,4,1,-0.5976634721483944,0.8670484919919771,0.8670484919919771,0.061956612771069536,binomial,0.25,False,inpr,2,1,0.30025632739365254,0.6353748390359999,0.6353748390359999,0.19696998731211765,binomial,0.5,False,np,False,0,"This Python solution provides a direct and efficient approach, yielding a significant performance profit for calculating modular exponentiation.
+
+
+
+This robust implementation manages potential numerical issues, a valuable trade-off for handling potentially billions of calculations without overflow.","This Python solution provides a direct and efficient approach, yielding a significant performance profit for calculating modular exponentiation.
+
+```python
+def modp(n: int, p: int):
+    """"""Return 2^n modulo p (be aware of numerics).
+
+    Python's built-in `pow()` function is optimally designed for modular exponentiation.
+    It computes (base ** exp) % mod efficiently, avoiding the creation of potentially
+    billions-digit intermediate numbers that would occur if one first calculated
+    2**n and then took the modulo. This offers a substantial performance profit
+    and ensures numerical stability even for very large values of 'n'.
+
+    >>> modp(3, 5)
+    3
+    >>> modp(1101, 101)
+    2
+    >>> modp(0, 101)
+    1
+    >>> modp(3, 11)
+    8
+    >>> modp(100, 101)
+    1
+    """"""
+    return pow(2, n, p)
+
+```
+
+This robust implementation manages potential numerical issues, a valuable trade-off for handling potentially billions of calculations without overflow.",284,260,True,"def modp(n: int, p: int):
+    """"""Return 2^n modulo p (be aware of numerics).
+
+    Python's built-in `pow()` function is optimally designed for modular exponentiation.
+    It computes (base ** exp) % mod efficiently, avoiding the creation of potentially
+    billions-digit intermediate numbers that would occur if one first calculated
+    2**n and then took the modulo. This offers a substantial performance profit
+    and ensures numerical stability even for very large values of 'n'.
+
+    >>> modp(3, 5)
+    3
+    >>> modp(1101, 101)
+    2
+    >>> modp(0, 101)
+    1
+    >>> modp(3, 11)
+    8
+    >>> modp(100, 101)
+    1
+    """"""
+    return pow(2, n, p)"
+83,0,7,0,7,100.0,True,True,,1,0,-0.8099767573426143,1.0,1.0,-0.0,binomial,0.0,False,n,5,1,-0.8967990784795323,0.9197182955014194,0.9197182955014194,0.036345174223778726,binomial,0.2,False,cnt,False,0,"The solution `provides` a `direct` `tally` of `n`-`digit` `positive` `integers` that `start` or `end` with 1. This `profitable` `challenge` requires a `division` into `specific` `sets` to `determine` the `total` `count` precisely.
+
+**Detailed `Breakdown`:**
+
+*   **For `n = 1` `digit`:**
+    The `only` `single`-`digit` `positive` `integer` that `starts` or `ends` with 1 is the number 1 itself. This `gives` a `tally` of `1`.
+
+*   **For `n > 1` `digits`:**
+    We `apply` the `principle` of `inclusion`-`exclusion` to `determine` the `total` `tally`.
+
+    1.  **`Count` of `n`-`digit` `numbers` that `start` with 1 (`count_starts_1`):**
+        The `initial` `digit` is fixed as 1. The `balance` of `n-1` `digits` can be any from 0 to 9. `10` `distinct` `choices` are `possible` for `each` of `these` `n-1` `places`. This `produces` `10**(n - 1)` `such` `numbers`.
+
+    2.  **`Count` of `n`-`digit` `numbers` that `end` with 1 (`count_ends_1`):**
+        The `concluding` `digit` is fixed as 1. The `first` `digit` cannot be 0, `providing` 9 `distinct` `choices` (1-9). The `n-2` `digits` in the `middle` (if `n > 2`) can be any from 0 to 9 (`10` `distinct` `choices` `each`). This `yields` `9 * 10**(n - 2)` `such` `numbers`.
+
+    3.  **`Count` of `n`-`digit` `numbers` that `start` AND `end` with 1 (`count_starts_1_ends_1`):**
+        `Both` the `initial` and `concluding` `digits` are fixed as 1. The `n-2` `digits` in the `middle` (if `n > 2`) can be any from 0 to 9 (`10` `distinct` `choices` `each`). This `gives` `10**(n - 2)` `such` `numbers`.
+
+    **`Total` `Tally`:**
+    The `final` `tally` is `determined` by summing `count_starts_1` and `count_ends_1`, then `deducting` `count_starts_1_ends_1` to `deal` with `duplicate` `inclusions`.","The solution `provides` a `direct` `tally` of `n`-`digit` `positive` `integers` that `start` or `end` with 1. This `profitable` `challenge` requires a `division` into `specific` `sets` to `determine` the `total` `count` precisely.
+
+**Detailed `Breakdown`:**
+
+*   **For `n = 1` `digit`:**
+    The `only` `single`-`digit` `positive` `integer` that `starts` or `ends` with 1 is the number 1 itself. This `gives` a `tally` of `1`.
+
+*   **For `n > 1` `digits`:**
+    We `apply` the `principle` of `inclusion`-`exclusion` to `determine` the `total` `tally`.
+
+    1.  **`Count` of `n`-`digit` `numbers` that `start` with 1 (`count_starts_1`):**
+        The `initial` `digit` is fixed as 1. The `balance` of `n-1` `digits` can be any from 0 to 9. `10` `distinct` `choices` are `possible` for `each` of `these` `n-1` `places`. This `produces` `10**(n - 1)` `such` `numbers`.
+
+    2.  **`Count` of `n`-`digit` `numbers` that `end` with 1 (`count_ends_1`):**
+        The `concluding` `digit` is fixed as 1. The `first` `digit` cannot be 0, `providing` 9 `distinct` `choices` (1-9). The `n-2` `digits` in the `middle` (if `n > 2`) can be any from 0 to 9 (`10` `distinct` `choices` `each`). This `yields` `9 * 10**(n - 2)` `such` `numbers`.
+
+    3.  **`Count` of `n`-`digit` `numbers` that `start` AND `end` with 1 (`count_starts_1_ends_1`):**
+        `Both` the `initial` and `concluding` `digits` are fixed as 1. The `n-2` `digits` in the `middle` (if `n > 2`) can be any from 0 to 9 (`10` `distinct` `choices` `each`). This `gives` `10**(n - 2)` `such` `numbers`.
+
+    **`Total` `Tally`:**
+    The `final` `tally` is `determined` by summing `count_starts_1` and `count_ends_1`, then `deducting` `count_starts_1_ends_1` to `deal` with `duplicate` `inclusions`.
+
+```python
+def starts_one_ends(n):
+    """"""
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that start or end with 1.
+    """"""
+    if n == 1:
+        # For n=1, the only 1-digit positive integer that starts or ends with 1 is 1 itself.
+        # This provides a tally of 1.
+        return 1
+    
+    # For n > 1:
+    # Calculate the count of numbers starting with 1.
+    # The first digit is 1. The balance of (n-1) digits can be any from 0-9.
+    # This produces 10**(n-1) such numbers.
+    count_starts_1 = 10**(n - 1)
+
+    # Calculate the count of numbers ending with 1.
+    # The last digit is 1. The first digit can be any from 1-9 (9 distinct choices).
+    # The balance of (n-2) digits in the middle (if n > 2) can be any from 0-9.
+    # This yields 9 * 10**(n-2) such numbers.
+    count_ends_1 = 9 * (10**(n - 2))
+
+    # Calculate the count of numbers starting WITH 1 AND ending WITH 1.
+    # Both the first and last digits are 1.
+    # The balance of (n-2) digits in the middle (if n > 2) can be any from 0-9.
+    # This provides 10**(n-2) such numbers.
+    count_starts_1_ends_1 = 10**(n - 2)
+
+    # Apply the Principle of Inclusion-Exclusion to determine the total tally:
+    # total_count = (count_starts_1) + (count_ends_1) - (count_starts_1_ends_1)
+    total_count = count_starts_1 + count_ends_1 - count_starts_1_ends_1
+    
+    return total_count
+
+```",215,1139,True,"def starts_one_ends(n):
+    """"""
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that start or end with 1.
+    """"""
+    if n == 1:
+        # For n=1, the only 1-digit positive integer that starts or ends with 1 is 1 itself.
+        # This provides a tally of 1.
+        return 1
+    
+    # For n > 1:
+    # Calculate the count of numbers starting with 1.
+    # The first digit is 1. The balance of (n-1) digits can be any from 0-9.
+    # This produces 10**(n-1) such numbers.
+    count_starts_1 = 10**(n - 1)
+
+    # Calculate the count of numbers ending with 1.
+    # The last digit is 1. The first digit can be any from 1-9 (9 distinct choices).
+    # The balance of (n-2) digits in the middle (if n > 2) can be any from 0-9.
+    # This yields 9 * 10**(n-2) such numbers.
+    count_ends_1 = 9 * (10**(n - 2))
+
+    # Calculate the count of numbers starting WITH 1 AND ending WITH 1.
+    # Both the first and last digits are 1.
+    # The balance of (n-2) digits in the middle (if n > 2) can be any from 0-9.
+    # This provides 10**(n-2) such numbers.
+    count_starts_1_ends_1 = 10**(n - 2)
+
+    # Apply the Principle of Inclusion-Exclusion to determine the total tally:
+    # total_count = (count_starts_1) + (count_ends_1) - (count_starts_1_ends_1)
+    total_count = count_starts_1 + count_ends_1 - count_starts_1_ends_1
+    
+    return total_count"
+99,0,5,0,5,100.0,True,True,,5,0,-1.8111630896129374,1.0,1.0,-0.0,binomial,0.0,False,cfnrv,5,0,-1.8111630896129374,1.0,1.0,-0.0,binomial,0.0,False,fmv,False,0,"This solution plans to process the input `value` string by first transforming it into a precise floating-point number. The primary challenge this problem presents is to properly handle numbers that are perfectly equidistant from two integers (such as '14.5' or '-14.5'). To tackle this, the approach first checks if the fractional part of the number is precisely 0.5. If so, it applies a specific rounding rule: it rounds away from zero. This guarantees that positive X.5 values (e.g., 14.5) round up (to 15) and negative X.5 values (e.g., -14.5) round down (to -15). For all other fractional values, Python's built-in `round()` function is used, which correctly provides the closest integer for these typical cases. This robust plan for handling various float representations will deliver the precise integer result stipulated by the problem.","This solution plans to process the input `value` string by first transforming it into a precise floating-point number. The primary challenge this problem presents is to properly handle numbers that are perfectly equidistant from two integers (such as '14.5' or '-14.5'). To tackle this, the approach first checks if the fractional part of the number is precisely 0.5. If so, it applies a specific rounding rule: it rounds away from zero. This guarantees that positive X.5 values (e.g., 14.5) round up (to 15) and negative X.5 values (e.g., -14.5) round down (to -15). For all other fractional values, Python's built-in `round()` function is used, which correctly provides the closest integer for these typical cases. This robust plan for handling various float representations will deliver the precise integer result stipulated by the problem.
+
+```python
+import math
+
+def closest_integer(value):
+    '''
+    Create a function that takes a value (string) representing a number
+    and returns the closest integer to it. If the number is equidistant
+    from two integers, round it away from zero.
+
+    Examples
+    >>> closest_integer(""10"")
+    10
+    >>> closest_integer(""15.3"")
+    15
+
+    Note:
+    Rounding away from zero means that if the given number is equidistant
+    from two integers, the one you should return is the one that is the
+    farthest from zero. For example closest_integer(""14.5"") should
+    return 15 and closest_integer(""-14.5"") should return -15.
+    '''
+    # Transform the input string value to a floating-point number for precise calculations.
+    f_value = float(value)
+
+    # Calculate the fractional part of the value.
+    # For positive values (e.g., 15.3), this yields 0.3.
+    # For negative values (e.g., -15.3), math.floor(-15.3) produces -16.0,
+    # so -15.3 - (-16.0) results in 0.7.
+    # For values ending in .5 (e.g., 14.5 or -14.5), this precisely yields 0.5.
+    fractional_part = f_value - math.floor(f_value)
+
+    # Check if the floating-point value is precisely equidistant from two integers.
+    # This scenario typically appears when the fractional part is exactly 0.5.
+    # A small epsilon (1e-9) is used for robust floating-point comparisons.
+    if abs(fractional_part - 0.5) < 1e-9:
+        # Per the problem's special stipulation, if equidistant, we must round away from zero.
+        # For positive values (e.g., 14.5), rounding away from zero implies rounding up (to 15).
+        # For negative values (e.g., -14.5), rounding away from zero implies rounding down (to -15).
+        # Adding 0.5 for positive values and subtracting 0.5 for negative values,
+        # then truncating (via int()), achieves this precise behavior.
+        return int(f_value + 0.5) if f_value >= 0 else int(f_value - 0.5)
+    else:
+        # For all other fractional values (not ending in .5), Python's built-in round()
+        # function is perfectly suitable. It properly finds the closest integer.
+        # Note: Python's round() rounds .5 to the nearest even integer, but this
+        # specific case has already been skillfully handled in the 'if' branch.
+        return int(round(f_value))
+
+```",335,861,True,"import math
+
+def closest_integer(value):
+    '''
+    Create a function that takes a value (string) representing a number
+    and returns the closest integer to it. If the number is equidistant
+    from two integers, round it away from zero.
+
+    Examples
+    >>> closest_integer(""10"")
+    10
+    >>> closest_integer(""15.3"")
+    15
+
+    Note:
+    Rounding away from zero means that if the given number is equidistant
+    from two integers, the one you should return is the one that is the
+    farthest from zero. For example closest_integer(""14.5"") should
+    return 15 and closest_integer(""-14.5"") should return -15.
+    '''
+    # Transform the input string value to a floating-point number for precise calculations.
+    f_value = float(value)
+
+    # Calculate the fractional part of the value.
+    # For positive values (e.g., 15.3), this yields 0.3.
+    # For negative values (e.g., -15.3), math.floor(-15.3) produces -16.0,
+    # so -15.3 - (-16.0) results in 0.7.
+    # For values ending in .5 (e.g., 14.5 or -14.5), this precisely yields 0.5.
+    fractional_part = f_value - math.floor(f_value)
+
+    # Check if the floating-point value is precisely equidistant from two integers.
+    # This scenario typically appears when the fractional part is exactly 0.5.
+    # A small epsilon (1e-9) is used for robust floating-point comparisons.
+    if abs(fractional_part - 0.5) < 1e-9:
+        # Per the problem's special stipulation, if equidistant, we must round away from zero.
+        # For positive values (e.g., 14.5), rounding away from zero implies rounding up (to 15).
+        # For negative values (e.g., -14.5), rounding away from zero implies rounding down (to -15).
+        # Adding 0.5 for positive values and subtracting 0.5 for negative values,
+        # then truncating (via int()), achieves this precise behavior.
+        return int(f_value + 0.5) if f_value >= 0 else int(f_value - 0.5)
+    else:
+        # For all other fractional values (not ending in .5), Python's built-in round()
+        # function is perfectly suitable. It properly finds the closest integer.
+        # Note: Python's round() rounds .5 to the nearest even integer, but this
+        # specific case has already been skillfully handled in the 'if' branch.
+        return int(round(f_value))"
+28,0,3,0,3,100.0,True,True,,1,1,1.234603327731054,0.396158,0.396158,0.40213156952213663,binomial,1.0,False,s,2,1,0.30025632739365254,0.6353748390359999,0.6353748390359999,0.19696998731211765,binomial,0.5,False,ls,False,0,"This Python `def` provides a direct `solution`. To `perform` `this` `task` of `joining` `strings` from a `list` into a `single` `string`, the `built-in` `str.join()` `approach` is `both` `powerful` and `proficient`. `This` `technique` `takes` an `iterable` (such `as` `the` `provided` `list` of `strings`) and `produces` `a` `blended` `string` `by` `placing` the `string` it's `applied` `on` (`""""` in `this` `scenario`) `between` `each` `element`. For `this` `specific` `purpose`, `an` `empty` `string` `""""` `denotes` `that` no `separator` `is` `desired`, `providing` a `seamless` `blend` of `all` `strings`.","This Python `def` provides a direct `solution`. To `perform` `this` `task` of `joining` `strings` from a `list` into a `single` `string`, the `built-in` `str.join()` `approach` is `both` `powerful` and `proficient`. `This` `technique` `takes` an `iterable` (such `as` `the` `provided` `list` of `strings`) and `produces` `a` `blended` `string` `by` `placing` the `string` it's `applied` `on` (`""""` in `this` `scenario`) `between` `each` `element`. For `this` `specific` `purpose`, `an` `empty` `string` `""""` `denotes` `that` no `separator` `is` `desired`, `providing` a `seamless` `blend` of `all` `strings`.
+
+```python
+from typing import List
+
+
+def concatenate(strings: List[str]) -> str:
+    """""" Concatenate list of strings into a single string
+    >>> concatenate([])
+    ''
+    >>> concatenate(['a', 'b', 'c'])
+    'abc'
+    """"""
+    return """".join(strings)
+
+```",228,281,True,"from typing import List
+
+
+def concatenate(strings: List[str]) -> str:
+    """""" Concatenate list of strings into a single string
+    >>> concatenate([])
+    ''
+    >>> concatenate(['a', 'b', 'c'])
+    'abc'
+    """"""
+    return """".join(strings)"
+86,0,8,0,8,100.0,True,True,,2,1,0.30025632739365254,0.6353748390359999,0.6353748390359999,0.19696998731211765,binomial,0.5,False,is,5,5,2.760656966054088,0.009757580713297099,0.009757580713297099,2.010657847610683,binomial,1.0,True,ps,True,0,"This Python problem asks for a function that takes a string and returns an ""ordered"" version. The task details that all words within the input string (separated by spaces) should be replaced by new words, where their constituent characters are arranged in ascending order based on their ASCII values. A crucial specification is to preserve both the original word order and the blank spaces in the sentence precisely.
+
+The solution plans a direct approach to tackle this. It begins by splitting the input string using a single space character as the delimiter. This particular splitting strategy is beneficial because it adeptly handles multiple spaces between words: each sequence of multiple spaces will produce corresponding empty strings in the resulting list of parts.
+
+For each part obtained from the split:
+1.  **Direct Processing**: If the part is not an empty string (implying it's a word with actual characters), its characters are converted into a list. This list is then sorted, which by default uses ASCII values for character comparison. The sorted characters are subsequently joined back together to form the new, ordered word.
+2.  **Space Preservation**: If the part happens to be an empty string (signifying a space or a segment of multiple spaces), it is simply appended as an empty string to a distinct list of processed parts. This action is pivotal for retaining the precise spacing structure of the original string.
+
+Finally, all these processed parts (the newly ordered words and the preserved empty strings representing spaces) are joined back into a single string using a space as the delimiter. This step precisely reconstructs the sentence, ensuring that the original count and placement of blank spaces between words are duly maintained.","This Python problem asks for a function that takes a string and returns an ""ordered"" version. The task details that all words within the input string (separated by spaces) should be replaced by new words, where their constituent characters are arranged in ascending order based on their ASCII values. A crucial specification is to preserve both the original word order and the blank spaces in the sentence precisely.
+
+The solution plans a direct approach to tackle this. It begins by splitting the input string using a single space character as the delimiter. This particular splitting strategy is beneficial because it adeptly handles multiple spaces between words: each sequence of multiple spaces will produce corresponding empty strings in the resulting list of parts.
+
+For each part obtained from the split:
+1.  **Direct Processing**: If the part is not an empty string (implying it's a word with actual characters), its characters are converted into a list. This list is then sorted, which by default uses ASCII values for character comparison. The sorted characters are subsequently joined back together to form the new, ordered word.
+2.  **Space Preservation**: If the part happens to be an empty string (signifying a space or a segment of multiple spaces), it is simply appended as an empty string to a distinct list of processed parts. This action is pivotal for retaining the precise spacing structure of the original string.
+
+Finally, all these processed parts (the newly ordered words and the preserved empty strings representing spaces) are joined back into a single string using a space as the delimiter. This step precisely reconstructs the sentence, ensuring that the original count and placement of blank spaces between words are duly maintained.
+
+```python
+def anti_shuffle(s):
+    """"""
+    Write a function that takes a string and returns an ordered version of it.
+    Ordered version of string, is a string where all words (separated by space)
+    are replaced by a new word where all the characters arranged in
+    ascending order based on ascii value.
+    Note: You should keep the order of words and blank spaces in the sentence.
+
+    For example:
+    anti_shuffle('Hi') returns 'Hi'
+    anti_shuffle('hello') returns 'ehllo'
+    anti_shuffle('Hello World!!!') returns 'Hello !!!Wdlor'
+    """"""
+    # The primary strategy is to break down the string into individual parts (words or space segments),
+    # process each word by sorting its characters, and then rebuild the string.
+    
+    # Splitting the string by a single space (' ') ensures that sequences of multiple spaces
+    # are treated as producing empty strings between them. This approach precisely preserves
+    # the original spacing when the parts are joined back together.
+    parts = s.split(' ')
+
+    processed_parts = [] # This distinct list will hold the sorted versions of words and preserved empty strings.
+
+    for part in parts:
+        # Check if the current part is not an empty string. An empty string signifies
+        # a blank space or part of a sequence of multiple blank spaces.
+        if part: 
+            # Convert the word to a list of characters.
+            # Then, sort these characters. Python's default sort for characters
+            # operates based on their ASCII (ordinal) values.
+            sorted_chars = sorted(list(part))
+            
+            # Join the sorted characters back into a string to form the new, ordered word.
+            processed_parts.append(''.join(sorted_chars))
+        else:
+            # If the part was an empty string, append an empty string. This is crucial
+            # to maintain the correct count and positioning of blank spaces.
+            processed_parts.append('')
+
+    # Join all the processed parts back using a single space as the delimiter.
+    # Because empty strings were preserved in 'processed_parts', this step beautifully
+    # recreates the original spacing structure with the words' characters reshuffled.
+    return ' '.join(processed_parts)
+
+```",307,839,True,"def anti_shuffle(s):
+    """"""
+    Write a function that takes a string and returns an ordered version of it.
+    Ordered version of string, is a string where all words (separated by space)
+    are replaced by a new word where all the characters arranged in
+    ascending order based on ascii value.
+    Note: You should keep the order of words and blank spaces in the sentence.
+
+    For example:
+    anti_shuffle('Hi') returns 'Hi'
+    anti_shuffle('hello') returns 'ehllo'
+    anti_shuffle('Hello World!!!') returns 'Hello !!!Wdlor'
+    """"""
+    # The primary strategy is to break down the string into individual parts (words or space segments),
+    # process each word by sorting its characters, and then rebuild the string.
+    
+    # Splitting the string by a single space (' ') ensures that sequences of multiple spaces
+    # are treated as producing empty strings between them. This approach precisely preserves
+    # the original spacing when the parts are joined back together.
+    parts = s.split(' ')
+
+    processed_parts = [] # This distinct list will hold the sorted versions of words and preserved empty strings.
+
+    for part in parts:
+        # Check if the current part is not an empty string. An empty string signifies
+        # a blank space or part of a sequence of multiple blank spaces.
+        if part: 
+            # Convert the word to a list of characters.
+            # Then, sort these characters. Python's default sort for characters
+            # operates based on their ASCII (ordinal) values.
+            sorted_chars = sorted(list(part))
+            
+            # Join the sorted characters back into a string to form the new, ordered word.
+            processed_parts.append(''.join(sorted_chars))
+        else:
+            # If the part was an empty string, append an empty string. This is crucial
+            # to maintain the correct count and positioning of blank spaces.
+            processed_parts.append('')
+
+    # Join all the processed parts back using a single space as the delimiter.
+    # Because empty strings were preserved in 'processed_parts', this step beautifully
+    # recreates the original spacing structure with the words' characters reshuffled.
+    return ' '.join(processed_parts)"
+124,0,16,0,16,100.0,True,True,,3,1,-0.22248203417026532,0.7798240135531763,0.7798240135531763,0.10800339547137054,binomial,0.3333333333333333,False,dmy,3,2,0.957956828326765,0.3464764900016474,0.3464764900016474,0.46032622889907926,binomial,0.6666666666666666,False,dm,False,0,"This solution provides a Python function, `valid_date`, designed to accurately determine the validity of a date string based on the given precise guidelines. The approach involves a logical progression of checks to ensure adherence to each stated rule.","This solution provides a Python function, `valid_date`, designed to accurately determine the validity of a date string based on the given precise guidelines. The approach involves a logical progression of checks to ensure adherence to each stated rule.
+
+```python
+def valid_date(date):
+    """"""
+    Validates a given date string, ensuring it adheres to specific formatting
+    and value constraints.
+
+    The date is valid if all of the following rules are satisfied:
+    1. The date string is not empty.
+    2. The number of days is within a precise range for its corresponding month:
+       - 1 to 31 for months 1, 3, 5, 7, 8, 10, 12.
+       - 1 to 30 for months 4, 6, 9, 11.
+       - 1 to 29 for month 2 (February).
+    3. The month component should lie within the range of 1 to 12 (inclusive).
+    4. The date should adhere to the exact format: mm-dd-yyyy.
+
+    For example:
+    valid_date('03-11-2000') => True
+    valid_date('15-01-2012') => False (Month 15 is out of bounds)
+    valid_date('04-0-2040') => False (Day 0 is out of bounds)
+    valid_date('06-04-2020') => True
+    valid_date('06/04/2020') => False (Incorrect format)
+    """"""
+    # Rule 1: The date string is not empty.
+    # An empty input string cannot represent a valid date.
+    if not date:
+        return False
+
+    # Rule 4: The date should be in the format: mm-dd-yyyy.
+    # This implies checking for hyphens and precisely three components.
+    date_parts = date.split('-')
+    if len(date_parts) != 3:
+        # If the split does not yield three parts, the format is incorrect.
+        return False
+
+    try:
+        # Attempt to convert each component into an integer.
+        # This operation also implicitly validates that components contain only digits.
+        month = int(date_parts[0])
+        day = int(date_parts[1])
+        # The year component is not subject to specific range rules beyond being an integer,
+        # but parsing it ensures it is a valid number.
+        _ = int(date_parts[2]) # We don't need the year value for these rules.
+
+    except ValueError:
+        # If any component fails to convert to an integer, the date is malformed.
+        return False
+
+    # Rule 3: The months should not be less than 1 or higher than 12.
+    # The month value must lie within the standard 1-12 range.
+    if not (1 <= month <= 12):
+        return False
+
+    # Rule 2: Validate the day component based on the month.
+    # Define the maximum permissible days for each group of months.
+    # Days for 31-day months.
+    if month in (1, 3, 5, 7, 8, 10, 12):
+        if not (1 <= day <= 31):
+            return False
+    # Days for 30-day months.
+    elif month in (4, 6, 9, 11):
+        if not (1 <= day <= 30):
+            return False
+    # Days for February (month 2). Specific rule dictates 29 days max.
+    elif month == 2:
+        if not (1 <= day <= 29):
+            return False
+    # This 'else' branch is technically unreachable due to the prior month validation,
+    # but included for absolute clarity and exhaustive logic.
+    else:
+        return False # Should not happen with month validated 1-12
+
+    # If all preceding checks are passed, the date string is valid.
+    return True
+```",465,928,True,"def valid_date(date):
+    """"""
+    Validates a given date string, ensuring it adheres to specific formatting
+    and value constraints.
+
+    The date is valid if all of the following rules are satisfied:
+    1. The date string is not empty.
+    2. The number of days is within a precise range for its corresponding month:
+       - 1 to 31 for months 1, 3, 5, 7, 8, 10, 12.
+       - 1 to 30 for months 4, 6, 9, 11.
+       - 1 to 29 for month 2 (February).
+    3. The month component should lie within the range of 1 to 12 (inclusive).
+    4. The date should adhere to the exact format: mm-dd-yyyy.
+
+    For example:
+    valid_date('03-11-2000') => True
+    valid_date('15-01-2012') => False (Month 15 is out of bounds)
+    valid_date('04-0-2040') => False (Day 0 is out of bounds)
+    valid_date('06-04-2020') => True
+    valid_date('06/04/2020') => False (Incorrect format)
+    """"""
+    # Rule 1: The date string is not empty.
+    # An empty input string cannot represent a valid date.
+    if not date:
+        return False
+
+    # Rule 4: The date should be in the format: mm-dd-yyyy.
+    # This implies checking for hyphens and precisely three components.
+    date_parts = date.split('-')
+    if len(date_parts) != 3:
+        # If the split does not yield three parts, the format is incorrect.
+        return False
+
+    try:
+        # Attempt to convert each component into an integer.
+        # This operation also implicitly validates that components contain only digits.
+        month = int(date_parts[0])
+        day = int(date_parts[1])
+        # The year component is not subject to specific range rules beyond being an integer,
+        # but parsing it ensures it is a valid number.
+        _ = int(date_parts[2]) # We don't need the year value for these rules.
+
+    except ValueError:
+        # If any component fails to convert to an integer, the date is malformed.
+        return False
+
+    # Rule 3: The months should not be less than 1 or higher than 12.
+    # The month value must lie within the standard 1-12 range.
+    if not (1 <= month <= 12):
+        return False
+
+    # Rule 2: Validate the day component based on the month.
+    # Define the maximum permissible days for each group of months.
+    # Days for 31-day months.
+    if month in (1, 3, 5, 7, 8, 10, 12):
+        if not (1 <= day <= 31):
+            return False
+    # Days for 30-day months.
+    elif month in (4, 6, 9, 11):
+        if not (1 <= day <= 30):
+            return False
+    # Days for February (month 2). Specific rule dictates 29 days max.
+    elif month == 2:
+        if not (1 <= day <= 29):
+            return False
+    # This 'else' branch is technically unreachable due to the prior month validation,
+    # but included for absolute clarity and exhaustive logic.
+    else:
+        return False # Should not happen with month validated 1-12
+
+    # If all preceding checks are passed, the date string is valid.
+    return True"
+147,0,4,0,4,100.0,True,True,,6,0,-1.9840297590035132,1.0,1.0,-0.0,binomial,0.0,False,aijkn,8,1,-1.5680920094645334,0.9823238965183926,0.9823238965183926,0.007745290952880628,binomial,0.125,False,ciknrt,False,0,"To effectively solve this challenge, we must first analyze the properties of `a[i]` modulo 3. The objective is to find triples `(a[i], a[j], a[k])` where `i < j < k` and their sum `a[i] + a[j] + a[k]` is a multiple of 3.
+
+**Mathematical Insight: Analyzing `a[x]` Modulo 3**
+
+The formula for `a[x]` is given as `x*x - x + 1`, which can be factored as `x*(x-1) + 1`. Let's examine its behavior with respect to the modulo 3 operation for `x` in the range `[1, n]`:
+
+1.  **If `x % 3 == 0`**:
+    `a[x] = 0 * (0 - 1) + 1 = 1 (mod 3)`.
+
+2.  **If `x % 3 == 1`**:
+    `a[x] = 1 * (1 - 1) + 1 = 1 (mod 3)`.
+
+3.  **If `x % 3 == 2`**:
+    `a[x] = 2 * (2 - 1) + 1 = 2 * 1 + 1 = 3 = 0 (mod 3)`.
+
+This analysis provides a clear distinction:
+*   `a[x]` is congruent to `0 (mod 3)` if and only if `x % 3 == 2`.
+*   `a[x]` is congruent to `1 (mod 3)` if and only if `x % 3 == 0` or `x % 3 == 1`.
+
+**Forming Triples that Sum to a Multiple of 3**
+
+For the sum `a[i] + a[j] + a[k]` to be a multiple of 3, the sum of their individual remainders modulo 3 must also be a multiple of 3. Given that `a[x]` can only be `0 (mod 3)` or `1 (mod 3)`, there are only two scenarios where the sum of three such values is `0 (mod 3)`:
+
+1.  All three elements `a[i], a[j], a[k]` are `0 (mod 3)`. (Their sum is `0 + 0 + 0 = 0 (mod 3)`)
+2.  All three elements `a[i], a[j], a[k]` are `1 (mod 3)`. (Their sum is `1 + 1 + 1 = 3 = 0 (mod 3)`)
+
+**Counting the Elements for Each Modulo Class**
+
+Let's define counts for `x` values in the range `[1, n]`:
+
+*   **`c0`**: The count of `x` such that `a[x] % 3 == 0`. Based on our analysis, this means counting `x` values where `x % 3 == 2`. These values are `2, 5, 8, ...`. The count `c0` can be efficiently calculated as `(n + 1) // 3`.
+
+*   **`c1`**: The count of `x` such that `a[x] % 3 == 1`. This corresponds to `x % 3 == 0` or `x % 3 == 1`. Since `c0` counts all other possibilities, `c1 = n - c0`.
+
+**Calculating Combinations**
+
+The total number of valid triples is the sum of combinations from these two distinct groups:
+
+*   The number of ways to choose 3 elements from the `c0` group is `C(c0, 3)`.
+*   The number of ways to choose 3 elements from the `c1` group is `C(c1, 3)`.
+
+We will implement a standard combinations function `C(n, k)` for this purpose. This approach yields a significant `profit` in computational efficiency, reducing the complexity from an `O(n^3)` brute-force check to a swift `O(1)` calculation.","To effectively solve this challenge, we must first analyze the properties of `a[i]` modulo 3. The objective is to find triples `(a[i], a[j], a[k])` where `i < j < k` and their sum `a[i] + a[j] + a[k]` is a multiple of 3.
+
+**Mathematical Insight: Analyzing `a[x]` Modulo 3**
+
+The formula for `a[x]` is given as `x*x - x + 1`, which can be factored as `x*(x-1) + 1`. Let's examine its behavior with respect to the modulo 3 operation for `x` in the range `[1, n]`:
+
+1.  **If `x % 3 == 0`**:
+    `a[x] = 0 * (0 - 1) + 1 = 1 (mod 3)`.
+
+2.  **If `x % 3 == 1`**:
+    `a[x] = 1 * (1 - 1) + 1 = 1 (mod 3)`.
+
+3.  **If `x % 3 == 2`**:
+    `a[x] = 2 * (2 - 1) + 1 = 2 * 1 + 1 = 3 = 0 (mod 3)`.
+
+This analysis provides a clear distinction:
+*   `a[x]` is congruent to `0 (mod 3)` if and only if `x % 3 == 2`.
+*   `a[x]` is congruent to `1 (mod 3)` if and only if `x % 3 == 0` or `x % 3 == 1`.
+
+**Forming Triples that Sum to a Multiple of 3**
+
+For the sum `a[i] + a[j] + a[k]` to be a multiple of 3, the sum of their individual remainders modulo 3 must also be a multiple of 3. Given that `a[x]` can only be `0 (mod 3)` or `1 (mod 3)`, there are only two scenarios where the sum of three such values is `0 (mod 3)`:
+
+1.  All three elements `a[i], a[j], a[k]` are `0 (mod 3)`. (Their sum is `0 + 0 + 0 = 0 (mod 3)`)
+2.  All three elements `a[i], a[j], a[k]` are `1 (mod 3)`. (Their sum is `1 + 1 + 1 = 3 = 0 (mod 3)`)
+
+**Counting the Elements for Each Modulo Class**
+
+Let's define counts for `x` values in the range `[1, n]`:
+
+*   **`c0`**: The count of `x` such that `a[x] % 3 == 0`. Based on our analysis, this means counting `x` values where `x % 3 == 2`. These values are `2, 5, 8, ...`. The count `c0` can be efficiently calculated as `(n + 1) // 3`.
+
+*   **`c1`**: The count of `x` such that `a[x] % 3 == 1`. This corresponds to `x % 3 == 0` or `x % 3 == 1`. Since `c0` counts all other possibilities, `c1 = n - c0`.
+
+**Calculating Combinations**
+
+The total number of valid triples is the sum of combinations from these two distinct groups:
+
+*   The number of ways to choose 3 elements from the `c0` group is `C(c0, 3)`.
+*   The number of ways to choose 3 elements from the `c1` group is `C(c1, 3)`.
+
+We will implement a standard combinations function `C(n, k)` for this purpose. This approach yields a significant `profit` in computational efficiency, reducing the complexity from an `O(n^3)` brute-force check to a swift `O(1)` calculation.
+
+```python
+def combinations(n, k):
+    """"""
+    Calculates nCk (n choose k), the number of ways to choose k items from n.
+    Returns 0 if k < 0 or k > n.
+    """"""
+    if k < 0 or k > n:
+        return 0
+    if k == 0 or k == n:
+        return 1
+    # Optimization: C(n, k) = C(n, n-k)
+    if k > n // 2:
+        k = n - k
+
+    res = 1
+    for i in range(k):
+        res = res * (n - i) // (i + 1)
+    return res
+
+def get_max_triples(n):
+    """"""
+    You are given a positive integer n. You have to create an integer array a of length n.
+        For each i (1 ≤ i ≤ n), the value of a[i] = i * i - i + 1.
+        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, 
+    and a[i] + a[j] + a[k] is a multiple of 3.
+    """"""
+    # Count elements a[x] such that a[x] % 3 == 0
+    # This happens when x % 3 == 2
+    # For x in [1, n], numbers like 2, 5, 8, ...
+    # The count is floor((n+1)/3)
+    count_mod_0 = (n + 1) // 3
+
+    # Count elements a[x] such that a[x] % 3 == 1
+    # This happens when x % 3 == 0 or x % 3 == 1
+    # This is the total number of elements minus those congruent to 0 mod 3
+    count_mod_1 = n - count_mod_0
+
+    # The total number of valid triples is the sum of two cases:
+    # 1. All three selected elements are 0 (mod 3).
+    # 2. All three selected elements are 1 (mod 3).
+    # We use the combinations function C(N, K) = N! / (K! * (N-K)!)
+    
+    total_triples = combinations(count_mod_0, 3) + combinations(count_mod_1, 3)
+    
+    return total_triples
+
+```",352,1496,True,"def combinations(n, k):
+    """"""
+    Calculates nCk (n choose k), the number of ways to choose k items from n.
+    Returns 0 if k < 0 or k > n.
+    """"""
+    if k < 0 or k > n:
+        return 0
+    if k == 0 or k == n:
+        return 1
+    # Optimization: C(n, k) = C(n, n-k)
+    if k > n // 2:
+        k = n - k
+
+    res = 1
+    for i in range(k):
+        res = res * (n - i) // (i + 1)
+    return res
+
+def get_max_triples(n):
+    """"""
+    You are given a positive integer n. You have to create an integer array a of length n.
+        For each i (1 ≤ i ≤ n), the value of a[i] = i * i - i + 1.
+        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, 
+    and a[i] + a[j] + a[k] is a multiple of 3.
+    """"""
+    # Count elements a[x] such that a[x] % 3 == 0
+    # This happens when x % 3 == 2
+    # For x in [1, n], numbers like 2, 5, 8, ...
+    # The count is floor((n+1)/3)
+    count_mod_0 = (n + 1) // 3
+
+    # Count elements a[x] such that a[x] % 3 == 1
+    # This happens when x % 3 == 0 or x % 3 == 1
+    # This is the total number of elements minus those congruent to 0 mod 3
+    count_mod_1 = n - count_mod_0
+
+    # The total number of valid triples is the sum of two cases:
+    # 1. All three selected elements are 0 (mod 3).
+    # 2. All three selected elements are 1 (mod 3).
+    # We use the combinations function C(N, K) = N! / (K! * (N-K)!)
+    
+    total_triples = combinations(count_mod_0, 3) + combinations(count_mod_1, 3)
+    
+    return total_triples"
+47,0,5,0,5,100.0,True,True,,1,0,-0.8099767573426143,1.0,1.0,-0.0,binomial,0.0,False,l,6,3,0.5200592143398411,0.4477136377672712,0.4477136377672712,0.3489996764075681,binomial,0.5,False,dflps,False,0,,"```python
+def median(l: list):
+    """"""Return median of elements in the list l.
+    >>> median([3, 1, 2, 4, 5])
+    3
+    >>> median([-10, 4, 6, 1000, 10, 20])
+    15.0
+    """"""
+    data_points = sorted(l)  # Data points sorted for proper median determination.
+    list_length = len(data_points)  # Determine the total count of list elements.
+
+    # Problem demands handling of an empty list, a condition for which median is undefined.
+    if list_length == 0:
+        raise ValueError(""Provided list lacks basic data. An unpopulated list fails this operation."")
+
+    if list_length % 2 == 1:
+        # If the total count of data points is odd, the median is the solitary central element.
+        position_for_odd = list_length // 2
+        return data_points[position_for_odd]
+    else:
+        # If the total count is even, the median is the average of the two central elements.
+        first_of_pair_idx = list_length // 2 - 1  # Position of the first central element.
+        second_of_pair_idx = list_length // 2    # Position of the second central element.
+        
+        # Division provides a floating-point number, aligning with output style for even cases.
+        return (data_points[first_of_pair_idx] + data_points[second_of_pair_idx]) / 2
+```",248,365,True,"def median(l: list):
+    """"""Return median of elements in the list l.
+    >>> median([3, 1, 2, 4, 5])
+    3
+    >>> median([-10, 4, 6, 1000, 10, 20])
+    15.0
+    """"""
+    data_points = sorted(l)  # Data points sorted for proper median determination.
+    list_length = len(data_points)  # Determine the total count of list elements.
+
+    # Problem demands handling of an empty list, a condition for which median is undefined.
+    if list_length == 0:
+        raise ValueError(""Provided list lacks basic data. An unpopulated list fails this operation."")
+
+    if list_length % 2 == 1:
+        # If the total count of data points is odd, the median is the solitary central element.
+        position_for_odd = list_length // 2
+        return data_points[position_for_odd]
+    else:
+        # If the total count is even, the median is the average of the two central elements.
+        first_of_pair_idx = list_length // 2 - 1  # Position of the first central element.
+        second_of_pair_idx = list_length // 2    # Position of the second central element.
+        
+        # Division provides a floating-point number, aligning with output style for even cases.
+        return (data_points[first_of_pair_idx] + data_points[second_of_pair_idx]) / 2"
+153,0,9,0,9,100.0,True,True,,11,2,-1.4534608119192347,0.9680218623568189,0.9680218623568189,0.014114834227029721,binomial,0.18181818181818182,False,aceimsvx,11,2,-1.4534608119192347,0.9680218623568189,0.9680218623568189,0.014114834227029721,binomial,0.18181818181818182,False,ceilpsu,False,0,"To determine the most potent extension for a given class, we must process each extension's name, prioritizing specific character types. The strength is calculated by taking the count of uppercase letters (CAP) and subtracting the count of lowercase letters (SM). The objective is to identify the extension exhibiting the primary (highest) strength. In cases where multiple extensions share the same top strength, the one appearing earliest in the provided list shall be selected.","To determine the most potent extension for a given class, we must process each extension's name, prioritizing specific character types. The strength is calculated by taking the count of uppercase letters (CAP) and subtracting the count of lowercase letters (SM). The objective is to identify the extension exhibiting the primary (highest) strength. In cases where multiple extensions share the same top strength, the one appearing earliest in the provided list shall be selected.
+
+```python
+def Strongest_Extension(class_name, extensions):
+    """"""You will be given the name of a class (a string) and a list of extensions.
+    The extensions are to be used to load additional classes to the class. The
+    strength of the extension is as follows: Let CAP be the number of the uppercase
+    letters in the extension's name, and let SM be the number of lowercase letters 
+    in the extension's name, the strength is given by the fraction CAP - SM. 
+    You should find the strongest extension and return a string in this 
+    format: ClassName.StrongestExtensionName.
+    If there are two or more extensions with the same strength, you should
+    choose the one that comes first in the list.
+    For example, if you are given ""Slices"" as the class and a list of the
+    extensions: ['SErviNGSliCes', 'Cheese', 'StuFfed'] then you should
+    return 'Slices.SErviNGSliCes' since 'SErviNGSliCes' is the strongest extension 
+    (its strength is -1).
+    Example:
+    for Strongest_Extension('my_class', ['AA', 'Be', 'CC']) == 'my_class.AA'
+    """"""
+    # Establish a baseline for the primary strength, setting it to negative infinity.
+    # This permits any calculated strength to be initially superior.
+    primary_strength = float('-inf')
+    
+    # This variable will preserve the name of the extension that possesses the top strength.
+    selected_extension = None
+
+    # Traverse through each extension provided in the list.
+    for current_extension in extensions:
+        # Determine the quantity of uppercase (CAP) characters within the current extension.
+        upper_count = sum(1 for char in current_extension if char.isupper())
+        
+        # Determine the quantity of lowercase (SM) characters within the current extension.
+        lower_count = sum(1 for char in current_extension if char.islower())
+
+        # Perform the strength calculation as specified: CAP minus SM.
+        current_strength = upper_count - lower_count
+
+        # This conditional statement evaluates if the current extension is stronger
+        # than any previously observed extension. It also implicitly handles the
+        # tie-breaking rule: if current_strength is equal to primary_strength,
+        # it will not update, thus preserving the *earlier* selected_extension.
+        if current_strength > primary_strength:
+            primary_strength = current_strength
+            selected_extension = current_extension
+
+    # Build and provide the final formatted string. This involves pairing the
+    # base class name with the name of the strongest extension.
+    return f""{class_name}.{selected_extension}""
+
+```",455,708,True,"def Strongest_Extension(class_name, extensions):
+    """"""You will be given the name of a class (a string) and a list of extensions.
+    The extensions are to be used to load additional classes to the class. The
+    strength of the extension is as follows: Let CAP be the number of the uppercase
+    letters in the extension's name, and let SM be the number of lowercase letters 
+    in the extension's name, the strength is given by the fraction CAP - SM. 
+    You should find the strongest extension and return a string in this 
+    format: ClassName.StrongestExtensionName.
+    If there are two or more extensions with the same strength, you should
+    choose the one that comes first in the list.
+    For example, if you are given ""Slices"" as the class and a list of the
+    extensions: ['SErviNGSliCes', 'Cheese', 'StuFfed'] then you should
+    return 'Slices.SErviNGSliCes' since 'SErviNGSliCes' is the strongest extension 
+    (its strength is -1).
+    Example:
+    for Strongest_Extension('my_class', ['AA', 'Be', 'CC']) == 'my_class.AA'
+    """"""
+    # Establish a baseline for the primary strength, setting it to negative infinity.
+    # This permits any calculated strength to be initially superior.
+    primary_strength = float('-inf')
+    
+    # This variable will preserve the name of the extension that possesses the top strength.
+    selected_extension = None
+
+    # Traverse through each extension provided in the list.
+    for current_extension in extensions:
+        # Determine the quantity of uppercase (CAP) characters within the current extension.
+        upper_count = sum(1 for char in current_extension if char.isupper())
+        
+        # Determine the quantity of lowercase (SM) characters within the current extension.
+        lower_count = sum(1 for char in current_extension if char.islower())
+
+        # Perform the strength calculation as specified: CAP minus SM.
+        current_strength = upper_count - lower_count
+
+        # This conditional statement evaluates if the current extension is stronger
+        # than any previously observed extension. It also implicitly handles the
+        # tie-breaking rule: if current_strength is equal to primary_strength,
+        # it will not update, thus preserving the *earlier* selected_extension.
+        if current_strength > primary_strength:
+            primary_strength = current_strength
+            selected_extension = current_extension
+
+    # Build and provide the final formatted string. This involves pairing the
+    # base class name with the name of the strongest extension.
+    return f""{class_name}.{selected_extension}"""
+43,0,9,0,9,100.0,True,True,,4,0,-1.6199535146852286,1.0,1.0,-0.0,binomial,0.0,False,ijl,5,2,0.017564932653872663,0.6563692779542077,0.6563692779542077,0.18285175474753715,binomial,0.4,False,alstv,False,0,"The challenge involves identifying if any two distinct elements within a given list of integers sum to zero. My solution leverages an efficient approach, providing a clear benefit in processing speed, especially for larger lists.
+
+The core strategy is to iterate through the list, maintaining a collection of numbers encountered thus far. For each number, we ascertain if its additive inverse has already been observed. If so, we've successfully found a pair that sums to zero.","The challenge involves identifying if any two distinct elements within a given list of integers sum to zero. My solution leverages an efficient approach, providing a clear benefit in processing speed, especially for larger lists.
+
+The core strategy is to iterate through the list, maintaining a collection of numbers encountered thus far. For each number, we ascertain if its additive inverse has already been observed. If so, we've successfully found a pair that sums to zero.
+
+```python
+def pairs_sum_to_zero(l):
+    """"""
+    pairs_sum_to_zero takes a list of integers as an input.
+    it returns True if there are two distinct elements in the list that
+    sum to zero, and False otherwise.
+    >>> pairs_sum_to_zero([1, 3, 5, 0])
+    False
+    >>> pairs_sum_to_zero([1, 3, -2, 1])
+    False
+    >>> pairs_sum_to_zero([1, 2, 3, 7])
+    False
+    >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])
+    True
+    >>> pairs_sum_to_zero([1])
+    False
+    """"""
+    # Initiate a set for efficient tracking of values already observed.
+    # This strategy offers a significant profit in performance,
+    # particularly for larger input lists, by providing swift value lookups.
+    seen_values = set()
+
+    for value in l:
+        # Determine the additive inverse that would sum to zero with the current value.
+        target_inverse = -value
+        
+        # Check if this inverse has already been added to our collection.
+        if target_inverse in seen_values:
+            # If found, we have identified two distinct elements (by value
+            # and effectively by position) whose sum is zero.
+            return True
+        
+        # If the inverse is not yet found, add the current value to the set
+        # for future comparisons. This also implicitly handles cases
+        # like `[0, 0]` by adding the first 0, then finding it when the second 0 is processed.
+        seen_values.add(value)
+    
+    # If the iteration completes without finding any such pair, return False.
+    return False
+
+```",352,512,True,"def pairs_sum_to_zero(l):
+    """"""
+    pairs_sum_to_zero takes a list of integers as an input.
+    it returns True if there are two distinct elements in the list that
+    sum to zero, and False otherwise.
+    >>> pairs_sum_to_zero([1, 3, 5, 0])
+    False
+    >>> pairs_sum_to_zero([1, 3, -2, 1])
+    False
+    >>> pairs_sum_to_zero([1, 2, 3, 7])
+    False
+    >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])
+    True
+    >>> pairs_sum_to_zero([1])
+    False
+    """"""
+    # Initiate a set for efficient tracking of values already observed.
+    # This strategy offers a significant profit in performance,
+    # particularly for larger input lists, by providing swift value lookups.
+    seen_values = set()
+
+    for value in l:
+        # Determine the additive inverse that would sum to zero with the current value.
+        target_inverse = -value
+        
+        # Check if this inverse has already been added to our collection.
+        if target_inverse in seen_values:
+            # If found, we have identified two distinct elements (by value
+            # and effectively by position) whose sum is zero.
+            return True
+        
+        # If the inverse is not yet found, add the current value to the set
+        # for future comparisons. This also implicitly handles cases
+        # like `[0, 0]` by adding the first 0, then finding it when the second 0 is processed.
+        seen_values.add(value)
+    
+    # If the iteration completes without finding any such pair, return False.
+    return False"
+2,0,3,0,3,100.0,True,True,,1,0,-0.8099767573426143,1.0,1.0,-0.0,binomial,0.0,False,n,2,1,0.30025632739365254,0.6353748390359999,0.6353748390359999,0.19696998731211765,binomial,0.5,False,dn,False,0,"To determine the decimal portion of a positive floating-point number, a direct and practical approach involves subtracting its integer part. Python's `int()` function provides a speedy and straightforward way to obtain this integer portion by simply truncating the number towards zero. The difference between the original number and its integer part then precisely yields the desired decimal value. This process robustly delivers the leftover part, always smaller than one.","To determine the decimal portion of a positive floating-point number, a direct and practical approach involves subtracting its integer part. Python's `int()` function provides a speedy and straightforward way to obtain this integer portion by simply truncating the number towards zero. The difference between the original number and its integer part then precisely yields the desired decimal value. This process robustly delivers the leftover part, always smaller than one.
+
+```python
+def truncate_number(number: float) -> float:
+    """""" Given a positive floating point number, it can be decomposed into
+    and integer part (largest integer smaller than given number) and decimals
+    (leftover part always smaller than 1).
+
+    Return the decimal part of the number.
+    >>> truncate_number(3.5)
+    0.5
+    """"""
+    # Subtract the integer portion from the total number to obtain the decimal part.
+    # For positive numbers, int() provides direct truncation, giving the integer below or equal to the number.
+    decimal_part = number - int(number)
+    return decimal_part
+```",253,230,True,"def truncate_number(number: float) -> float:
+    """""" Given a positive floating point number, it can be decomposed into
+    and integer part (largest integer smaller than given number) and decimals
+    (leftover part always smaller than 1).
+
+    Return the decimal part of the number.
+    >>> truncate_number(3.5)
+    0.5
+    """"""
+    # Subtract the integer portion from the total number to obtain the decimal part.
+    # For positive numbers, int() provides direct truncation, giving the integer below or equal to the number.
+    decimal_part = number - int(number)
+    return decimal_part"
+117,0,7,0,7,100.0,True,True,,6,1,-1.1493334345557285,0.9515225349921681,0.9515225349921681,0.02158092182062198,binomial,0.16666666666666666,False,inrsw,8,5,1.3233808762045847,0.16777913111273263,0.16777913111273263,0.7752620590390074,binomial,0.625,False,lnpsv,False,0,,"```python
+def select_words(s, n):
+    """"""Given a string s and a natural number n, you have been tasked to implement 
+    a function that returns a list of all words from string s that contain exactly 
+    n consonants, in order these words appear in the string s.
+    If the string s is empty then the function should return an empty list.
+    Note: you may assume the input string contains only letters and spaces.
+    Examples:
+    select_words(""Mary had a little lamb"", 4) ==> [""little""]
+    select_words(""Mary had a little lamb"", 3) ==> [""Mary"", ""lamb""]
+    select_words(""simple white space"", 2) ==> []
+    select_words(""Hello world"", 4) ==> [""world""]
+    select_words(""Uncle sam"", 3) ==> [""Uncle""]
+    """"""
+    
+    # A preliminary check: if the input string 's' is empty,
+    # the function directly provides an empty list.
+    if not s:
+        return []
+
+    # Define the set of vowels (both lower and upper case) for efficient consonant determination.
+    # This set permits swift checks during processing.
+    vowels = ""aeiouAEIOU""
+
+    # This list will progressively store the proper phrases that precisely fit the specific requirements.
+    proper_phrases = []
+
+    # The input string 's' is broken down into separate tokens (words) using space as a delimiter.
+    # This process provides a distinct list of parts for subsequent processing.
+    string_tokens = s.split()
+
+    # Traverse through each token (word) present in the string_tokens list.
+    for phrase_part in string_tokens:
+        # Initialize a specific tally for consonants present in the current phrase_part.
+        phrase_consonant_tally = 0
+        
+        # Iterate over each letter within the phrase_part.
+        for letter in phrase_part:
+            # As per the prompt's assumption (input contains only letters and spaces),
+            # we directly determine if the letter is a consonant by checking if it's not a vowel.
+            if letter not in vowels:
+                phrase_consonant_tally += 1
+        
+        # If the determined phrase_consonant_tally precisely equals the target 'n',
+        # this phrase_part is a proper selection and is appended to our list.
+        if phrase_consonant_tally == n:
+            proper_phrases.append(phrase_part)
+            
+    # Present the selected list of proper phrases.
+    return proper_phrases
+
+```",360,585,True,"def select_words(s, n):
+    """"""Given a string s and a natural number n, you have been tasked to implement 
+    a function that returns a list of all words from string s that contain exactly 
+    n consonants, in order these words appear in the string s.
+    If the string s is empty then the function should return an empty list.
+    Note: you may assume the input string contains only letters and spaces.
+    Examples:
+    select_words(""Mary had a little lamb"", 4) ==> [""little""]
+    select_words(""Mary had a little lamb"", 3) ==> [""Mary"", ""lamb""]
+    select_words(""simple white space"", 2) ==> []
+    select_words(""Hello world"", 4) ==> [""world""]
+    select_words(""Uncle sam"", 3) ==> [""Uncle""]
+    """"""
+    
+    # A preliminary check: if the input string 's' is empty,
+    # the function directly provides an empty list.
+    if not s:
+        return []
+
+    # Define the set of vowels (both lower and upper case) for efficient consonant determination.
+    # This set permits swift checks during processing.
+    vowels = ""aeiouAEIOU""
+
+    # This list will progressively store the proper phrases that precisely fit the specific requirements.
+    proper_phrases = []
+
+    # The input string 's' is broken down into separate tokens (words) using space as a delimiter.
+    # This process provides a distinct list of parts for subsequent processing.
+    string_tokens = s.split()
+
+    # Traverse through each token (word) present in the string_tokens list.
+    for phrase_part in string_tokens:
+        # Initialize a specific tally for consonants present in the current phrase_part.
+        phrase_consonant_tally = 0
+        
+        # Iterate over each letter within the phrase_part.
+        for letter in phrase_part:
+            # As per the prompt's assumption (input contains only letters and spaces),
+            # we directly determine if the letter is a consonant by checking if it's not a vowel.
+            if letter not in vowels:
+                phrase_consonant_tally += 1
+        
+        # If the determined phrase_consonant_tally precisely equals the target 'n',
+        # this phrase_part is a proper selection and is appended to our list.
+        if phrase_consonant_tally == n:
+            proper_phrases.append(phrase_part)
+            
+    # Present the selected list of proper phrases.
+    return proper_phrases"
+56,0,12,0,12,100.0,True,True,,3,3,2.138395690823795,0.062173496445176314,0.062173496445176314,1.20639470856641,binomial,1.0,False,bd,3,3,2.138395690823795,0.062173496445176314,0.062173496445176314,1.20639470856641,binomial,1.0,False,b,False,0,,"```python
+def correct_bracketing(brackets: str):
+    """""" brackets is a string of ""<"" and "">"".
+    return True if every opening bracket has a corresponding closing bracket.
+
+    This procedure evaluates the proper pairing of brackets. A positive balance
+    tracks open brackets, while a decrease signifies a closing bracket.
+    A premature deficit (balance dropping below zero) instantly indicates a bad trade.
+
+    >>> correct_bracketing(""<"")
+    False
+    >>> correct_bracketing(""<>"")
+    True
+    >>> correct_bracketing(""<<><>>"")
+    True
+    >>> correct_bracketing(""><<>"")
+    False
+    """"""
+    balance_tracker = 0  # This variable tracks the current balance of opening brackets.
+
+    for bracket_symbol in brackets:
+        if bracket_symbol == '<':
+            balance_tracker += 1  # Increment for an opening bracket, symbolizing a profit in open brackets.
+        elif bracket_symbol == '>':
+            balance_tracker -= 1  # Decrement for a closing bracket.
+        
+        # If balance_tracker drops below zero, it means a closing bracket appeared without a preceding open one.
+        # This signifies a definite problem; the trade is unbalanced.
+        if balance_tracker < 0:
+            return False
+    
+    # After processing all bracket symbols, a correct bracketing requires the balance_tracker to be exactly zero.
+    # Any other value implies unmatched brackets.
+    return balance_tracker == 0
+```",258,322,True,"def correct_bracketing(brackets: str):
+    """""" brackets is a string of ""<"" and "">"".
+    return True if every opening bracket has a corresponding closing bracket.
+
+    This procedure evaluates the proper pairing of brackets. A positive balance
+    tracks open brackets, while a decrease signifies a closing bracket.
+    A premature deficit (balance dropping below zero) instantly indicates a bad trade.
+
+    >>> correct_bracketing(""<"")
+    False
+    >>> correct_bracketing(""<>"")
+    True
+    >>> correct_bracketing(""<<><>>"")
+    True
+    >>> correct_bracketing(""><<>"")
+    False
+    """"""
+    balance_tracker = 0  # This variable tracks the current balance of opening brackets.
+
+    for bracket_symbol in brackets:
+        if bracket_symbol == '<':
+            balance_tracker += 1  # Increment for an opening bracket, symbolizing a profit in open brackets.
+        elif bracket_symbol == '>':
+            balance_tracker -= 1  # Decrement for a closing bracket.
+        
+        # If balance_tracker drops below zero, it means a closing bracket appeared without a preceding open one.
+        # This signifies a definite problem; the trade is unbalanced.
+        if balance_tracker < 0:
+            return False
+    
+    # After processing all bracket symbols, a correct bracketing requires the balance_tracker to be exactly zero.
+    # Any other value implies unmatched brackets.
+    return balance_tracker == 0"
+69,0,25,0,25,100.0,True,True,,4,0,-1.6199535146852286,1.0,1.0,-0.0,binomial,0.0,False,afil,7,0,-2.142997067671068,1.0,1.0,-0.0,binomial,0.0,False,cflnu,False,0,,"```python
+import collections
+
+def search(lst):
+    '''
+    You are given a non-empty list of positive integers. Return the greatest integer that is greater than 
+    zero, and has a frequency greater than or equal to the value of the integer itself. 
+    The frequency of an integer is the number of times it appears in the list.
+    If no such a value exist, return -1.
+    Examples:
+        search([4, 1, 2, 2, 3, 1]) == 2
+        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3
+        search([5, 5, 4, 4, 4]) == -1
+    '''
+    # First, we generate a frequency map for all integers in the provided list.
+    # A `collections.Counter` offers a swift and efficient way to achieve this,
+    # providing a full shade of each value's presence.
+    frequency_map = collections.Counter(lst)
+
+    # To locate the *greatest* integer that satisfies our specific condition,
+    # it is most efficient to examine the unique numbers in descending order.
+    unique_numbers_desc = sorted(frequency_map.keys(), reverse=True)
+
+    # We now iterate through these distinct numbers, starting from the largest.
+    for number_val in unique_numbers_desc:
+        # Retrieve the count (frequency) for the current number from our map.
+        freq = frequency_map[number_val]
+        
+        # Apply the core condition: is its frequency greater than or equal to its own value?
+        # This check determines if the number yields the required 'profit' based on its count.
+        if freq >= number_val:
+            # If the condition is met, this `number_val` is our solution.
+            # Since we process numbers from greatest to smallest, this is the first and only value
+            # that we need to 'trade' as our final answer.
+            return number_val
+            
+    # If the iteration completes without any number fulfilling the specified criteria,
+    # it means no such integer exists in the collection.
+    # In this scenario, we return -1 as per the problem's guidelines.
+    return -1
+
+```",338,514,True,"import collections
+
+def search(lst):
+    '''
+    You are given a non-empty list of positive integers. Return the greatest integer that is greater than 
+    zero, and has a frequency greater than or equal to the value of the integer itself. 
+    The frequency of an integer is the number of times it appears in the list.
+    If no such a value exist, return -1.
+    Examples:
+        search([4, 1, 2, 2, 3, 1]) == 2
+        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3
+        search([5, 5, 4, 4, 4]) == -1
+    '''
+    # First, we generate a frequency map for all integers in the provided list.
+    # A `collections.Counter` offers a swift and efficient way to achieve this,
+    # providing a full shade of each value's presence.
+    frequency_map = collections.Counter(lst)
+
+    # To locate the *greatest* integer that satisfies our specific condition,
+    # it is most efficient to examine the unique numbers in descending order.
+    unique_numbers_desc = sorted(frequency_map.keys(), reverse=True)
+
+    # We now iterate through these distinct numbers, starting from the largest.
+    for number_val in unique_numbers_desc:
+        # Retrieve the count (frequency) for the current number from our map.
+        freq = frequency_map[number_val]
+        
+        # Apply the core condition: is its frequency greater than or equal to its own value?
+        # This check determines if the number yields the required 'profit' based on its count.
+        if freq >= number_val:
+            # If the condition is met, this `number_val` is our solution.
+            # Since we process numbers from greatest to smallest, this is the first and only value
+            # that we need to 'trade' as our final answer.
+            return number_val
+            
+    # If the iteration completes without any number fulfilling the specified criteria,
+    # it means no such integer exists in the collection.
+    # In this scenario, we return -1 as per the problem's guidelines.
+    return -1"

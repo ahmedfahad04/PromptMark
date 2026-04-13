@@ -1,0 +1,45 @@
+{
+  "experiment_info": {
+    "z_threshold": 2.12,
+    "p_threshold": 0.017003022647632787,
+    "model": "claude",
+    "experiment_number": "expX",
+    "generation_type": "only-gen",
+    "sample_size": 164,
+    "dataset": "mbpp",
+    "total_samples": 100
+  },
+  "roc_metrics": {
+    "auroc": 0.8916,
+    "fpr_range": [
+      0.0,
+      1.0
+    ],
+    "tpr_range": [
+      0.0,
+      1.0
+    ]
+  },
+  "tpr_at_fpr_thresholds": {
+    "T@0%F": 0.13,
+    "T@1%F": 0.37,
+    "T@3%F": 0.37,
+    "T@5%F": 0.6,
+    "T@10%F": 0.6
+  },
+  "confusion_matrix": {
+    "tp": 9,
+    "fp": 0,
+    "tn": 100,
+    "fn": 91
+  },
+  "performance_metrics": {
+    "tpr_at_fixed_threshold": 0.09,
+    "fpr_at_fixed_threshold": 0.0,
+    "tnr_specificity": 1.0,
+    "fnr": 0.91,
+    "precision": 1.0,
+    "accuracy": 0.545,
+    "f1_score": 0.165138
+  }
+}

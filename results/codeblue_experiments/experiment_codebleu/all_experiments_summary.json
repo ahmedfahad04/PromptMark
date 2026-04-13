@@ -1,0 +1,380 @@
+[
+  {
+    "experiment": "EXP_1-1_MBPP_After_GEN_100",
+    "model": "codegemma_exp1-1_after_gen_v1_100_mbpp",
+    "avg_codebleu": 0.6698843483777884,
+    "total_samples": 98,
+    "csv_file": "results/experiment_codebleu/EXP_1-1_MBPP_After_GEN_100_codegemma_exp1-1_after_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1-1_MBPP_After_GEN_100",
+    "model": "codegemma_exp1-1_after_gen_v2_100_mbpp",
+    "avg_codebleu": 0.6307101443996675,
+    "total_samples": 69,
+    "csv_file": "results/experiment_codebleu/EXP_1-1_MBPP_After_GEN_100_codegemma_exp1-1_after_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1-1_MBPP_After_GEN_100",
+    "model": "gemini_exp1-1_after_gen_v1_100_mbpp",
+    "avg_codebleu": 0.5611802678894496,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_1-1_MBPP_After_GEN_100_gemini_exp1-1_after_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1-1_MBPP_After_GEN_100",
+    "model": "gemini_exp1-1_after_gen_v2_100_mbpp",
+    "avg_codebleu": 0.5599448420390537,
+    "total_samples": 92,
+    "csv_file": "results/experiment_codebleu/EXP_1-1_MBPP_After_GEN_100_gemini_exp1-1_after_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1-1_MBPP_After_GEN_100",
+    "model": "qwen14_exp1-1_after_gen_v1_100_mbpp",
+    "avg_codebleu": 0.5875982742923035,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_1-1_MBPP_After_GEN_100_qwen14_exp1-1_after_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1-1_MBPP_After_GEN_100",
+    "model": "qwen14_exp1-1_after_gen_v2_100_mbpp",
+    "avg_codebleu": 0.5818676383497305,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_1-1_MBPP_After_GEN_100_qwen14_exp1-1_after_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1-1_MBPP_With_Comments_100",
+    "model": "codegemma_exp1-1_during_gen_v5_100_mbpp",
+    "avg_codebleu": 0.24727824761688158,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_1-1_MBPP_With_Comments_100_codegemma_exp1-1_during_gen_v5_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1-1_MBPP_With_Comments_100",
+    "model": "codegemma_exp1-1_during_gen_v6_100_mbpp",
+    "avg_codebleu": 0.2260494657443915,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_1-1_MBPP_With_Comments_100_codegemma_exp1-1_during_gen_v6_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1-1_MBPP_With_Comments_100",
+    "model": "gemini_exp1-1_during_gen_v5_100_mbpp",
+    "avg_codebleu": 0.23719278172328404,
+    "total_samples": 96,
+    "csv_file": "results/experiment_codebleu/EXP_1-1_MBPP_With_Comments_100_gemini_exp1-1_during_gen_v5_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1-1_MBPP_With_Comments_100",
+    "model": "gemini_exp1-1_during_gen_v6_100_mbpp",
+    "avg_codebleu": 0.2377120836954744,
+    "total_samples": 98,
+    "csv_file": "results/experiment_codebleu/EXP_1-1_MBPP_With_Comments_100_gemini_exp1-1_during_gen_v6_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1-1_MBPP_With_Comments_100",
+    "model": "qwen14_exp1-1_during_gen_v5_100_mbpp",
+    "avg_codebleu": 0.26343148778952025,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_1-1_MBPP_With_Comments_100_qwen14_exp1-1_during_gen_v5_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1-1_MBPP_With_Comments_100",
+    "model": "qwen14_exp1-1_during_gen_v6_100_mbpp",
+    "avg_codebleu": 0.26412865604453306,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_1-1_MBPP_With_Comments_100_qwen14_exp1-1_during_gen_v6_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1_MBPP_100",
+    "model": "codegemma_exp1_dgen_v1_100",
+    "avg_codebleu": 0.24272547675114112,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_1_MBPP_100_codegemma_exp1_dgen_v1_100_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1_MBPP_100",
+    "model": "codegemma_exp1_dgen_v2_100",
+    "avg_codebleu": 0.24272547675114112,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_1_MBPP_100_codegemma_exp1_dgen_v2_100_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1_MBPP_100",
+    "model": "gemini_exp1_dgen_v1_100",
+    "avg_codebleu": 0.23844021991321834,
+    "total_samples": 95,
+    "csv_file": "results/experiment_codebleu/EXP_1_MBPP_100_gemini_exp1_dgen_v1_100_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1_MBPP_100",
+    "model": "gemini_exp1_dgen_v2_100",
+    "avg_codebleu": 0.24326796339388002,
+    "total_samples": 75,
+    "csv_file": "results/experiment_codebleu/EXP_1_MBPP_100_gemini_exp1_dgen_v2_100_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1_MBPP_100",
+    "model": "qwen14b_exp1_dgen_v1_100",
+    "avg_codebleu": 0.270166226887531,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_1_MBPP_100_qwen14b_exp1_dgen_v1_100_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_1_MBPP_100",
+    "model": "qwen14b_exp1_dgen_v2_100",
+    "avg_codebleu": 0.2694374866777868,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_1_MBPP_100_qwen14b_exp1_dgen_v2_100_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_2-1_2-2_V1_V2_MBPP",
+    "model": "gemini_exp2-1_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.23728989240392387,
+    "total_samples": 94,
+    "csv_file": "results/experiment_codebleu/EXP_2-1_2-2_V1_V2_MBPP_gemini_exp2-1_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_2-1_2-2_V1_V2_MBPP",
+    "model": "gemini_exp2-1_during_gen_v2_188_mbpp",
+    "avg_codebleu": 0.24036072399689123,
+    "total_samples": 188,
+    "csv_file": "results/experiment_codebleu/EXP_2-1_2-2_V1_V2_MBPP_gemini_exp2-1_during_gen_v2_188_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_2-1_2-2_V1_V2_MBPP",
+    "model": "gemini_exp2-2_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.23987118453947154,
+    "total_samples": 96,
+    "csv_file": "results/experiment_codebleu/EXP_2-1_2-2_V1_V2_MBPP_gemini_exp2-2_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_2-1_2-2_V1_V2_MBPP",
+    "model": "gemini_exp2-2_during_gen_v2_100_mbpp",
+    "avg_codebleu": 0.24516408683032134,
+    "total_samples": 98,
+    "csv_file": "results/experiment_codebleu/EXP_2-1_2-2_V1_V2_MBPP_gemini_exp2-2_during_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_2-1_2-2_V1_V2_MBPP",
+    "model": "qwen14_exp2-1_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.24995548717110888,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_2-1_2-2_V1_V2_MBPP_qwen14_exp2-1_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_2-1_2-2_V1_V2_MBPP",
+    "model": "qwen14_exp2-1_during_gen_v2_100_mbpp",
+    "avg_codebleu": 0.2554398334118272,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_2-1_2-2_V1_V2_MBPP_qwen14_exp2-1_during_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_2-1_2-2_V1_V2_MBPP",
+    "model": "qwen14_exp2-2_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.24564045258288197,
+    "total_samples": 92,
+    "csv_file": "results/experiment_codebleu/EXP_2-1_2-2_V1_V2_MBPP_qwen14_exp2-2_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_2_V1_V2",
+    "model": "gemini_exp2_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.24177291202509013,
+    "total_samples": 92,
+    "csv_file": "results/experiment_codebleu/EXP_2_V1_V2_gemini_exp2_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_2_V1_V2",
+    "model": "gemini_exp2_during_gen_v2_100_mbpp",
+    "avg_codebleu": 0.241708662904163,
+    "total_samples": 92,
+    "csv_file": "results/experiment_codebleu/EXP_2_V1_V2_gemini_exp2_during_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_2_V1_V2",
+    "model": "openai_exp2_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.23856774717659682,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_2_V1_V2_openai_exp2_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_2_V1_V2",
+    "model": "openai_exp2_during_gen_v2_100_mbpp",
+    "avg_codebleu": 0.25246288644236875,
+    "total_samples": 99,
+    "csv_file": "results/experiment_codebleu/EXP_2_V1_V2_openai_exp2_during_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_2_V1_V2",
+    "model": "qwen14_exp2_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.2498959923441314,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_2_V1_V2_qwen14_exp2_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_2_V1_V2",
+    "model": "qwen14_exp2_during_gen_v2_100_mbpp",
+    "avg_codebleu": 0.2518291276933212,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_2_V1_V2_qwen14_exp2_during_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_1_2_3_V1_V2_MBPP",
+    "model": "claude_exp3-1_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.2547159847892705,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_3_1_2_3_V1_V2_MBPP_claude_exp3-1_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_1_2_3_V1_V2_MBPP",
+    "model": "gemini_exp3-1_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.2536081616151174,
+    "total_samples": 97,
+    "csv_file": "results/experiment_codebleu/EXP_3_1_2_3_V1_V2_MBPP_gemini_exp3-1_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_1_2_3_V1_V2_MBPP",
+    "model": "gemini_exp3-1_during_gen_v2_100_mbpp",
+    "avg_codebleu": 0.25047420728851266,
+    "total_samples": 84,
+    "csv_file": "results/experiment_codebleu/EXP_3_1_2_3_V1_V2_MBPP_gemini_exp3-1_during_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_1_2_3_V1_V2_MBPP",
+    "model": "gemini_exp3-2_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.25185699558638497,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_3_1_2_3_V1_V2_MBPP_gemini_exp3-2_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_1_2_3_V1_V2_MBPP",
+    "model": "gemini_exp3-2_during_gen_v2_100_mbpp",
+    "avg_codebleu": 0.24819135209159984,
+    "total_samples": 98,
+    "csv_file": "results/experiment_codebleu/EXP_3_1_2_3_V1_V2_MBPP_gemini_exp3-2_during_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_1_2_3_V1_V2_MBPP",
+    "model": "gemini_exp3-2_during_gen_v3_100_mbpp",
+    "avg_codebleu": 0.2518975594107274,
+    "total_samples": 95,
+    "csv_file": "results/experiment_codebleu/EXP_3_1_2_3_V1_V2_MBPP_gemini_exp3-2_during_gen_v3_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_1_2_3_V1_V2_MBPP",
+    "model": "gemini_exp3-3_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.24663884631938615,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_3_1_2_3_V1_V2_MBPP_gemini_exp3-3_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_V1_V2_MBPP",
+    "model": "gemini_exp3-1_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.2536081616151174,
+    "total_samples": 97,
+    "csv_file": "results/experiment_codebleu/EXP_3_V1_V2_MBPP_gemini_exp3-1_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_V1_V2_MBPP",
+    "model": "gemini_exp3-1_during_gen_v2_100_mbpp",
+    "avg_codebleu": 0.25047420728851266,
+    "total_samples": 84,
+    "csv_file": "results/experiment_codebleu/EXP_3_V1_V2_MBPP_gemini_exp3-1_during_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_V1_V2_MBPP",
+    "model": "gemini_exp3_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.24632623844176907,
+    "total_samples": 97,
+    "csv_file": "results/experiment_codebleu/EXP_3_V1_V2_MBPP_gemini_exp3_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_V1_V2_MBPP",
+    "model": "gemini_exp3_during_gen_v1_2_mbpp",
+    "avg_codebleu": 0.22925452121666012,
+    "total_samples": 2,
+    "csv_file": "results/experiment_codebleu/EXP_3_V1_V2_MBPP_gemini_exp3_during_gen_v1_2_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_V1_V2_MBPP",
+    "model": "gemini_exp3_during_gen_v2_100_mbpp",
+    "avg_codebleu": 0.25066413948949895,
+    "total_samples": 95,
+    "csv_file": "results/experiment_codebleu/EXP_3_V1_V2_MBPP_gemini_exp3_during_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_V1_V2_MBPP",
+    "model": "qwen14_exp3-1_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.2761711302442206,
+    "total_samples": 98,
+    "csv_file": "results/experiment_codebleu/EXP_3_V1_V2_MBPP_qwen14_exp3-1_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_V1_V2_MBPP",
+    "model": "qwen14_exp3-1_during_gen_v2_100_mbpp",
+    "avg_codebleu": 0.2590195007470689,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_3_V1_V2_MBPP_qwen14_exp3-1_during_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_V1_V2_MBPP",
+    "model": "qwen14_exp3_1_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.25880476575282,
+    "total_samples": 99,
+    "csv_file": "results/experiment_codebleu/EXP_3_V1_V2_MBPP_qwen14_exp3_1_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_V1_V2_MBPP",
+    "model": "qwen14_exp3_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.2604952543515084,
+    "total_samples": 66,
+    "csv_file": "results/experiment_codebleu/EXP_3_V1_V2_MBPP_qwen14_exp3_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_3_V1_V2_MBPP",
+    "model": "qwen14_exp3_during_gen_v2_100_mbpp",
+    "avg_codebleu": 0.253612185931243,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_3_V1_V2_MBPP_qwen14_exp3_during_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_X_1_V1_V2_V3",
+    "model": "gemini_expX-1_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.23263408210870537,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_X_1_V1_V2_V3_gemini_expX-1_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_X_1_V1_V2_V3",
+    "model": "gemini_expX-1_during_gen_v2_100_mbpp",
+    "avg_codebleu": 0.2302583568610747,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_X_1_V1_V2_V3_gemini_expX-1_during_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_X_1_V1_V2_V3",
+    "model": "gemini_expX-1_during_gen_v3_100_mbpp",
+    "avg_codebleu": 0.23445548791524728,
+    "total_samples": 99,
+    "csv_file": "results/experiment_codebleu/EXP_X_1_V1_V2_V3_gemini_expX-1_during_gen_v3_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_X_1_V1_V2_V3",
+    "model": "qwen14_expX-1_during_gen_v1_100_mbpp",
+    "avg_codebleu": 0.2208683628503967,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_X_1_V1_V2_V3_qwen14_expX-1_during_gen_v1_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_X_1_V1_V2_V3",
+    "model": "qwen14_expX-1_during_gen_v2_100_mbpp",
+    "avg_codebleu": 0.2149593127818094,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_X_1_V1_V2_V3_qwen14_expX-1_during_gen_v2_100_mbpp_codebleu.csv"
+  },
+  {
+    "experiment": "EXP_X_1_V1_V2_V3",
+    "model": "qwen14_expX-1_during_gen_v3_100_mbpp",
+    "avg_codebleu": 0.2333266314595823,
+    "total_samples": 100,
+    "csv_file": "results/experiment_codebleu/EXP_X_1_V1_V2_V3_qwen14_expX-1_during_gen_v3_100_mbpp_codebleu.csv"
+  }
+]

@@ -1,0 +1,1082 @@
+{
+  "a": [
+    {
+      "token": "arr",
+      "frequency": 22
+    },
+    {
+      "token": "add",
+      "frequency": 12
+    },
+    {
+      "token": "alpha_val",
+      "frequency": 10
+    },
+    {
+      "token": "active_position",
+      "frequency": 6
+    },
+    {
+      "token": "array",
+      "frequency": 6
+    },
+    {
+      "token": "and_tuples",
+      "frequency": 5
+    },
+    {
+      "token": "average_tuple",
+      "frequency": 5
+    },
+    {
+      "token": "a_val",
+      "frequency": 4
+    },
+    {
+      "token": "atan2",
+      "frequency": 3
+    },
+    {
+      "token": "a_input",
+      "frequency": 3
+    }
+  ],
+  "b": [
+    {
+      "token": "beta_val",
+      "frequency": 8
+    },
+    {
+      "token": "b_numbers_list",
+      "frequency": 7
+    },
+    {
+      "token": "b_div_d",
+      "frequency": 6
+    },
+    {
+      "token": "b_group_value",
+      "frequency": 6
+    },
+    {
+      "token": "b_val",
+      "frequency": 5
+    },
+    {
+      "token": "binary_one",
+      "frequency": 5
+    },
+    {
+      "token": "binary_two",
+      "frequency": 5
+    },
+    {
+      "token": "bit_length",
+      "frequency": 4
+    },
+    {
+      "token": "bygone_glyph",
+      "frequency": 4
+    },
+    {
+      "token": "by_val",
+      "frequency": 4
+    }
+  ],
+  "c": [
+    {
+      "token": "current_number",
+      "frequency": 37
+    },
+    {
+      "token": "current_position",
+      "frequency": 31
+    },
+    {
+      "token": "current_list",
+      "frequency": 21
+    },
+    {
+      "token": "current_length",
+      "frequency": 19
+    },
+    {
+      "token": "current_char",
+      "frequency": 18
+    },
+    {
+      "token": "current_tuple",
+      "frequency": 17
+    },
+    {
+      "token": "current_object",
+      "frequency": 13
+    },
+    {
+      "token": "current_gap",
+      "frequency": 10
+    },
+    {
+      "token": "current_value",
+      "frequency": 9
+    },
+    {
+      "token": "current_product",
+      "frequency": 8
+    }
+  ],
+  "d": [
+    {
+      "token": "data_list",
+      "frequency": 19
+    },
+    {
+      "token": "dgap",
+      "frequency": 10
+    },
+    {
+      "token": "data_tuple",
+      "frequency": 6
+    },
+    {
+      "token": "d_val",
+      "frequency": 6
+    },
+    {
+      "token": "dict1",
+      "frequency": 6
+    },
+    {
+      "token": "dp_lengths_list",
+      "frequency": 5
+    },
+    {
+      "token": "drop_empty",
+      "frequency": 5
+    },
+    {
+      "token": "d_val_one",
+      "frequency": 5
+    },
+    {
+      "token": "datum_two",
+      "frequency": 5
+    },
+    {
+      "token": "dp",
+      "frequency": 5
+    }
+  ],
+  "e": [
+    {
+      "token": "ele",
+      "frequency": 26
+    },
+    {
+      "token": "end",
+      "frequency": 10
+    },
+    {
+      "token": "el",
+      "frequency": 8
+    },
+    {
+      "token": "empty_dit",
+      "frequency": 7
+    },
+    {
+      "token": "extract_nth_element",
+      "frequency": 5
+    },
+    {
+      "token": "extract_string",
+      "frequency": 5
+    },
+    {
+      "token": "extract_quotation",
+      "frequency": 5
+    },
+    {
+      "token": "extract_singly",
+      "frequency": 5
+    },
+    {
+      "token": "even_Power_Sum",
+      "frequency": 5
+    },
+    {
+      "token": "end_idx",
+      "frequency": 5
+    }
+  ],
+  "f": [
+    {
+      "token": "final_position",
+      "frequency": 12
+    },
+    {
+      "token": "first_occurrence_position",
+      "frequency": 10
+    },
+    {
+      "token": "first_val",
+      "frequency": 9
+    },
+    {
+      "token": "find_First_Missing",
+      "frequency": 7
+    },
+    {
+      "token": "find_lucas",
+      "frequency": 7
+    },
+    {
+      "token": "first_position",
+      "frequency": 7
+    },
+    {
+      "token": "first_odd",
+      "frequency": 7
+    },
+    {
+      "token": "first_even",
+      "frequency": 7
+    },
+    {
+      "token": "first_val_two_multiple",
+      "frequency": 6
+    },
+    {
+      "token": "first_val_not_two_multiple",
+      "frequency": 6
+    }
+  ],
+  "g": [
+    {
+      "token": "given_list",
+      "frequency": 18
+    },
+    {
+      "token": "guiding_phrase",
+      "frequency": 9
+    },
+    {
+      "token": "guiding_numbers",
+      "frequency": 9
+    },
+    {
+      "token": "gaps",
+      "frequency": 8
+    },
+    {
+      "token": "general_gcd",
+      "frequency": 7
+    },
+    {
+      "token": "gcd_value",
+      "frequency": 7
+    },
+    {
+      "token": "g_output_elements",
+      "frequency": 6
+    },
+    {
+      "token": "grand_total",
+      "frequency": 6
+    },
+    {
+      "token": "glyph_unit",
+      "frequency": 6
+    },
+    {
+      "token": "group_tuples",
+      "frequency": 5
+    }
+  ],
+  "h": [
+    {
+      "token": "high_position",
+      "frequency": 5
+    },
+    {
+      "token": "has_vowel_by_position",
+      "frequency": 5
+    },
+    {
+      "token": "how_many_equal_objs",
+      "frequency": 4
+    },
+    {
+      "token": "huge_list",
+      "frequency": 3
+    },
+    {
+      "token": "hypotenuse",
+      "frequency": 2
+    },
+    {
+      "token": "h_output_string",
+      "frequency": 2
+    },
+    {
+      "token": "hypot",
+      "frequency": 2
+    },
+    {
+      "token": "h_bearing_value",
+      "frequency": 2
+    },
+    {
+      "token": "huge_input_query",
+      "frequency": 2
+    },
+    {
+      "token": "half_product_val",
+      "frequency": 2
+    }
+  ],
+  "i": [
+    {
+      "token": "idx",
+      "frequency": 16
+    },
+    {
+      "token": "intersection",
+      "frequency": 9
+    },
+    {
+      "token": "isupper",
+      "frequency": 6
+    },
+    {
+      "token": "idx_j",
+      "frequency": 6
+    },
+    {
+      "token": "insert_element",
+      "frequency": 5
+    },
+    {
+      "token": "is_perfect_square",
+      "frequency": 5
+    },
+    {
+      "token": "isdigit",
+      "frequency": 5
+    },
+    {
+      "token": "is_sublist",
+      "frequency": 5
+    },
+    {
+      "token": "intersection_array",
+      "frequency": 5
+    },
+    {
+      "token": "interleave_lists",
+      "frequency": 5
+    }
+  ],
+  "j": [
+    {
+      "token": "j_val",
+      "frequency": 10
+    },
+    {
+      "token": "jdx_klm",
+      "frequency": 10
+    },
+    {
+      "token": "jndex",
+      "frequency": 9
+    },
+    {
+      "token": "j_idx",
+      "frequency": 9
+    },
+    {
+      "token": "j_pos",
+      "frequency": 8
+    },
+    {
+      "token": "j_final_start_position",
+      "frequency": 6
+    },
+    {
+      "token": "j_original_group",
+      "frequency": 5
+    },
+    {
+      "token": "j_offset",
+      "frequency": 5
+    },
+    {
+      "token": "j_list_chars",
+      "frequency": 4
+    },
+    {
+      "token": "j_even_quantity",
+      "frequency": 4
+    }
+  ],
+  "k": [
+    {
+      "token": "k_val",
+      "frequency": 12
+    },
+    {
+      "token": "k_idx",
+      "frequency": 10
+    },
+    {
+      "token": "key_val",
+      "frequency": 7
+    },
+    {
+      "token": "k_lower_bound",
+      "frequency": 7
+    },
+    {
+      "token": "k_key",
+      "frequency": 6
+    },
+    {
+      "token": "k_dex",
+      "frequency": 6
+    },
+    {
+      "token": "key_element",
+      "frequency": 6
+    },
+    {
+      "token": "k_upper_bound",
+      "frequency": 6
+    },
+    {
+      "token": "known_special_values",
+      "frequency": 5
+    },
+    {
+      "token": "k_dict_link_val",
+      "frequency": 5
+    }
+  ],
+  "l": [
+    {
+      "token": "l_data",
+      "frequency": 20
+    },
+    {
+      "token": "list_length",
+      "frequency": 20
+    },
+    {
+      "token": "list1",
+      "frequency": 18
+    },
+    {
+      "token": "l_length",
+      "frequency": 17
+    },
+    {
+      "token": "list_data",
+      "frequency": 12
+    },
+    {
+      "token": "line_dlsk",
+      "frequency": 12
+    },
+    {
+      "token": "length",
+      "frequency": 8
+    },
+    {
+      "token": "low_position",
+      "frequency": 8
+    },
+    {
+      "token": "list_one",
+      "frequency": 7
+    },
+    {
+      "token": "left",
+      "frequency": 7
+    }
+  ],
+  "m": [
+    {
+      "token": "math",
+      "frequency": 31
+    },
+    {
+      "token": "mid",
+      "frequency": 12
+    },
+    {
+      "token": "mlist",
+      "frequency": 9
+    },
+    {
+      "token": "monthnum2",
+      "frequency": 8
+    },
+    {
+      "token": "mid_lmt",
+      "frequency": 6
+    },
+    {
+      "token": "move_num",
+      "frequency": 5
+    },
+    {
+      "token": "merge_dictionaries_three",
+      "frequency": 5
+    },
+    {
+      "token": "multiply_num",
+      "frequency": 5
+    },
+    {
+      "token": "min_Swaps",
+      "frequency": 5
+    },
+    {
+      "token": "merge",
+      "frequency": 5
+    }
+  ],
+  "n": [
+    {
+      "token": "numbers_list",
+      "frequency": 31
+    },
+    {
+      "token": "num",
+      "frequency": 18
+    },
+    {
+      "token": "nums",
+      "frequency": 17
+    },
+    {
+      "token": "n_val",
+      "frequency": 11
+    },
+    {
+      "token": "n_dlsk",
+      "frequency": 10
+    },
+    {
+      "token": "num_val",
+      "frequency": 8
+    },
+    {
+      "token": "newList",
+      "frequency": 7
+    },
+    {
+      "token": "num_one",
+      "frequency": 6
+    },
+    {
+      "token": "num_position",
+      "frequency": 6
+    },
+    {
+      "token": "numeric_val",
+      "frequency": 6
+    }
+  ],
+  "o": [
+    {
+      "token": "original_list",
+      "frequency": 60
+    },
+    {
+      "token": "original_text",
+      "frequency": 24
+    },
+    {
+      "token": "output_list",
+      "frequency": 16
+    },
+    {
+      "token": "other_tuple",
+      "frequency": 12
+    },
+    {
+      "token": "overall_total",
+      "frequency": 10
+    },
+    {
+      "token": "overall_length",
+      "frequency": 9
+    },
+    {
+      "token": "original_tuple",
+      "frequency": 8
+    },
+    {
+      "token": "operand_a",
+      "frequency": 8
+    },
+    {
+      "token": "original_plain_text",
+      "frequency": 8
+    },
+    {
+      "token": "output_bag",
+      "frequency": 8
+    }
+  ],
+  "p": [
+    {
+      "token": "position",
+      "frequency": 12
+    },
+    {
+      "token": "py_obj_data",
+      "frequency": 10
+    },
+    {
+      "token": "primary_gap",
+      "frequency": 10
+    },
+    {
+      "token": "p_objects_list",
+      "frequency": 9
+    },
+    {
+      "token": "p_idx",
+      "frequency": 8
+    },
+    {
+      "token": "pattern",
+      "frequency": 8
+    },
+    {
+      "token": "particular_x",
+      "frequency": 7
+    },
+    {
+      "token": "pivot_key",
+      "frequency": 7
+    },
+    {
+      "token": "power",
+      "frequency": 6
+    },
+    {
+      "token": "pi",
+      "frequency": 6
+    }
+  ],
+  "q": [
+    {
+      "token": "query_list",
+      "frequency": 9
+    },
+    {
+      "token": "query_overall_values",
+      "frequency": 8
+    },
+    {
+      "token": "query_value",
+      "frequency": 8
+    },
+    {
+      "token": "query_val",
+      "frequency": 7
+    },
+    {
+      "token": "query_nth_value",
+      "frequency": 6
+    },
+    {
+      "token": "quantity",
+      "frequency": 6
+    },
+    {
+      "token": "query_string",
+      "frequency": 5
+    },
+    {
+      "token": "query_list_length",
+      "frequency": 5
+    },
+    {
+      "token": "quotient_factor",
+      "frequency": 5
+    },
+    {
+      "token": "qty_by_og",
+      "frequency": 4
+    }
+  ],
+  "r": [
+    {
+      "token": "result_list",
+      "frequency": 45
+    },
+    {
+      "token": "res",
+      "frequency": 35
+    },
+    {
+      "token": "result",
+      "frequency": 28
+    },
+    {
+      "token": "right",
+      "frequency": 8
+    },
+    {
+      "token": "round_and_sum",
+      "frequency": 7
+    },
+    {
+      "token": "rotate_right",
+      "frequency": 5
+    },
+    {
+      "token": "remove_lowercase",
+      "frequency": 5
+    },
+    {
+      "token": "remove_nested",
+      "frequency": 5
+    },
+    {
+      "token": "remove_Occ",
+      "frequency": 5
+    },
+    {
+      "token": "rfind",
+      "frequency": 5
+    }
+  ],
+  "s": [
+    {
+      "token": "sqrt",
+      "frequency": 12
+    },
+    {
+      "token": "start",
+      "frequency": 12
+    },
+    {
+      "token": "str1",
+      "frequency": 11
+    },
+    {
+      "token": "second_val",
+      "frequency": 9
+    },
+    {
+      "token": "sequence",
+      "frequency": 9
+    },
+    {
+      "token": "seq_vals",
+      "frequency": 8
+    },
+    {
+      "token": "square_nums",
+      "frequency": 7
+    },
+    {
+      "token": "string",
+      "frequency": 7
+    },
+    {
+      "token": "sum_series",
+      "frequency": 6
+    },
+    {
+      "token": "search",
+      "frequency": 6
+    }
+  ],
+  "t": [
+    {
+      "token": "temp",
+      "frequency": 23
+    },
+    {
+      "token": "test_list",
+      "frequency": 17
+    },
+    {
+      "token": "test_str",
+      "frequency": 13
+    },
+    {
+      "token": "text_string",
+      "frequency": 12
+    },
+    {
+      "token": "total_length",
+      "frequency": 10
+    },
+    {
+      "token": "total_sum",
+      "frequency": 9
+    },
+    {
+      "token": "text",
+      "frequency": 9
+    },
+    {
+      "token": "t_current_sum",
+      "frequency": 6
+    },
+    {
+      "token": "test_tup1",
+      "frequency": 6
+    },
+    {
+      "token": "test_tup2",
+      "frequency": 6
+    }
+  ],
+  "u": [
+    {
+      "token": "u_list",
+      "frequency": 8
+    },
+    {
+      "token": "unit_quantity",
+      "frequency": 6
+    },
+    {
+      "token": "union_elements",
+      "frequency": 5
+    },
+    {
+      "token": "unique_product",
+      "frequency": 5
+    },
+    {
+      "token": "upper_key",
+      "frequency": 5
+    },
+    {
+      "token": "upp",
+      "frequency": 4
+    },
+    {
+      "token": "upper_bound",
+      "frequency": 4
+    },
+    {
+      "token": "unit",
+      "frequency": 3
+    },
+    {
+      "token": "unique_elements_holder",
+      "frequency": 3
+    },
+    {
+      "token": "updated_payload_list",
+      "frequency": 3
+    }
+  ],
+  "v": [
+    {
+      "token": "vowels_dlsk",
+      "frequency": 11
+    },
+    {
+      "token": "vow_list",
+      "frequency": 8
+    },
+    {
+      "token": "v_value",
+      "frequency": 6
+    },
+    {
+      "token": "v_actual_length",
+      "frequency": 6
+    },
+    {
+      "token": "val_token",
+      "frequency": 5
+    },
+    {
+      "token": "val_a",
+      "frequency": 5
+    },
+    {
+      "token": "val_b",
+      "frequency": 5
+    },
+    {
+      "token": "value",
+      "frequency": 5
+    },
+    {
+      "token": "v_factor_a",
+      "frequency": 4
+    },
+    {
+      "token": "vowel_group",
+      "frequency": 4
+    }
+  ],
+  "w": [
+    {
+      "token": "whole_length",
+      "frequency": 12
+    },
+    {
+      "token": "whole_glyph",
+      "frequency": 7
+    },
+    {
+      "token": "whole_group",
+      "frequency": 6
+    },
+    {
+      "token": "wo_list",
+      "frequency": 5
+    },
+    {
+      "token": "word_body",
+      "frequency": 5
+    },
+    {
+      "token": "word_yoke",
+      "frequency": 5
+    },
+    {
+      "token": "was_yet_pending_swap",
+      "frequency": 4
+    },
+    {
+      "token": "whole_number",
+      "frequency": 4
+    },
+    {
+      "token": "was_exchanged",
+      "frequency": 4
+    },
+    {
+      "token": "w_word_segment",
+      "frequency": 3
+    }
+  ],
+  "x": [
+    {
+      "token": "x_particular",
+      "frequency": 15
+    },
+    {
+      "token": "x_value",
+      "frequency": 9
+    },
+    {
+      "token": "x_val",
+      "frequency": 7
+    },
+    {
+      "token": "x_step",
+      "frequency": 6
+    },
+    {
+      "token": "x_final",
+      "frequency": 3
+    },
+    {
+      "token": "x_coefficient",
+      "frequency": 3
+    },
+    {
+      "token": "x_one",
+      "frequency": 3
+    },
+    {
+      "token": "x_solution",
+      "frequency": 3
+    },
+    {
+      "token": "x_next",
+      "frequency": 2
+    },
+    {
+      "token": "x_val_base",
+      "frequency": 2
+    }
+  ],
+  "y": [
+    {
+      "token": "y_particular",
+      "frequency": 11
+    },
+    {
+      "token": "y_val",
+      "frequency": 9
+    },
+    {
+      "token": "y_original_list",
+      "frequency": 8
+    },
+    {
+      "token": "y_value",
+      "frequency": 6
+    },
+    {
+      "token": "y_step",
+      "frequency": 6
+    },
+    {
+      "token": "yield_glyphs",
+      "frequency": 4
+    },
+    {
+      "token": "y_current_contiguous_product",
+      "frequency": 4
+    },
+    {
+      "token": "y_current_element",
+      "frequency": 4
+    },
+    {
+      "token": "yet_other_obj",
+      "frequency": 4
+    },
+    {
+      "token": "yellow_good_offset",
+      "frequency": 4
+    }
+  ],
+  "z": [
+    {
+      "token": "z_logic",
+      "frequency": 2
+    },
+    {
+      "token": "z_is_all_matched",
+      "frequency": 2
+    },
+    {
+      "token": "zebra_two_tuple",
+      "frequency": 2
+    },
+    {
+      "token": "zero_count_one",
+      "frequency": 2
+    },
+    {
+      "token": "zero_count_two",
+      "frequency": 2
+    },
+    {
+      "token": "zipped_payload_groups",
+      "frequency": 2
+    },
+    {
+      "token": "zipped_items",
+      "frequency": 2
+    }
+  ]
+}

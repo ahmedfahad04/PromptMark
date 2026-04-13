@@ -1,0 +1,270 @@
+{
+  "a": [
+    "add",
+    "alpha_coefficient",
+    "and_tuples",
+    "atan2",
+    "average_tuple"
+  ],
+  "b": [
+    "begin_position",
+    "begin_location_key",
+    "best_local_list",
+    "big_list",
+    "base_edge",
+    "beta_coefficient",
+    "base_val",
+    "big_pool",
+    "both_quad_values",
+    "bought_price"
+  ],
+  "c": [
+    "current_x",
+    "current_y",
+    "current_piece",
+    "current_sublist",
+    "collections",
+    "count_Substrings",
+    "capital_words_spaces",
+    "count_divisors",
+    "check_monthnumb_number",
+    "common_in_nested_lists"
+  ],
+  "d": [
+    "divisor_kount",
+    "defaultdict",
+    "drop_empty"
+  ],
+  "e": [
+    "each_value",
+    "even_quantity",
+    "element_value",
+    "effective_offset",
+    "each_group",
+    "each_provided_tuple",
+    "each_word",
+    "each_piece",
+    "each_object",
+    "element_quantity"
+  ],
+  "f": [
+    "factor_q",
+    "final_x",
+    "final_y",
+    "find_First_Missing",
+    "find_even_pair",
+    "Find_Min",
+    "find_adverbs",
+    "finditer",
+    "findall",
+    "Find_Max_Length"
+  ],
+  "g": [
+    "given_list",
+    "gap_value",
+    "g_val",
+    "g_values_list",
+    "goven_value",
+    "gcd_val",
+    "group_length",
+    "group_of_objects",
+    "g_pivot",
+    "guven_value"
+  ],
+  "h": [
+    "half_point",
+    "high_position",
+    "high_point",
+    "h_heaped_parts_key",
+    "h_preserved_chars",
+    "head_elements",
+    "hypo_val_length",
+    "hyp_len",
+    "height",
+    "high_bound_idx"
+  ],
+  "i": [
+    "insert_element",
+    "isupper",
+    "is_perfect_square",
+    "isqrt",
+    "islower",
+    "isdigit",
+    "intersection_update",
+    "is_sublist",
+    "intersection",
+    "intersection_array"
+  ],
+  "j": [
+    "j_idx",
+    "j_index",
+    "j_pos",
+    "j_val",
+    "j_ptr",
+    "jdx",
+    "j_glyph_units",
+    "j_power_of_four",
+    "jumbled_groups",
+    "jovial_payload_two"
+  ],
+  "k": [
+    "key_part",
+    "key_piece",
+    "kept_glyphs",
+    "kept_elements",
+    "k_key_idx",
+    "key_query_glyph",
+    "key_value",
+    "key_element",
+    "k_ptr",
+    "k_idx"
+  ],
+  "l": [
+    "l_length",
+    "low_point",
+    "low_position",
+    "last_position",
+    "low_length",
+    "local_len",
+    "local_piece",
+    "leg_y",
+    "leg_z",
+    "l_len_val"
+  ],
+  "m": [
+    "math",
+    "move_num",
+    "merge_dictionaries_three",
+    "multiply_num",
+    "min_Swaps",
+    "merge",
+    "median_trapezium",
+    "mul_even_odd"
+  ],
+  "n": [
+    "new_tuple"
+  ],
+  "o": [
+    "original_whole_group",
+    "overall_length",
+    "overall_value",
+    "odd_quantity",
+    "output_whole_pieces",
+    "one_list",
+    "other_list",
+    "ordered_elements_list",
+    "obj_values",
+    "ordered_elements"
+  ],
+  "p": [
+    "py_list",
+    "p_list_of_nums",
+    "picked_p_words",
+    "path_lengths",
+    "part_list",
+    "previous_one_lucas",
+    "p_odd_val",
+    "p_even_val",
+    "product_holder",
+    "peak_length_value"
+  ],
+  "q": [
+    "q_elem",
+    "query_young_part",
+    "q_values_holder",
+    "query_value",
+    "quad_values",
+    "q_final_tuple",
+    "quotient_value",
+    "q_parts_key",
+    "query_value_pattern",
+    "q_part"
+  ],
+  "r": [
+    "rotate_right",
+    "round_and_sum",
+    "remove_lowercase",
+    "remove_nested",
+    "remove_Occ",
+    "rfind",
+    "remove_dirty_chars",
+    "reverse_string_list",
+    "replace_char",
+    "remove_whitespaces"
+  ],
+  "s": [
+    "sum_series",
+    "search",
+    "sequence",
+    "start_withp",
+    "start",
+    "subject_marks",
+    "sector_area",
+    "sum_list",
+    "sum_even_and_even_index",
+    "square_nums"
+  ],
+  "t": [
+    "text_match_wordz",
+    "tuple_intersection",
+    "text_lowercase_underscore",
+    "test_three_equal",
+    "toggle_middle_bits",
+    "trim_tuple",
+    "two_unique_nums"
+  ],
+  "u": [
+    "unique_values_pool",
+    "upper_bound",
+    "u_unique_values_set",
+    "unique_elements",
+    "union_elements",
+    "unique_product"
+  ],
+  "v": [
+    "value_a",
+    "value_b",
+    "value_n",
+    "value_given",
+    "value_list",
+    "val",
+    "value_group",
+    "v_value",
+    "value",
+    "val_j"
+  ],
+  "w": [
+    "whole_list",
+    "whole_length",
+    "whole_lists",
+    "whole_text",
+    "w_char",
+    "whole_given_pair",
+    "was_exchanged",
+    "w_value",
+    "whole_word_payload",
+    "whole_qty"
+  ],
+  "x": [
+    "x_previous"
+  ],
+  "y": [
+    "yielded_elements",
+    "yonder_quantity",
+    "yellow_list",
+    "y_tuple",
+    "y_given_angle",
+    "y_total_power_val",
+    "y_char",
+    "yellow_processed_payload_one",
+    "yielded_list",
+    "yielded_averages"
+  ],
+  "z": [
+    "zelos_proxy_set",
+    "z_zero_to_one_diff_count",
+    "zulu_processed_payload_two",
+    "zel_pattern",
+    "z_quad_val"
+  ]
+}

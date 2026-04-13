@@ -1,0 +1,59 @@
+task_id,iteration_used,tests_passed,tests_failed,total_tests,pass_rate,all_passed,correctness,error_message,original_z_score,original_p_exact,original_score,original_token_count,original_green_count,original_is_watermarked,original_unique_starts,generated_z_score,generated_p_exact,generated_score,generated_token_count,generated_green_count,generated_is_watermarked,generated_unique_starts,meets_z,iteration,reasoning_text,full_llm_response,input_tokens,output_tokens,code,stopping_condition_met
+74,0,11,0,11,100.0,True,True,,1.091537344275872,0.2676552173859624,0.5724242865235949,5,4,False,"l, s",1.991948077349694,0.053877398179776735,1.2685933851734221,5,5,False,"c, i, l",False,0,,"```python
+def total_match(lst1, lst2):
+    count1 = sum(len(item) for item in lst1)
+    count2 = sum(len(item) for item in lst2)
+    
+    if count1 <= count2:
+        return lst1
+    else:
+        return lst2
+```",929,81,"def total_match(lst1, lst2):
+    count1 = sum(len(item) for item in lst1)
+    count2 = sum(len(item) for item in lst2)
+    
+    if count1 <= count2:
+        return lst1
+    else:
+        return lst2",True
+95,0,7,0,7,100.0,True,True,,0.7749627200298278,0.4033735928934323,0.39429253655471647,4,3,False,"i, k, s",2.3569047498785354,0.01674824328230376,1.7760307392427912,7,7,True,"a, c, i, k",True,0,,"```python
+def check_dict_case(dict):
+    if not dict:
+        return False
+    
+    # Check if all keys are strings
+    for key in dict.keys():
+        if not isinstance(key, str):
+            return False
+    
+    # Check if all keys are lowercase or all are uppercase
+    all_lower = True
+    all_upper = True
+    
+    for key in dict.keys():
+        if not key.islower():
+            all_lower = False
+        if not key.isupper():
+            all_upper = False
+    
+    return all_lower or all_upper
+```",1065,146,"def check_dict_case(dict):
+    if not dict:
+        return False
+    
+    # Check if all keys are strings
+    for key in dict.keys():
+        if not isinstance(key, str):
+            return False
+    
+    # Check if all keys are lowercase or all are uppercase
+    all_lower = True
+    all_upper = True
+    
+    for key in dict.keys():
+        if not key.islower():
+            all_lower = False
+        if not key.isupper():
+            all_upper = False
+    
+    return all_lower or all_upper",True

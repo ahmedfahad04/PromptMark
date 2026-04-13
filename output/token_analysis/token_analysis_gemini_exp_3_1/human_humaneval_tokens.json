@@ -1,0 +1,199 @@
+{
+  "a": [
+    "arr",
+    "ans",
+    "array",
+    "area",
+    "add"
+  ],
+  "b": [
+    "begin",
+    "beginning_of_suffix",
+    "balance",
+    "base",
+    "brackets"
+  ],
+  "c": [
+    "check",
+    "char",
+    "current_string",
+    "closing_bracket_index",
+    "current_depth",
+    "closest_pair",
+    "center",
+    "cnt",
+    "ceil",
+    "count_digit"
+  ],
+  "d": [
+    "depth",
+    "day",
+    "distance",
+    "digit",
+    "digits_sum",
+    "denom",
+    "dict1",
+    "div",
+    "dic",
+    "decimal"
+  ],
+  "e": [
+    "end",
+    "elem",
+    "evens",
+    "elem2",
+    "extensions",
+    "even_count",
+    "e1",
+    "expression",
+    "even_palindrome_count",
+    "even"
+  ],
+  "f": [
+    "flg",
+    "fact",
+    "frq",
+    "fact_i",
+    "fibfib",
+    "fib",
+    "floor",
+    "file_name"
+  ],
+  "g": [
+    "gpa",
+    "grid",
+    "grades",
+    "game",
+    "guess"
+  ],
+  "h": [
+    "hexdigest",
+    "hashlib"
+  ],
+  "i": [
+    "is_prime",
+    "idx",
+    "isalpha",
+    "islower",
+    "isupper",
+    "is_palindrome",
+    "idx2",
+    "ind",
+    "int_digit",
+    "interval1"
+  ],
+  "k": [
+    "key"
+  ],
+  "l": [
+    "lst",
+    "letter_grade",
+    "largest",
+    "l1",
+    "list1",
+    "l2",
+    "length",
+    "letter",
+    "lis",
+    "lst1"
+  ],
+  "m": [
+    "month",
+    "my_tri",
+    "max_sum",
+    "math",
+    "maxx",
+    "max_depth",
+    "message",
+    "my_val",
+    "my_arr",
+    "min_index"
+  ],
+  "n": [
+    "num",
+    "numbers",
+    "new_text",
+    "number",
+    "neg",
+    "new_lst",
+    "nums",
+    "numerator",
+    "number_as_string",
+    "n_consonants"
+  ],
+  "o": [
+    "odd_count",
+    "out",
+    "odd_collatz",
+    "odd_digits",
+    "odd_digit_elements",
+    "opening_bracket_index",
+    "odds",
+    "odd_palindrome_count",
+    "odd",
+    "op"
+  ],
+  "p": [
+    "planet_names",
+    "primes",
+    "power",
+    "product",
+    "planet1_index",
+    "planet2_index",
+    "poly",
+    "prod_value",
+    "planet1",
+    "planet2"
+  ],
+  "r": [
+    "result",
+    "ret",
+    "res",
+    "results",
+    "running_max",
+    "remaining",
+    "reverse"
+  ],
+  "s": [
+    "string",
+    "state",
+    "start",
+    "s_list",
+    "strings",
+    "substring",
+    "st",
+    "switch",
+    "swapcase",
+    "sum_value"
+  ],
+  "t": [
+    "text",
+    "txt",
+    "temp_a",
+    "temp_b",
+    "temp",
+    "total",
+    "times",
+    "threshold",
+    "test"
+  ],
+  "v": [
+    "val",
+    "vowels",
+    "value",
+    "vowels_replace",
+    "value_map",
+    "var"
+  ],
+  "w": [
+    "word",
+    "words"
+  ],
+  "x": [
+    "xs",
+    "xor"
+  ],
+  "y": [
+    "year"
+  ]
+}

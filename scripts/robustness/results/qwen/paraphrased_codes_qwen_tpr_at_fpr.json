@@ -1,0 +1,41 @@
+{
+  "experiment_info": {
+    "z_threshold": 2.12,
+    "p_threshold": 0.017003022647632787,
+    "model": "gemini",
+    "total_samples": 93
+  },
+  "roc_metrics": {
+    "auroc": 0.68268,
+    "fpr_range": [
+      0.0,
+      1.0
+    ],
+    "tpr_range": [
+      0.0,
+      1.0
+    ]
+  },
+  "tpr_at_fpr_thresholds": {
+    "T@0%F": 0.086022,
+    "T@1%F": 0.086022,
+    "T@3%F": 0.129032,
+    "T@5%F": 0.16129,
+    "T@10%F": 0.247312
+  },
+  "confusion_matrix": {
+    "tp": 7,
+    "fp": 0,
+    "tn": 93,
+    "fn": 86
+  },
+  "performance_metrics": {
+    "tpr_at_fixed_threshold": 0.075269,
+    "fpr_at_fixed_threshold": 0.0,
+    "tnr_specificity": 1.0,
+    "fnr": 0.924731,
+    "precision": 1.0,
+    "accuracy": 0.537634,
+    "f1_score": 0.14
+  }
+}

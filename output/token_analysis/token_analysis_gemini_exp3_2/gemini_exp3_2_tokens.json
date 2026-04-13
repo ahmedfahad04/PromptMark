@@ -1,0 +1,273 @@
+{
+  "a": [
+    "active_position",
+    "adjusted_values_output",
+    "add",
+    "a_value_found",
+    "alpha_data",
+    "alpha_val",
+    "added_value",
+    "adjustment_k",
+    "a_provided_digit",
+    "approved_ones_data"
+  ],
+  "b": [
+    "b_group_value",
+    "by_val",
+    "begin_idx",
+    "base_width_value",
+    "b_checked_value",
+    "b_common_elements",
+    "by_jolly_count",
+    "best_group",
+    "bygone_glyph",
+    "b_word_group"
+  ],
+  "c": [
+    "central_idx",
+    "current_growing_product",
+    "current_guy_char",
+    "current_value",
+    "count_bidirectional",
+    "count_Substrings",
+    "capital_words_spaces",
+    "count_vowels",
+    "cmath",
+    "count_divisors"
+  ],
+  "d": [
+    "datum_two",
+    "data_values",
+    "dyad",
+    "datum_one",
+    "datum_gold",
+    "data_array",
+    "dynamic_val",
+    "d_prior_group",
+    "data_extent",
+    "data_amount"
+  ],
+  "e": [
+    "end_idx",
+    "extended_gcd_algorithm",
+    "ending_position",
+    "expected_quantum",
+    "each_group_of_values",
+    "each_first_value",
+    "each_other_value",
+    "each_pair",
+    "even_value",
+    "extract_nth_element"
+  ],
+  "f": [
+    "first_position",
+    "final_point",
+    "found_idx",
+    "first_operand",
+    "final_position",
+    "fresh_phrasing",
+    "found_data_units",
+    "final_x_value",
+    "found_quantities",
+    "first_val"
+  ],
+  "g": [
+    "guiding_phrase",
+    "guiding_numbers",
+    "general_gcd",
+    "g_duration",
+    "grouped_outcome_units",
+    "given_gunk",
+    "g_collected_words",
+    "given_data_value",
+    "given_numbers",
+    "group_path_sizes"
+  ],
+  "h": [
+    "hypotenuse",
+    "h_output_string"
+  ],
+  "i": [
+    "idx_outer",
+    "idx",
+    "idx_junior",
+    "idx_object",
+    "insert_element",
+    "is_perfect_square",
+    "isupper",
+    "isdigit",
+    "intersection_update",
+    "is_sublist"
+  ],
+  "j": [
+    "j_idx",
+    "j_original_group",
+    "j_even_quantity",
+    "j_first_unit",
+    "j_second_unit",
+    "j_valid_jumps",
+    "j_div_kount",
+    "j_pos",
+    "j_journal_book",
+    "j_unique_observations"
+  ],
+  "k": [
+    "k_odd_quantity",
+    "key_val",
+    "k_unit",
+    "key_glyph",
+    "kept_chars_holder",
+    "k_qty",
+    "k_jumps",
+    "k_lower_word",
+    "key_order",
+    "koala_ordered_values"
+  ],
+  "l": [
+    "left_insertion",
+    "list_to_float",
+    "largest_subset",
+    "loss_amount",
+    "list_tuple",
+    "list_split"
+  ],
+  "m": [
+    "math",
+    "move_num",
+    "merge_dictionaries_three",
+    "multiply_num",
+    "min_Swaps",
+    "max_product",
+    "merge",
+    "median_trapezium",
+    "mul_even_odd"
+  ],
+  "n": [
+    "new_tuple"
+  ],
+  "o": [
+    "one_yielded_list",
+    "one_given_odd",
+    "one_given_whole",
+    "one_value",
+    "overall_total",
+    "output_builder_guys",
+    "open_point",
+    "overall_greatest_quantity",
+    "outcome_whole",
+    "og_by"
+  ],
+  "p": [
+    "py_obj_data",
+    "primary_gap",
+    "particular_x",
+    "particular_y",
+    "p_point",
+    "p_original_list",
+    "p_curr_val",
+    "polished_word",
+    "p_jnum",
+    "p_units_given"
+  ],
+  "q": [
+    "query_overall_values",
+    "query_nth_value",
+    "query_string",
+    "query_list_length",
+    "quantity",
+    "qty_by_og",
+    "q_capitalized_parts",
+    "query_overall_length",
+    "query_values",
+    "q_char"
+  ],
+  "r": [
+    "rotate_right",
+    "round_and_sum",
+    "remove_lowercase",
+    "remove_nested",
+    "remove_Occ",
+    "rfind",
+    "remove_dirty_chars",
+    "reverse_string_list",
+    "replace_char",
+    "remove_whitespaces"
+  ],
+  "s": [
+    "second_operand",
+    "sqrt",
+    "scaling_factor",
+    "squared_unit",
+    "slant_highness_value",
+    "sum_series",
+    "search",
+    "sequence",
+    "start_withp",
+    "string"
+  ],
+  "t": [
+    "target_value",
+    "two_list",
+    "text_match_wordz",
+    "tuple_intersection",
+    "text_lowercase_underscore",
+    "test_three_equal",
+    "toggle_middle_bits",
+    "trim_tuple",
+    "two_unique_nums"
+  ],
+  "u": [
+    "unit_quantity",
+    "unit",
+    "u_current_value",
+    "upper_bound_j",
+    "upcoming_glyph",
+    "unit_object",
+    "u_numbers_set",
+    "u_num",
+    "unwanted_chars_query",
+    "unwanted_chars_group"
+  ],
+  "v": [
+    "val_a",
+    "val_b",
+    "vowel_group",
+    "valid_quantities",
+    "v_value",
+    "v_output_value",
+    "vertical_depth_quantity"
+  ],
+  "w": [
+    "whole_group",
+    "wo_list",
+    "word_body",
+    "was_yet_pending_swap",
+    "w_word_segment",
+    "word_body_quantity",
+    "whole_group_length",
+    "whole_document",
+    "word_to_process",
+    "whole_query"
+  ],
+  "x": [
+    "x_value",
+    "x_for_gcd",
+    "x_next_val",
+    "x_idx"
+  ],
+  "y": [
+    "y_original_list",
+    "yield_glyphs",
+    "yielded_groups",
+    "y_match",
+    "y_overall_avgs",
+    "y_gathered_output",
+    "y_whole_group_unit",
+    "y_yield_list",
+    "y_input_values",
+    "y_val"
+  ],
+  "z": [
+    "zebra_two_tuple"
+  ]
+}

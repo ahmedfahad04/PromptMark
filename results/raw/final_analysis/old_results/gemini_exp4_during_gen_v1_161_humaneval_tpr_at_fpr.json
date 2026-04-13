@@ -1,0 +1,45 @@
+{
+  "experiment_info": {
+    "z_threshold": 2.12,
+    "p_threshold": 0.017003022647632787,
+    "model": "gemini",
+    "experiment_number": "exp4",
+    "generation_type": "during",
+    "sample_size": 161,
+    "dataset": "humaneval",
+    "total_samples": 161
+  },
+  "roc_metrics": {
+    "auroc": 0.989449,
+    "fpr_range": [
+      0.0,
+      1.0
+    ],
+    "tpr_range": [
+      0.0,
+      1.0
+    ]
+  },
+  "tpr_at_fpr_thresholds": {
+    "T@0%F": 0.838509,
+    "T@1%F": 0.919255,
+    "T@3%F": 0.937888,
+    "T@5%F": 0.968944,
+    "T@10%F": 0.975155
+  },
+  "confusion_matrix": {
+    "tp": 128,
+    "fp": 0,
+    "tn": 161,
+    "fn": 33
+  },
+  "performance_metrics": {
+    "tpr_at_fixed_threshold": 0.795031,
+    "fpr_at_fixed_threshold": 0.0,
+    "tnr_specificity": 1.0,
+    "fnr": 0.204969,
+    "precision": 1.0,
+    "accuracy": 0.897516,
+    "f1_score": 0.885813
+  }
+}

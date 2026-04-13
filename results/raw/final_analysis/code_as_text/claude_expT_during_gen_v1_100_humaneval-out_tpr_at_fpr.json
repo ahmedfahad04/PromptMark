@@ -1,0 +1,45 @@
+{
+  "experiment_info": {
+    "z_threshold": 2.12,
+    "p_threshold": 0.017003022647632787,
+    "model": "claude",
+    "experiment_number": "expX",
+    "generation_type": "only-gen",
+    "sample_size": 164,
+    "dataset": "humaneval",
+    "total_samples": 99
+  },
+  "roc_metrics": {
+    "auroc": 0.777778,
+    "fpr_range": [
+      0.0,
+      1.0
+    ],
+    "tpr_range": [
+      0.0,
+      1.0
+    ]
+  },
+  "tpr_at_fpr_thresholds": {
+    "T@0%F": 0.020202,
+    "T@1%F": 0.020202,
+    "T@3%F": 0.060606,
+    "T@5%F": 0.141414,
+    "T@10%F": 0.434343
+  },
+  "confusion_matrix": {
+    "tp": 3,
+    "fp": 1,
+    "tn": 98,
+    "fn": 96
+  },
+  "performance_metrics": {
+    "tpr_at_fixed_threshold": 0.030303,
+    "fpr_at_fixed_threshold": 0.010101,
+    "tnr_specificity": 0.989899,
+    "fnr": 0.969697,
+    "precision": 0.75,
+    "accuracy": 0.510101,
+    "f1_score": 0.058252
+  }
+}

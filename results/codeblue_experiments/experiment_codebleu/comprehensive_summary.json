@@ -1,0 +1,193 @@
+{
+  "overall_statistics": {
+    "total_evaluations": 58,
+    "total_experiments": 10,
+    "total_models": 56,
+    "total_samples": 5495,
+    "avg_codebleu": 0.28033287382205996,
+    "median_codebleu": 0.24773479985424063,
+    "std_codebleu": 0.11091285709819315,
+    "min_codebleu": 0.1954749641363178,
+    "max_codebleu": 0.6698843483777884
+  },
+  "top_10_models": [
+    {
+      "rank": 1,
+      "model": "codegemma_exp1-1_after_gen_v1_100_mbpp",
+      "experiment": "EXP_1-1_MBPP_After_GEN_100",
+      "avg_codebleu": 0.6698843483777884,
+      "total_samples": 98
+    },
+    {
+      "rank": 2,
+      "model": "codegemma_exp1-1_after_gen_v2_100_mbpp",
+      "experiment": "EXP_1-1_MBPP_After_GEN_100",
+      "avg_codebleu": 0.6307101443996675,
+      "total_samples": 69
+    },
+    {
+      "rank": 3,
+      "model": "qwen14_exp1-1_after_gen_v1_100_mbpp",
+      "experiment": "EXP_1-1_MBPP_After_GEN_100",
+      "avg_codebleu": 0.5875982742923035,
+      "total_samples": 100
+    },
+    {
+      "rank": 4,
+      "model": "qwen14_exp1-1_after_gen_v2_100_mbpp",
+      "experiment": "EXP_1-1_MBPP_After_GEN_100",
+      "avg_codebleu": 0.5818676383497305,
+      "total_samples": 100
+    },
+    {
+      "rank": 5,
+      "model": "gemini_exp1-1_after_gen_v1_100_mbpp",
+      "experiment": "EXP_1-1_MBPP_After_GEN_100",
+      "avg_codebleu": 0.5611802678894496,
+      "total_samples": 100
+    },
+    {
+      "rank": 6,
+      "model": "gemini_exp1-1_after_gen_v2_100_mbpp",
+      "experiment": "EXP_1-1_MBPP_After_GEN_100",
+      "avg_codebleu": 0.5599448420390537,
+      "total_samples": 92
+    },
+    {
+      "rank": 7,
+      "model": "qwen14_exp3-1_during_gen_v1_100_mbpp",
+      "experiment": "EXP_3_V1_V2_MBPP",
+      "avg_codebleu": 0.2761711302442206,
+      "total_samples": 98
+    },
+    {
+      "rank": 8,
+      "model": "qwen14b_exp1_dgen_v1_100",
+      "experiment": "EXP_1_MBPP_100",
+      "avg_codebleu": 0.270166226887531,
+      "total_samples": 100
+    },
+    {
+      "rank": 9,
+      "model": "qwen14b_exp1_dgen_v2_100",
+      "experiment": "EXP_1_MBPP_100",
+      "avg_codebleu": 0.2694374866777868,
+      "total_samples": 100
+    },
+    {
+      "rank": 10,
+      "model": "qwen14_exp1-1_during_gen_v6_100_mbpp",
+      "experiment": "EXP_1-1_MBPP_With_Comments_100",
+      "avg_codebleu": 0.264128656044533,
+      "total_samples": 100
+    }
+  ],
+  "experiment_statistics": {
+    "EXP_1-1_MBPP_After_GEN_100": {
+      "avg_codebleu": 0.5985,
+      "std_dev": 0.0434,
+      "min": 0.5599,
+      "max": 0.6699,
+      "num_models": 6,
+      "total_samples": 559
+    },
+    "EXP_3_V1_V2_MBPP": {
+      "avg_codebleu": 0.2538,
+      "std_dev": 0.0119,
+      "min": 0.2293,
+      "max": 0.2762,
+      "num_models": 10,
+      "total_samples": 838
+    },
+    "EXP_1_MBPP_100": {
+      "avg_codebleu": 0.2511,
+      "std_dev": 0.0146,
+      "min": 0.2384,
+      "max": 0.2702,
+      "num_models": 6,
+      "total_samples": 570
+    },
+    "EXP_3_1_2_3_V1_V2_MBPP": {
+      "avg_codebleu": 0.2511,
+      "std_dev": 0.0029,
+      "min": 0.2466,
+      "max": 0.2547,
+      "num_models": 7,
+      "total_samples": 674
+    },
+    "EXP_1-1_MBPP_With_Comments_100": {
+      "avg_codebleu": 0.246,
+      "std_dev": 0.0154,
+      "min": 0.226,
+      "max": 0.2641,
+      "num_models": 6,
+      "total_samples": 594
+    },
+    "EXP_2_V1_V2": {
+      "avg_codebleu": 0.246,
+      "std_dev": 0.006,
+      "min": 0.2386,
+      "max": 0.2525,
+      "num_models": 6,
+      "total_samples": 583
+    },
+    "EXP_2-1_2-2_V1_V2_MBPP": {
+      "avg_codebleu": 0.2448,
+      "std_dev": 0.0063,
+      "min": 0.2373,
+      "max": 0.2554,
+      "num_models": 7,
+      "total_samples": 768
+    },
+    "EXP_X_1_V1_V2_V3": {
+      "avg_codebleu": 0.2278,
+      "std_dev": 0.008,
+      "min": 0.215,
+      "max": 0.2345,
+      "num_models": 6,
+      "total_samples": 599
+    }
+  },
+  "model_family_statistics": {
+    "CodeGemma": {
+      "avg_codebleu": 0.3766,
+      "std_dev": 0.2125,
+      "min": 0.226,
+      "max": 0.6699,
+      "num_evaluations": 6,
+      "total_samples": 567
+    },
+    "Qwen": {
+      "avg_codebleu": 0.2877,
+      "std_dev": 0.1058,
+      "min": 0.215,
+      "max": 0.5876,
+      "num_evaluations": 19,
+      "total_samples": 1855
+    },
+    "Gemini": {
+      "avg_codebleu": 0.2617,
+      "std_dev": 0.0839,
+      "min": 0.1955,
+      "max": 0.5612,
+      "num_evaluations": 29,
+      "total_samples": 2679
+    },
+    "OpenAI": {
+      "avg_codebleu": 0.2455,
+      "std_dev": 0.0098,
+      "min": 0.2386,
+      "max": 0.2525,
+      "num_evaluations": 2,
+      "total_samples": 199
+    },
+    "Claude": {
+      "avg_codebleu": 0.2259,
+      "std_dev": 0.0408,
+      "min": 0.197,
+      "max": 0.2547,
+      "num_evaluations": 2,
+      "total_samples": 195
+    }
+  }
+}

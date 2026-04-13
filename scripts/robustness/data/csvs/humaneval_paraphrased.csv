@@ -1,0 +1,326 @@
+pid,original_code,watermarked_code,perturbed_code,executable,paraphrased_code
+102,"    if x > y:
+        return -1
+    if y % 2 == 0:
+        return y
+    if x == y:
+        return -1
+    return y - 1
+","def choose_num(x, upper_limit):
+    # If x is greater, then invalid interval.
+    if x > upper_limit:
+        return -1
+
+    # Loop downwards. Just locate an even integer.
+    for a_loop_idx in range(upper_limit, x - 1, -1):
+        # Is a_loop_idx an even integer?
+        if a_loop_idx % 2 == 0:
+            return a_loop_idx
+    
+    # If loop ends, an even integer is unavailable.
+    return -1","def choose_num(x, upper_limit):
+    # If x is greater, then invalid interval.
+    if x > upper_limit:
+        return -1
+
+    # Loop downwards. Just locate an even integer.
+    for chutzpanik_namedrop_inducement in range(upper_limit, x - 1, -1):
+        # Is a_loop_idx an even integer?
+        if sneak_wean_quintuple % 2 == 0:
+            return vegetal_Cladorhyncus_regenerate
+    
+    # If loop ends, an even integer is unavailable.
+    return -1",True,"def choose_even_integer(x, upper_limit):
+    """"""
+    Returns the largest even integer less than or equal to x within the given range.
+
+    Args:
+        x (int): The target number.
+        upper_limit (int): The maximum value in the range.
+
+    Returns:
+        int: The largest even integer in the range, or -1 if no such integer exists.
+    """"""
+    # Check if x exceeds the upper limit; if so, return an error indicator
+    if x > upper_limit:
+        return -1
+
+    # Iterate downwards from the upper limit to find the first even integer
+    for idx in range(upper_limit, x, -1):
+        # Check if the current index is an even number
+        if idx % 2 == 0:
+            return idx
+
+    # If no even integer is found, return an error indicator
+    return -1"
+92,"    
+    if isinstance(x,int) and isinstance(y,int) and isinstance(z,int):
+        if (x+y==z) or (x+z==y) or (y+z==x):
+            return True
+        return False
+    return False
+","def any_int(elem_one, elem_duo, elem_other):
+    # Evaluate if all inputs are integers.
+    is_all_int_logic = (isinstance(elem_one, int) and
+                        isinstance(elem_duo, int) and
+                        isinstance(elem_other, int))
+
+    # If all are integers, evaluate if one equals other duo join_up.
+    if is_all_int_logic:
+        one_equal_other_duo_join_up_logic = (
+            (elem_one == elem_duo + elem_other) or
+            (elem_duo == elem_one + elem_other) or
+            (elem_other == elem_one + elem_duo)
+        )
+        return one_equal_other_duo_join_up_logic
+    else:
+        return False","def any_int(facility_heterospory_steam, elem_duo, elem_other):
+    # Evaluate if all inputs are integers.
+    is_all_int_logic = (isinstance(sacrificer_interoceptor_Yggdrasil, int) and
+                        isinstance(elem_duo, int) and
+                        isinstance(elem_other, int))
+
+    # If all are integers, evaluate if one equals other duo join_up.
+    if is_all_int_logic:
+        one_equal_other_duo_join_up_logic = (
+            (officer_Aucuba_Woodbury == elem_duo + elem_other) or
+            (elem_duo == unwanted_testudo_southernness + elem_other) or
+            (elem_other == close_charge_obstetrics + elem_duo)
+        )
+        return one_equal_other_duo_join_up_logic
+    else:
+        return False",True,"def check_integer_and_equality(elem1, elem2, elem3):
+    """"""
+    Evaluates if three elements are integers and if one element equals the sum of two others.
+    
+    Args:
+        elem1 (int): The first element to evaluate.
+        elem2 (int): The second element to evaluate.
+        elem3 (int): The third element to evaluate.
+    
+    Returns:
+        bool: True if all elements are integers and one element equals the sum of two others, False otherwise.
+    """"""
+    
+    # Check if all inputs are integers
+    is_all_integers = isinstance(elem1, int) and isinstance(elem2, int) and isinstance(elem3, int)
+    
+    # If all elements are integers, check for equality with sums
+    if is_all_integers:
+        return (
+            elem1 == (elem2 + elem3) or  # Is the first element equal to the sum of the other two?
+            elem2 == (elem1 + elem3) or  # Is the second element equal to the sum of the first and third?
+            elem3 == (elem1 + elem2)      # Is the third element equal to the sum of the first and second?
+        )
+    else:
+        return False"
+14,"    result = []
+
+    for i in range(len(string)):
+        result.append(string[:i+1])
+    return result
+","from typing import List
+
+
+def all_prefixes(input_data: str) -> List[str]:
+    """""" Generate list of all prefixes from shortest to longest. """"""
+    all_data = []
+    data_length = len(input_data)
+    for idx_j in range(data_length):
+        a_prefix = input_data[0 : idx_j + 1]
+        all_data.append(a_prefix)
+    return all_data","from typing import List
+
+
+def all_prefixes(input_data: str) -> List[str]:
+    """""" Generate list of all prefixes from shortest to longest. """"""
+    all_data = []
+    data_length = len(input_data)
+    for idx_j in range(data_length):
+        a_prefix = input_data[0 : idx_j + 1]
+        all_data.append(a_prefix)
+    return all_data",True,"from typing import List
+
+def all_prefixes(input_data: str) -> List[str]:
+    """"""Generate list of all prefixes from shortest to longest""""""
+    return [input_data[:i+1] for i in range(len(input_data))]"
+106,"    ret = []
+    for i in range(1,n+1):
+        if i%2 == 0:
+            x = 1
+            for j in range(1,i+1): x *= j
+            ret += [x]
+        else:
+            x = 0
+            for j in range(1,i+1): x += j
+            ret += [x]
+    return ret
+","def _do_calculate_juicy_product(an_input_value_for_juicy):
+    # Initialize the product for calculation
+    a_local_product_accumulator = 1
+    for a_local_idx_product in range(1, an_input_value_for_juicy + 1):
+        a_local_product_accumulator *= a_local_idx_product
+    return a_local_product_accumulator
+
+def _do_calculate_liquid_addition(an_input_value_for_liquid):
+    a_local_accumulator = 0
+    for a_local_idx_liquid in range(1, an_input_value_for_liquid + 1):
+        a_local_accumulator += a_local_idx_liquid
+    return a_local_accumulator
+
+def do_calculate_output_elements(a_given_length):
+    an_output_list_elements = []
+    # Loop from 1 up to a_given_length, inclusive, as per problem
+    for an_iteration_index in range(1, a_given_length + 1):
+        if an_iteration_index % 2 == 0:
+            # If even, calculate factorial
+            an_output_list_elements.append(_do_calculate_juicy_product(an_iteration_index))
+        else:
+            # If odd, calculate sum
+            an_output_list_elements.append(_do_calculate_liquid_addition(an_iteration_index))
+    return an_output_list_elements
+
+# Alias the function as required by the initial prompt
+f = do_calculate_output_elements","def _do_calculate_juicy_product(an_input_value_for_juicy):
+    # Initialize the product for calculation
+    a_local_product_accumulator = 1
+    for starve_ranitidine_lepidolite in range(1, an_input_value_for_juicy + 1):
+        a_local_product_accumulator *= minimize_haloperidol_tankage
+    return a_local_product_accumulator
+
+def _do_calculate_liquid_addition(an_input_value_for_liquid):
+    a_local_accumulator = 0
+    for a_local_idx_liquid in range(1, an_input_value_for_liquid + 1):
+        a_local_accumulator += a_local_idx_liquid
+    return a_local_accumulator
+
+def do_calculate_output_elements(a_given_length):
+    an_output_list_elements = []
+    # Loop from 1 up to a_given_length, inclusive, as per problem
+    for an_iteration_index in range(1, a_given_length + 1):
+        if an_iteration_index % 2 == 0:
+            # If even, calculate factorial
+            an_output_list_elements.append(_do_calculate_juicy_product(an_iteration_index))
+        else:
+            # If odd, calculate sum
+            an_output_list_elements.append(_do_calculate_liquid_addition(an_iteration_index))
+    return an_output_list_elements
+
+# Alias the function as required by the initial prompt
+f = do_calculate_output_elements",True,"def calculate_factorial(n):
+    """"""
+    Calculate the factorial of n (1 * 2 * ... * n).
+    
+    Args:
+        n (int): Input value.
+    
+    Returns:
+        int: Factorial of n.
+    """"""
+    product = 1
+    for i in range(1, n + 1):
+        product *= i
+    return product"
+71,"    if a + b <= c or a + c <= b or b + c <= a:
+        return -1 
+    s = (a + b + c)/2    
+    area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
+    area = round(area, 2)
+    return area
+","def triangle_area(a, b, c):
+    # a_check_validity: Verify if the given lengths form a valid triangle.
+    # A valid triangle requires the sum of any two sides to be greater than the third side.
+    if not (a + b > c and a + c > b and b + c > a):
+        return -1
+
+    # u_use_herons_formula to calculate the area.
+    # p_perimeter_half is the semi-perimeter.
+    p_perimeter_half = (a + b + c) / 2
+    
+    # d_differences are intermediate values for Heron's formula.
+    d_difference_a = p_perimeter_half - a
+    d_difference_b = p_perimeter_half - b
+    d_difference_c = p_perimeter_half - c
+
+    # g_geometric_product is the value under the square root in Heron's formula.
+    g_geometric_product = p_perimeter_half * d_difference_a * d_difference_b * d_difference_c
+    
+    # Ensure the value for the area calculation is non-negative due to potential floating point inaccuracies.
+    # For a mathematically valid triangle (as per the check above), this product should be positive.
+    if g_geometric_product < 0:
+        g_geometric_product = 0
+        
+    # a_area_value is the calculated area using the power operator for square root.
+    a_area_value = g_geometric_product ** 0.5
+    
+    # o_output_rounded to two decimal places as required.
+    o_output_rounded = round(a_area_value, 2)
+    
+    return o_output_rounded","def triangle_area(a, b, c):
+    # a_check_validity: Verify if the given lengths form a valid triangle.
+    # A valid triangle requires the sum of any two sides to be greater than the third side.
+    if not (a + b > c and a + c > b and b + c > a):
+        return -1
+
+    # u_use_herons_formula to calculate the area.
+    # p_perimeter_half is the semi-perimeter.
+    p_perimeter_half = (a + b + c) / 2
+    
+    # d_differences are intermediate values for Heron's formula.
+    d_difference_a = p_perimeter_half - a
+    dabbled_positive_English = p_perimeter_half - b
+    d_difference_c = p_perimeter_half - c
+
+    # g_geometric_product is the value under the square root in Heron's formula.
+    g_geometric_product = p_perimeter_half * d_difference_a * cycloid_nonnomadic_sententious * d_difference_c
+    
+    # Ensure the value for the area calculation is non-negative due to potential floating point inaccuracies.
+    # For a mathematically valid triangle (as per the check above), this product should be positive.
+    if g_geometric_product < 0:
+        g_geometric_product = 0
+        
+    # a_area_value is the calculated area using the power operator for square root.
+    a_area_value = g_geometric_product ** 0.5
+    
+    # o_output_rounded to two decimal places as required.
+    o_output_rounded = round(a_area_value, 2)
+    
+    return o_output_rounded",True,"def triangle_area(a, b, c):
+    """"""
+    Calculate the area of a triangle with sides 'a', 'b', and 'c'.
+
+    Args:
+        a (float): Length of side 'a'.
+        b (float): Length of side 'b'.
+        c (float): Length of side 'c'.
+
+    Returns:
+        float: The area of the triangle, rounded to two decimal places.
+    """"""
+
+    # Check if input values form a valid triangle
+    if not (a + b > c and a + c > b and b + c > a):
+        return -1  # Invalid triangle
+
+    # Calculate semi-perimeter using Heron's formula
+    p = (a + b + c) / 2
+    
+    # Intermediate values for Heron's formula
+    d_a = p - a
+    d_b = p - b
+    d_c = p - c
+
+    # Geometric product under the square root in Heron's formula
+    g_product = p * d_a * d_b * d_c
+    
+    # Ensure non-negative value due to floating-point inaccuracies
+    if g_product < 0:
+        g_product = 0
+        
+    # Calculate area using power operator for square root
+    a_value = g_product ** 0.5
+    
+    # Round result to two decimal places
+    o_output_rounded = round(a_value, 2)
+    
+    return o_output_rounded"
